@@ -56,16 +56,36 @@
             const fileList = document.getElementById('file-list');
 
             if (fileData[course] && fileData[course][subject]) {
-                const files = fileData[course][subject];
+                let files = fileData[course][subject];
 
                 if (files.length === 0) {
                     fileList.innerHTML = '<p class="empty-msg">Папка пуста</p>';
                     return;
                 }
 
+                // Sort: PDFs first, then others
+                files.sort((a, b) => {
+                    if (a.type === 'pdf' && b.type !== 'pdf') return -1;
+                    if (a.type !== 'pdf' && b.type === 'pdf') return 1;
+                    return a.name.localeCompare(b.name);
+                });
+
                 files.forEach(file => {
                     const fileCard = document.createElement('a');
-                    fileCard.href = file.path;
+
+                    // Fix for PDF LFS: open in GitHub Blob viewer
+                    if (file.type === 'pdf') {
+                        // Remove './' from start and construct GitHub URL
+                        // Assuming path starts with "./"
+                        const cleanPath = file.path.startsWith('./') ? file.path.substring(2) : file.path;
+                        // URL encode the path parts for safety, though browser might handle it. 
+                        // GitHub blob URL needs raw path but spaces encoded usually.
+                        // Let's use the path as is but ensure it matches repo structure.
+                        fileCard.href = `https://github.com/Daniyarsick/main_portfolio/blob/main/${cleanPath}`;
+                    } else {
+                        fileCard.href = file.path;
+                    }
+
                     fileCard.className = 'file-card';
                     fileCard.target = '_blank';
 
