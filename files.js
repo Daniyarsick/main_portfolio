@@ -1,17 +1,47 @@
 const fileData = {
     "1 курс": {
-        "АД": [
+        "Дискретная математика": [
             {
-                "name": "Лекц.xlsx",
-                "path": "./1 курс/АД/ЛЕКЦ/Лекц.xlsx",
-                "type": "xlsx",
-                "size": 10801
+                "name": "Аннануров Даниил Петрович ИВТ 1.2 ДЗ Отношения.pdf",
+                "path": "./1 курс/Дискретная математика/Аннануров Даниил Петрович ИВТ 1.2 ДЗ Отношения.pdf",
+                "type": "pdf",
+                "size": 2858806
             },
             {
-                "name": "Аннануров ДП ИВТ 1.2 Сам работа.pdf",
-                "path": "./1 курс/АД/СР/Аннануров ДП ИВТ 1.2 Сам работа.pdf",
+                "name": "Блокнот без названия.pdf",
+                "path": "./1 курс/Дискретная математика/Блокнот без названия.pdf",
                 "type": "pdf",
-                "size": 7786051
+                "size": 7957167
+            },
+            {
+                "name": "Графы Теория.pdf",
+                "path": "./1 курс/Дискретная математика/Графы Теория.pdf",
+                "type": "pdf",
+                "size": 8425887
+            },
+            {
+                "name": "Дз Отношения.pdf",
+                "path": "./1 курс/Дискретная математика/Дз Отношения.pdf",
+                "type": "pdf",
+                "size": 2858806
+            },
+            {
+                "name": "Дискретка.pdf",
+                "path": "./1 курс/Дискретная математика/Дискретка.pdf",
+                "type": "pdf",
+                "size": 6795258
+            },
+            {
+                "name": "Практика 28.11.pdf",
+                "path": "./1 курс/Дискретная математика/Практика 28.11.pdf",
+                "type": "pdf",
+                "size": 5618173
+            },
+            {
+                "name": "Практика 5.12.pdf",
+                "path": "./1 курс/Дискретная математика/Практика 5.12.pdf",
+                "type": "pdf",
+                "size": 6231733
             }
         ],
         "Информатика": [
@@ -192,1206 +222,1930 @@ const fileData = {
                 "size": 739786
             }
         ],
-        "ИТ": [
-            {
-                "name": "Аннануров Даниил Петрович ИВТ 1.2 HTMLACADEMY (1).pdf",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 HTMLACADEMY (1).pdf",
-                "type": "pdf",
-                "size": 82763
-            },
-            {
-                "name": "Аннануров Даниил Петрович ИВТ 1.2 Выступление 2 семестр.mp4",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 Выступление 2 семестр.mp4",
-                "type": "mp4",
-                "size": 128684383
-            },
-            {
-                "name": "Аннануров Даниил Петрович ИВТ 1.2 документ.docx",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 документ.docx",
-                "type": "docx",
-                "size": 34265
-            },
-            {
-                "name": "Аннануров Даниил Петрович ИВТ 1.2 ЛБ 3.docx",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 3.docx",
-                "type": "docx",
-                "size": 3894694
-            },
-            {
-                "name": "Аннануров Даниил Петрович ИВТ 1.2 ЛБ 4 ч1.pdf",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 4 ч1.pdf",
-                "type": "pdf",
-                "size": 303215
-            },
-            {
-                "name": "Аннануров Даниил Петрович ИВТ 1.2 ЛР 1.pdf",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛР 1.pdf",
-                "type": "pdf",
-                "size": 366013
-            },
-            {
-                "name": "Аннануров Даниил Петрович, Жуйков Алексей Валерианович.mp3",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович, Жуйков Алексей Валерианович.mp3",
-                "type": "mp3",
-                "size": 10828321
-            },
-            {
-                "name": "Аннануров-ДП-ИВТ-1.2.pdf",
-                "path": "./1 курс/ИТ/Аннануров-ДП-ИВТ-1.2.pdf",
-                "type": "pdf",
-                "size": 54937
-            },
-            {
-                "name": "Выступление 1й семестр.mp4",
-                "path": "./1 курс/ИТ/Выступление 1й семестр.mp4",
-                "type": "mp4",
-                "size": 138040130
-            },
-            {
-                "name": "Кubuntu.pdf",
-                "path": "./1 курс/ИТ/Кubuntu.pdf",
-                "type": "pdf",
-                "size": 188256
-            },
-            {
-                "name": "Стендовый доклад.pptx",
-                "path": "./1 курс/ИТ/Стендовый доклад.pptx",
-                "type": "pptx",
-                "size": 739786
-            },
-            {
-                "name": "index.html",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/index.html",
-                "type": "html",
-                "size": 4972
-            },
-            {
-                "name": "LICENSE.md",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/LICENSE.md",
-                "type": "md",
-                "size": 3562
-            },
-            {
-                "name": "README.md",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/README.md",
-                "type": "md",
-                "size": 3477
-            },
-            {
-                "name": "cover.jpg",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/pictures/cover.jpg",
-                "type": "jpg",
-                "size": 81505
-            },
-            {
-                "name": "Horizont_SafronovF1_wallpaper-5.jpg",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/pictures/Horizont_SafronovF1_wallpaper-5.jpg",
-                "type": "jpg",
-                "size": 2399433
-            },
-            {
-                "name": "Horizont_SafronovF1_wallpaper-8.jpg",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/pictures/Horizont_SafronovF1_wallpaper-8.jpg",
-                "type": "jpg",
-                "size": 1768139
-            },
-            {
-                "name": "logo.png",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/pictures/logo.png",
-                "type": "png",
-                "size": 3152
-            },
-            {
-                "name": "logo.svg",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/pictures/logo.svg",
-                "type": "svg",
-                "size": 560
-            },
-            {
-                "name": "picture.jpg",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/pictures/picture.jpg",
-                "type": "jpg",
-                "size": 42340
-            },
-            {
-                "name": "pngwing.com.png",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/pictures/pngwing.com.png",
-                "type": "png",
-                "size": 4984
-            },
-            {
-                "name": "shower.js",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/shower.js",
-                "type": "js",
-                "size": 25019
-            },
-            {
-                "name": "index.html",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/index.html",
-                "type": "html",
-                "size": 26121
-            },
-            {
-                "name": "LICENSE.md",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/LICENSE.md",
-                "type": "md",
-                "size": 3572
-            },
-            {
-                "name": "README.md",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/README.md",
-                "type": "md",
-                "size": 2621
-            },
-            {
-                "name": "COPYRIGHT.txt",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/fonts/COPYRIGHT.txt",
-                "type": "txt",
-                "size": 47
-            },
-            {
-                "name": "LICENSE.txt",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/fonts/LICENSE.txt",
-                "type": "txt",
-                "size": 11358
-            },
-            {
-                "name": "roboto-bold-italic.woff2",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/fonts/roboto-bold-italic.woff2",
-                "type": "woff2",
-                "size": 70228
-            },
-            {
-                "name": "roboto-bold.woff2",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/fonts/roboto-bold.woff2",
-                "type": "woff2",
-                "size": 64804
-            },
-            {
-                "name": "roboto-italic.woff2",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/fonts/roboto-italic.woff2",
-                "type": "woff2",
-                "size": 70180
-            },
-            {
-                "name": "roboto-light.woff2",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/fonts/roboto-light.woff2",
-                "type": "woff2",
-                "size": 64280
-            },
-            {
-                "name": "roboto-mono-regular.woff2",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/fonts/roboto-mono-regular.woff2",
-                "type": "woff2",
-                "size": 50444
-            },
-            {
-                "name": "roboto-regular.woff2",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/fonts/roboto-regular.woff2",
-                "type": "woff2",
-                "size": 64752
-            },
-            {
-                "name": "canvas.png",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/pictures/canvas.png",
-                "type": "png",
-                "size": 97854
-            },
-            {
-                "name": "exact.svg",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/pictures/exact.svg",
-                "type": "svg",
-                "size": 124
-            },
-            {
-                "name": "picture-1.svg",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/pictures/picture-1.svg",
-                "type": "svg",
-                "size": 141
-            },
-            {
-                "name": "picture-2.svg",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/pictures/picture-2.svg",
-                "type": "svg",
-                "size": 141
-            },
-            {
-                "name": "picture-3.svg",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/pictures/picture-3.svg",
-                "type": "svg",
-                "size": 139
-            },
-            {
-                "name": "square.svg",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/pictures/square.svg",
-                "type": "svg",
-                "size": 118
-            },
-            {
-                "name": "tall.svg",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/pictures/tall.svg",
-                "type": "svg",
-                "size": 124
-            },
-            {
-                "name": "wide.svg",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/pictures/wide.svg",
-                "type": "svg",
-                "size": 124
-            },
-            {
-                "name": "fonts.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/fonts.css",
-                "type": "css",
-                "size": 1410
-            },
-            {
-                "name": "styles.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/styles.css",
-                "type": "css",
-                "size": 209
-            },
-            {
-                "name": "badge.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/blocks/badge.css",
-                "type": "css",
-                "size": 891
-            },
-            {
-                "name": "caption.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/blocks/caption.css",
-                "type": "css",
-                "size": 1186
-            },
-            {
-                "name": "progress.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/blocks/progress.css",
-                "type": "css",
-                "size": 624
-            },
-            {
-                "name": "region.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/blocks/region.css",
-                "type": "css",
-                "size": 328
-            },
-            {
-                "name": "grid.svg",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/shower/grid.svg",
-                "type": "svg",
-                "size": 1224
-            },
-            {
-                "name": "shower-full.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/shower/shower-full.css",
-                "type": "css",
-                "size": 356
-            },
-            {
-                "name": "shower-grid.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/shower/shower-grid.css",
-                "type": "css",
-                "size": 225
-            },
-            {
-                "name": "shower-list.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/shower/shower-list.css",
-                "type": "css",
-                "size": 1102
-            },
-            {
-                "name": "shower-pointless.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/shower/shower-pointless.css",
-                "type": "css",
-                "size": 63
-            },
-            {
-                "name": "shower-print.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/shower/shower-print.css",
-                "type": "css",
-                "size": 154
-            },
-            {
-                "name": "shower.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/shower/shower.css",
-                "type": "css",
-                "size": 959
-            },
-            {
-                "name": "slide-full.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/slide-full.css",
-                "type": "css",
-                "size": 227
-            },
-            {
-                "name": "slide-list.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/slide-list.css",
-                "type": "css",
-                "size": 523
-            },
-            {
-                "name": "slide.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/slide.css",
-                "type": "css",
-                "size": 1179
-            },
-            {
-                "name": "basic.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/content/basic.css",
-                "type": "css",
-                "size": 554
-            },
-            {
-                "name": "code.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/content/code.css",
-                "type": "css",
-                "size": 1695
-            },
-            {
-                "name": "footer.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/content/footer.css",
-                "type": "css",
-                "size": 529
-            },
-            {
-                "name": "inline.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/content/inline.css",
-                "type": "css",
-                "size": 737
-            },
-            {
-                "name": "lists.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/content/lists.css",
-                "type": "css",
-                "size": 784
-            },
-            {
-                "name": "quote.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/content/quote.css",
-                "type": "css",
-                "size": 394
-            },
-            {
-                "name": "table.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/content/table.css",
-                "type": "css",
-                "size": 1290
-            },
-            {
-                "name": "columns.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/elements/columns.css",
-                "type": "css",
-                "size": 268
-            },
-            {
-                "name": "copyright.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/elements/copyright.css",
-                "type": "css",
-                "size": 562
-            },
-            {
-                "name": "cover.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/elements/cover.css",
-                "type": "css",
-                "size": 325
-            },
-            {
-                "name": "next.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/elements/next.css",
-                "type": "css",
-                "size": 143
-            },
-            {
-                "name": "place.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/elements/place.css",
-                "type": "css",
-                "size": 755
-            },
-            {
-                "name": "shout.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/elements/shout.css",
-                "type": "css",
-                "size": 1035
-            },
-            {
-                "name": "spotlight.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/elements/spotlight.css",
-                "type": "css",
-                "size": 551
-            },
-            {
-                "name": "black.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/modifiers/black.css",
-                "type": "css",
-                "size": 59
-            },
-            {
-                "name": "clear.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/modifiers/clear.css",
-                "type": "css",
-                "size": 142
-            },
-            {
-                "name": "gray.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/modifiers/gray.css",
-                "type": "css",
-                "size": 71
-            },
-            {
-                "name": "index.html",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/index.html",
-                "type": "html",
-                "size": 25627
-            },
-            {
-                "name": "LICENSE.md",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/LICENSE.md",
-                "type": "md",
-                "size": 3564
-            },
-            {
-                "name": "README.md",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/README.md",
-                "type": "md",
-                "size": 2263
-            },
-            {
-                "name": "LICENSE.txt",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/fonts/LICENSE.txt",
-                "type": "txt",
-                "size": 1926
-            },
-            {
-                "name": "pt-mono-regular.woff2",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/fonts/pt-mono-regular.woff2",
-                "type": "woff2",
-                "size": 68864
-            },
-            {
-                "name": "pt-sans-bold-italic.woff2",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/fonts/pt-sans-bold-italic.woff2",
-                "type": "woff2",
-                "size": 92528
-            },
-            {
-                "name": "pt-sans-bold.woff2",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/fonts/pt-sans-bold.woff2",
-                "type": "woff2",
-                "size": 131692
-            },
-            {
-                "name": "pt-sans-italic.woff2",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/fonts/pt-sans-italic.woff2",
-                "type": "woff2",
-                "size": 118468
-            },
-            {
-                "name": "pt-sans-narrow-bold.woff2",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/fonts/pt-sans-narrow-bold.woff2",
-                "type": "woff2",
-                "size": 142652
-            },
-            {
-                "name": "pt-sans-regular.woff2",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/fonts/pt-sans-regular.woff2",
-                "type": "woff2",
-                "size": 125692
-            },
-            {
-                "name": "canvas.png",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/pictures/canvas.png",
-                "type": "png",
-                "size": 107682
-            },
-            {
-                "name": "exact.svg",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/pictures/exact.svg",
-                "type": "svg",
-                "size": 124
-            },
-            {
-                "name": "picture-1.svg",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/pictures/picture-1.svg",
-                "type": "svg",
-                "size": 141
-            },
-            {
-                "name": "picture-2.svg",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/pictures/picture-2.svg",
-                "type": "svg",
-                "size": 141
-            },
-            {
-                "name": "picture-3.svg",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/pictures/picture-3.svg",
-                "type": "svg",
-                "size": 139
-            },
-            {
-                "name": "square.svg",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/pictures/square.svg",
-                "type": "svg",
-                "size": 118
-            },
-            {
-                "name": "tall.svg",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/pictures/tall.svg",
-                "type": "svg",
-                "size": 124
-            },
-            {
-                "name": "wide.svg",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/pictures/wide.svg",
-                "type": "svg",
-                "size": 124
-            },
-            {
-                "name": "fonts.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/fonts.css",
-                "type": "css",
-                "size": 1406
-            },
-            {
-                "name": "styles.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/styles.css",
-                "type": "css",
-                "size": 209
-            },
-            {
-                "name": "badge.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/blocks/badge.css",
-                "type": "css",
-                "size": 790
-            },
-            {
-                "name": "caption.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/blocks/caption.css",
-                "type": "css",
-                "size": 776
-            },
-            {
-                "name": "progress.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/blocks/progress.css",
-                "type": "css",
-                "size": 691
-            },
-            {
-                "name": "region.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/blocks/region.css",
-                "type": "css",
-                "size": 328
-            },
-            {
-                "name": "grid.svg",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/shower/grid.svg",
-                "type": "svg",
-                "size": 890
-            },
-            {
-                "name": "shower-full.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/shower/shower-full.css",
-                "type": "css",
-                "size": 384
-            },
-            {
-                "name": "shower-grid.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/shower/shower-grid.css",
-                "type": "css",
-                "size": 225
-            },
-            {
-                "name": "shower-list.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/shower/shower-list.css",
-                "type": "css",
-                "size": 1078
-            },
-            {
-                "name": "shower-pointless.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/shower/shower-pointless.css",
-                "type": "css",
-                "size": 63
-            },
-            {
-                "name": "shower-print.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/shower/shower-print.css",
-                "type": "css",
-                "size": 161
-            },
-            {
-                "name": "shower.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/shower/shower.css",
-                "type": "css",
-                "size": 874
-            },
-            {
-                "name": "ribbon.svg",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/ribbon.svg",
-                "type": "svg",
-                "size": 114
-            },
-            {
-                "name": "slide-full.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/slide-full.css",
-                "type": "css",
-                "size": 227
-            },
-            {
-                "name": "slide-list.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/slide-list.css",
-                "type": "css",
-                "size": 546
-            },
-            {
-                "name": "slide.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/slide.css",
-                "type": "css",
-                "size": 1272
-            },
-            {
-                "name": "basic.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/content/basic.css",
-                "type": "css",
-                "size": 336
-            },
-            {
-                "name": "code.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/content/code.css",
-                "type": "css",
-                "size": 1670
-            },
-            {
-                "name": "footer.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/content/footer.css",
-                "type": "css",
-                "size": 491
-            },
-            {
-                "name": "inline.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/content/inline.css",
-                "type": "css",
-                "size": 736
-            },
-            {
-                "name": "lists.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/content/lists.css",
-                "type": "css",
-                "size": 785
-            },
-            {
-                "name": "quote.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/content/quote.css",
-                "type": "css",
-                "size": 365
-            },
-            {
-                "name": "table.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/content/table.css",
-                "type": "css",
-                "size": 1167
-            },
-            {
-                "name": "columns.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/elements/columns.css",
-                "type": "css",
-                "size": 268
-            },
-            {
-                "name": "copyright.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/elements/copyright.css",
-                "type": "css",
-                "size": 562
-            },
-            {
-                "name": "cover.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/elements/cover.css",
-                "type": "css",
-                "size": 325
-            },
-            {
-                "name": "next.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/elements/next.css",
-                "type": "css",
-                "size": 143
-            },
-            {
-                "name": "place.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/elements/place.css",
-                "type": "css",
-                "size": 755
-            },
-            {
-                "name": "shout.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/elements/shout.css",
-                "type": "css",
-                "size": 983
-            },
-            {
-                "name": "spotlight.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/elements/spotlight.css",
-                "type": "css",
-                "size": 551
-            },
-            {
-                "name": "black.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/modifiers/black.css",
-                "type": "css",
-                "size": 59
-            },
-            {
-                "name": "clear.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/modifiers/clear.css",
-                "type": "css",
-                "size": 142
-            },
-            {
-                "name": "gray.css",
-                "path": "./1 курс/ИТ/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/modifiers/gray.css",
-                "type": "css",
-                "size": 59
-            }
-        ],
-        "ИТ в математике_": [
+        "Информационные технологии в математике": [
             {
                 "name": "Аннануров ДП ИВТ 1.2 ВСР Задание 1.1.pdf",
-                "path": "./1 курс/ИТ в математике_/Тема 1/ВСР/Аннануров ДП ИВТ 1.2 ВСР Задание 1.1.pdf",
+                "path": "./1 курс/Информационные технологии в математике/Тема 1/ВСР/Аннануров ДП ИВТ 1.2 ВСР Задание 1.1.pdf",
                 "type": "pdf",
                 "size": 446299
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ИСР Задание 1.1.pdf",
-                "path": "./1 курс/ИТ в математике_/Тема 1/ИСР_/Аннануров Даниил Петрович ИВТ 1.2 ИСР Задание 1.1.pdf",
+                "path": "./1 курс/Информационные технологии в математике/Тема 1/ИСР_/Аннануров Даниил Петрович ИВТ 1.2 ИСР Задание 1.1.pdf",
                 "type": "pdf",
                 "size": 382469
             },
             {
                 "name": "Аннануров Д.П. группа 1 подгруппа 2 ЛР-1 задание 0.pdf",
-                "path": "./1 курс/ИТ в математике_/Тема 1/ЛР/Аннануров Д.П. группа 1 подгруппа 2 ЛР-1 задание 0.pdf",
+                "path": "./1 курс/Информационные технологии в математике/Тема 1/ЛР/Аннануров Д.П. группа 1 подгруппа 2 ЛР-1 задание 0.pdf",
                 "type": "pdf",
                 "size": 195721
             },
             {
                 "name": "Аннануров ДП ИВТ 1.2 ЛР тема 1 задание 2.pdf",
-                "path": "./1 курс/ИТ в математике_/Тема 1/ЛР/Аннануров ДП ИВТ 1.2 ЛР тема 1 задание 2.pdf",
+                "path": "./1 курс/Информационные технологии в математике/Тема 1/ЛР/Аннануров ДП ИВТ 1.2 ЛР тема 1 задание 2.pdf",
                 "type": "pdf",
                 "size": 225811
             },
             {
                 "name": "АннануровДП,httpssites.google.comviewannanurov-d-p-portfolioглавная-страница.pdf",
-                "path": "./1 курс/ИТ в математике_/Тема 1/ЛР/АннануровДП,httpssites.google.comviewannanurov-d-p-portfolioглавная-страница.pdf",
+                "path": "./1 курс/Информационные технологии в математике/Тема 1/ЛР/АннануровДП,httpssites.google.comviewannanurov-d-p-portfolioглавная-страница.pdf",
                 "type": "pdf",
                 "size": 55770
             },
             {
+                "name": "Аннануров Даниил Петрович ВСР 2.2.4.pptx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 2/ВСР/Аннануров Даниил Петрович ВСР 2.2.4.pptx",
+                "type": "pptx",
+                "size": 4263707
+            },
+            {
+                "name": "Аннануров Даниил Петрович ИВТ 1.2 ВСР 2.1.3.docx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 2/ВСР/Аннануров Даниил Петрович ИВТ 1.2 ВСР 2.1.3.docx",
+                "type": "docx",
+                "size": 629074
+            },
+            {
                 "name": "Аннануров ДП ИВТ 1.2 ВСР задание 2.3.pdf",
-                "path": "./1 курс/ИТ в математике_/Тема 2/ВСР/Аннануров ДП ИВТ 1.2 ВСР задание 2.3.pdf",
+                "path": "./1 курс/Информационные технологии в математике/Тема 2/ВСР/Аннануров ДП ИВТ 1.2 ВСР задание 2.3.pdf",
                 "type": "pdf",
                 "size": 359997
             },
             {
                 "name": "Аннануров ДП ИВТ 1.2 Тема 2 часть 2 задание 2.5.pdf",
-                "path": "./1 курс/ИТ в математике_/Тема 2/ВСР/Аннануров ДП ИВТ 1.2 Тема 2 часть 2 задание 2.5.pdf",
+                "path": "./1 курс/Информационные технологии в математике/Тема 2/ВСР/Аннануров ДП ИВТ 1.2 Тема 2 часть 2 задание 2.5.pdf",
                 "type": "pdf",
                 "size": 479968
             },
             {
                 "name": "Аннануров ДП ИВТ 1.2 Тема 2 часть 3 задание 2.6.pdf",
-                "path": "./1 курс/ИТ в математике_/Тема 2/ВСР/Аннануров ДП ИВТ 1.2 Тема 2 часть 3 задание 2.6.pdf",
+                "path": "./1 курс/Информационные технологии в математике/Тема 2/ВСР/Аннануров ДП ИВТ 1.2 Тема 2 часть 3 задание 2.6.pdf",
                 "type": "pdf",
                 "size": 1768709
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ИСР графики (1).xlsx",
-                "path": "./1 курс/ИТ в математике_/Тема 2/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР графики (1).xlsx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 2/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР графики (1).xlsx",
                 "type": "xlsx",
                 "size": 28702
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ИСР графики.xlsx",
-                "path": "./1 курс/ИТ в математике_/Тема 2/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР графики.xlsx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 2/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР графики.xlsx",
                 "type": "xlsx",
                 "size": 53943
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ИСР тема 2 задание 2.4.pdf",
-                "path": "./1 курс/ИТ в математике_/Тема 2/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР тема 2 задание 2.4.pdf",
+                "path": "./1 курс/Информационные технологии в математике/Тема 2/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР тема 2 задание 2.4.pdf",
                 "type": "pdf",
                 "size": 490670
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ЛР графики.xlsx",
-                "path": "./1 курс/ИТ в математике_/Тема 2/ЛР/Аннануров Даниил Петрович ИВТ 1.2 ЛР графики.xlsx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 2/ЛР/Аннануров Даниил Петрович ИВТ 1.2 ЛР графики.xlsx",
                 "type": "xlsx",
                 "size": 18449
             },
             {
                 "name": "Аннануров ДП ИВТ 1.2 ЛР графики.xlsx",
-                "path": "./1 курс/ИТ в математике_/Тема 2/ЛР/Аннануров ДП ИВТ 1.2 ЛР графики.xlsx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 2/ЛР/Аннануров ДП ИВТ 1.2 ЛР графики.xlsx",
                 "type": "xlsx",
                 "size": 75494
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ИСР задание 3.1.rar",
-                "path": "./1 курс/ИТ в математике_/Тема 3/Maxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР задание 3.1.rar",
+                "path": "./1 курс/Информационные технологии в математике/Тема 3/Maxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР задание 3.1.rar",
                 "type": "rar",
                 "size": 3946
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ИСР задание 3.2.rar",
-                "path": "./1 курс/ИТ в математике_/Тема 3/Maxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР задание 3.2.rar",
+                "path": "./1 курс/Информационные технологии в математике/Тема 3/Maxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР задание 3.2.rar",
                 "type": "rar",
                 "size": 4042
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ИСР задание 3.3.rar",
-                "path": "./1 курс/ИТ в математике_/Тема 3/Maxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР задание 3.3.rar",
+                "path": "./1 курс/Информационные технологии в математике/Тема 3/Maxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР задание 3.3.rar",
                 "type": "rar",
                 "size": 6070
             },
             {
                 "name": "Аннануров Д.П. ИВТ 1.2 тема 3 ЛР задание 3.4.wxmx",
-                "path": "./1 курс/ИТ в математике_/Тема 3/Maxima/ЛБ/Аннануров Д.П. ИВТ 1.2 тема 3 ЛР задание 3.4.wxmx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 3/Maxima/ЛБ/Аннануров Д.П. ИВТ 1.2 тема 3 ЛР задание 3.4.wxmx",
                 "type": "wxmx",
                 "size": 20080
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ЛР задание 3.3.wxmx",
-                "path": "./1 курс/ИТ в математике_/Тема 3/Maxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 ЛР задание 3.3.wxmx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 3/Maxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 ЛР задание 3.3.wxmx",
                 "type": "wxmx",
                 "size": 10217
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 тема 3 ЛР задание 3.1.wxmx",
-                "path": "./1 курс/ИТ в математике_/Тема 3/Maxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 тема 3 ЛР задание 3.1.wxmx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 3/Maxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 тема 3 ЛР задание 3.1.wxmx",
                 "type": "wxmx",
                 "size": 4628
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 тема 3 лр задание 3.2.wxmx",
-                "path": "./1 курс/ИТ в математике_/Тема 3/Maxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 тема 3 лр задание 3.2.wxmx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 3/Maxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 тема 3 лр задание 3.2.wxmx",
                 "type": "wxmx",
                 "size": 6074
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ВСР тема 3 часть 2.pdf",
-                "path": "./1 курс/ИТ в математике_/Тема 3/ВСР/Аннануров Даниил Петрович ИВТ 1.2 ВСР тема 3 часть 2.pdf",
+                "path": "./1 курс/Информационные технологии в математике/Тема 3/ВСР/Аннануров Даниил Петрович ИВТ 1.2 ВСР тема 3 часть 2.pdf",
                 "type": "pdf",
                 "size": 360372
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ВСР тема 3 часть 3 (2).pdf",
-                "path": "./1 курс/ИТ в математике_/Тема 3/ВСР/Аннануров Даниил Петрович ИВТ 1.2 ВСР тема 3 часть 3 (2).pdf",
+                "path": "./1 курс/Информационные технологии в математике/Тема 3/ВСР/Аннануров Даниил Петрович ИВТ 1.2 ВСР тема 3 часть 3 (2).pdf",
                 "type": "pdf",
                 "size": 98796
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ВСР тема 3.pdf",
-                "path": "./1 курс/ИТ в математике_/Тема 3/ВСР/Аннануров Даниил Петрович ИВТ 1.2 ВСР тема 3.pdf",
+                "path": "./1 курс/Информационные технологии в математике/Тема 3/ВСР/Аннануров Даниил Петрович ИВТ 1.2 ВСР тема 3.pdf",
                 "type": "pdf",
                 "size": 894102
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ИСР 3.4 тема 3.pdf",
-                "path": "./1 курс/ИТ в математике_/Тема 3/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР 3.4 тема 3.pdf",
+                "path": "./1 курс/Информационные технологии в математике/Тема 3/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР 3.4 тема 3.pdf",
                 "type": "pdf",
                 "size": 75429
             },
             {
                 "name": "Аннануров ДП ИВТ 1.2 ИСР задание 3.5 тема 3.pdf",
-                "path": "./1 курс/ИТ в математике_/Тема 3/ИСР/Аннануров ДП ИВТ 1.2 ИСР задание 3.5 тема 3.pdf",
+                "path": "./1 курс/Информационные технологии в математике/Тема 3/ИСР/Аннануров ДП ИВТ 1.2 ИСР задание 3.5 тема 3.pdf",
                 "type": "pdf",
                 "size": 67264
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 Тема 4 ВСР задание 4.3.pdf",
-                "path": "./1 курс/ИТ в математике_/Тема 4/ВСР/Аннануров Даниил Петрович ИВТ 1.2 Тема 4 ВСР задание 4.3.pdf",
+                "path": "./1 курс/Информационные технологии в математике/Тема 4/ВСР/Аннануров Даниил Петрович ИВТ 1.2 Тема 4 ВСР задание 4.3.pdf",
                 "type": "pdf",
                 "size": 475442
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 Тема 4 ВСР задание 4.5.pdf",
-                "path": "./1 курс/ИТ в математике_/Тема 4/ВСР/Аннануров Даниил Петрович ИВТ 1.2 Тема 4 ВСР задание 4.5.pdf",
+                "path": "./1 курс/Информационные технологии в математике/Тема 4/ВСР/Аннануров Даниил Петрович ИВТ 1.2 Тема 4 ВСР задание 4.5.pdf",
                 "type": "pdf",
                 "size": 152751
             },
             {
                 "name": "Аннануров-Даниил-Петрович-ИВТ-1.2-Тема-4-ВСР-задание-4.1.pdf",
-                "path": "./1 курс/ИТ в математике_/Тема 4/ВСР/Аннануров-Даниил-Петрович-ИВТ-1.2-Тема-4-ВСР-задание-4.1.pdf",
+                "path": "./1 курс/Информационные технологии в математике/Тема 4/ВСР/Аннануров-Даниил-Петрович-ИВТ-1.2-Тема-4-ВСР-задание-4.1.pdf",
                 "type": "pdf",
                 "size": 235341
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ИСР 4.5.mp4",
-                "path": "./1 курс/ИТ в математике_/Тема 4/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР 4.5.mp4",
+                "path": "./1 курс/Информационные технологии в математике/Тема 4/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР 4.5.mp4",
                 "type": "mp4",
                 "size": 45682877
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 тема 4 ИСР задание 4.1.rar",
-                "path": "./1 курс/ИТ в математике_/Тема 4/Мaxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 тема 4 ИСР задание 4.1.rar",
+                "path": "./1 курс/Информационные технологии в математике/Тема 4/Мaxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 тема 4 ИСР задание 4.1.rar",
                 "type": "rar",
                 "size": 17539
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 тема 4 ИСР задание 4.2.rar",
-                "path": "./1 курс/ИТ в математике_/Тема 4/Мaxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 тема 4 ИСР задание 4.2.rar",
+                "path": "./1 курс/Информационные технологии в математике/Тема 4/Мaxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 тема 4 ИСР задание 4.2.rar",
                 "type": "rar",
                 "size": 16790
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 тема 4 ИСР задание 4.3.rar",
-                "path": "./1 курс/ИТ в математике_/Тема 4/Мaxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 тема 4 ИСР задание 4.3.rar",
+                "path": "./1 курс/Информационные технологии в математике/Тема 4/Мaxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 тема 4 ИСР задание 4.3.rar",
                 "type": "rar",
                 "size": 17393
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 тема 4 ИСР задание 4.4.rar",
-                "path": "./1 курс/ИТ в математике_/Тема 4/Мaxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 тема 4 ИСР задание 4.4.rar",
+                "path": "./1 курс/Информационные технологии в математике/Тема 4/Мaxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 тема 4 ИСР задание 4.4.rar",
                 "type": "rar",
                 "size": 20
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 тема 4 ЛР задание 4.1.wxmx",
-                "path": "./1 курс/ИТ в математике_/Тема 4/Мaxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 тема 4 ЛР задание 4.1.wxmx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 4/Мaxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 тема 4 ЛР задание 4.1.wxmx",
                 "type": "wxmx",
                 "size": 19053
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 тема 4 ЛР задание 4.2.wxmx",
-                "path": "./1 курс/ИТ в математике_/Тема 4/Мaxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 тема 4 ЛР задание 4.2.wxmx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 4/Мaxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 тема 4 ЛР задание 4.2.wxmx",
                 "type": "wxmx",
                 "size": 21806
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 тема 4 лр задание 4.3.wxmx",
-                "path": "./1 курс/ИТ в математике_/Тема 4/Мaxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 тема 4 лр задание 4.3.wxmx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 4/Мaxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 тема 4 лр задание 4.3.wxmx",
                 "type": "wxmx",
                 "size": 12012
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 тема 4 лр задание 4.4.wxmx",
-                "path": "./1 курс/ИТ в математике_/Тема 4/Мaxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 тема 4 лр задание 4.4.wxmx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 4/Мaxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 тема 4 лр задание 4.4.wxmx",
                 "type": "wxmx",
                 "size": 7897
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ИСР тема 5 задание 5.2.zip",
-                "path": "./1 курс/ИТ в математике_/Тема 5/Maxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР тема 5 задание 5.2.zip",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Maxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР тема 5 задание 5.2.zip",
                 "type": "zip",
                 "size": 162729
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ИСР тема 5 задание 5.4.wxmx",
-                "path": "./1 курс/ИТ в математике_/Тема 5/Maxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР тема 5 задание 5.4.wxmx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Maxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР тема 5 задание 5.4.wxmx",
                 "type": "wxmx",
                 "size": 48540
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 тема 5 ИСР задание 5.1.zip",
-                "path": "./1 курс/ИТ в математике_/Тема 5/Maxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 тема 5 ИСР задание 5.1.zip",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Maxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 тема 5 ИСР задание 5.1.zip",
                 "type": "zip",
                 "size": 53137
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 тема 5 ИСР задание 5.3.zip",
-                "path": "./1 курс/ИТ в математике_/Тема 5/Maxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 тема 5 ИСР задание 5.3.zip",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Maxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 тема 5 ИСР задание 5.3.zip",
                 "type": "zip",
                 "size": 62487
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 Тема 5 ЛР 5.3.wxmx",
-                "path": "./1 курс/ИТ в математике_/Тема 5/Maxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 Тема 5 ЛР 5.3.wxmx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Maxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 Тема 5 ЛР 5.3.wxmx",
                 "type": "wxmx",
                 "size": 11600
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 тема 5 ЛР задание 5.0.wxmx",
-                "path": "./1 курс/ИТ в математике_/Тема 5/Maxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 тема 5 ЛР задание 5.0.wxmx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Maxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 тема 5 ЛР задание 5.0.wxmx",
                 "type": "wxmx",
                 "size": 28862
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 тема 5 ЛР задание 5.1.wxmx",
-                "path": "./1 курс/ИТ в математике_/Тема 5/Maxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 тема 5 ЛР задание 5.1.wxmx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Maxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 тема 5 ЛР задание 5.1.wxmx",
                 "type": "wxmx",
                 "size": 14783
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 тема 5 ЛР задание 5.2.wxmx",
-                "path": "./1 курс/ИТ в математике_/Тема 5/Maxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 тема 5 ЛР задание 5.2.wxmx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Maxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 тема 5 ЛР задание 5.2.wxmx",
                 "type": "wxmx",
                 "size": 32642
             },
             {
+                "name": "index.html",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/index.html",
+                "type": "html",
+                "size": 4972
+            },
+            {
+                "name": "LICENSE.md",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/LICENSE.md",
+                "type": "md",
+                "size": 3562
+            },
+            {
+                "name": "README.md",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/README.md",
+                "type": "md",
+                "size": 3477
+            },
+            {
+                "name": "cover.jpg",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/pictures/cover.jpg",
+                "type": "jpg",
+                "size": 81505
+            },
+            {
+                "name": "Horizont_SafronovF1_wallpaper-5.jpg",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/pictures/Horizont_SafronovF1_wallpaper-5.jpg",
+                "type": "jpg",
+                "size": 2399433
+            },
+            {
+                "name": "Horizont_SafronovF1_wallpaper-8.jpg",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/pictures/Horizont_SafronovF1_wallpaper-8.jpg",
+                "type": "jpg",
+                "size": 1768139
+            },
+            {
+                "name": "logo.png",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/pictures/logo.png",
+                "type": "png",
+                "size": 3152
+            },
+            {
+                "name": "logo.svg",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/pictures/logo.svg",
+                "type": "svg",
+                "size": 560
+            },
+            {
+                "name": "picture.jpg",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/pictures/picture.jpg",
+                "type": "jpg",
+                "size": 42340
+            },
+            {
+                "name": "pngwing.com.png",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/pictures/pngwing.com.png",
+                "type": "png",
+                "size": 4984
+            },
+            {
+                "name": "shower.js",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/shower.js",
+                "type": "js",
+                "size": 25019
+            },
+            {
+                "name": "index.html",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/index.html",
+                "type": "html",
+                "size": 26121
+            },
+            {
+                "name": "LICENSE.md",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/LICENSE.md",
+                "type": "md",
+                "size": 3572
+            },
+            {
+                "name": "README.md",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/README.md",
+                "type": "md",
+                "size": 2621
+            },
+            {
+                "name": "COPYRIGHT.txt",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/fonts/COPYRIGHT.txt",
+                "type": "txt",
+                "size": 47
+            },
+            {
+                "name": "LICENSE.txt",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/fonts/LICENSE.txt",
+                "type": "txt",
+                "size": 11358
+            },
+            {
+                "name": "roboto-bold-italic.woff2",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/fonts/roboto-bold-italic.woff2",
+                "type": "woff2",
+                "size": 70228
+            },
+            {
+                "name": "roboto-bold.woff2",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/fonts/roboto-bold.woff2",
+                "type": "woff2",
+                "size": 64804
+            },
+            {
+                "name": "roboto-italic.woff2",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/fonts/roboto-italic.woff2",
+                "type": "woff2",
+                "size": 70180
+            },
+            {
+                "name": "roboto-light.woff2",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/fonts/roboto-light.woff2",
+                "type": "woff2",
+                "size": 64280
+            },
+            {
+                "name": "roboto-mono-regular.woff2",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/fonts/roboto-mono-regular.woff2",
+                "type": "woff2",
+                "size": 50444
+            },
+            {
+                "name": "roboto-regular.woff2",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/fonts/roboto-regular.woff2",
+                "type": "woff2",
+                "size": 64752
+            },
+            {
+                "name": "canvas.png",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/pictures/canvas.png",
+                "type": "png",
+                "size": 97854
+            },
+            {
+                "name": "exact.svg",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/pictures/exact.svg",
+                "type": "svg",
+                "size": 124
+            },
+            {
+                "name": "picture-1.svg",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/pictures/picture-1.svg",
+                "type": "svg",
+                "size": 141
+            },
+            {
+                "name": "picture-2.svg",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/pictures/picture-2.svg",
+                "type": "svg",
+                "size": 141
+            },
+            {
+                "name": "picture-3.svg",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/pictures/picture-3.svg",
+                "type": "svg",
+                "size": 139
+            },
+            {
+                "name": "square.svg",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/pictures/square.svg",
+                "type": "svg",
+                "size": 118
+            },
+            {
+                "name": "tall.svg",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/pictures/tall.svg",
+                "type": "svg",
+                "size": 124
+            },
+            {
+                "name": "wide.svg",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/pictures/wide.svg",
+                "type": "svg",
+                "size": 124
+            },
+            {
+                "name": "fonts.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/fonts.css",
+                "type": "css",
+                "size": 1410
+            },
+            {
+                "name": "styles.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/styles.css",
+                "type": "css",
+                "size": 209
+            },
+            {
+                "name": "badge.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/blocks/badge.css",
+                "type": "css",
+                "size": 891
+            },
+            {
+                "name": "caption.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/blocks/caption.css",
+                "type": "css",
+                "size": 1186
+            },
+            {
+                "name": "progress.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/blocks/progress.css",
+                "type": "css",
+                "size": 624
+            },
+            {
+                "name": "region.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/blocks/region.css",
+                "type": "css",
+                "size": 328
+            },
+            {
+                "name": "grid.svg",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/shower/grid.svg",
+                "type": "svg",
+                "size": 1224
+            },
+            {
+                "name": "shower-full.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/shower/shower-full.css",
+                "type": "css",
+                "size": 356
+            },
+            {
+                "name": "shower-grid.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/shower/shower-grid.css",
+                "type": "css",
+                "size": 225
+            },
+            {
+                "name": "shower-list.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/shower/shower-list.css",
+                "type": "css",
+                "size": 1102
+            },
+            {
+                "name": "shower-pointless.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/shower/shower-pointless.css",
+                "type": "css",
+                "size": 63
+            },
+            {
+                "name": "shower-print.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/shower/shower-print.css",
+                "type": "css",
+                "size": 154
+            },
+            {
+                "name": "shower.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/shower/shower.css",
+                "type": "css",
+                "size": 959
+            },
+            {
+                "name": "slide-full.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/slide-full.css",
+                "type": "css",
+                "size": 227
+            },
+            {
+                "name": "slide-list.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/slide-list.css",
+                "type": "css",
+                "size": 523
+            },
+            {
+                "name": "slide.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/slide.css",
+                "type": "css",
+                "size": 1179
+            },
+            {
+                "name": "basic.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/content/basic.css",
+                "type": "css",
+                "size": 554
+            },
+            {
+                "name": "code.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/content/code.css",
+                "type": "css",
+                "size": 1695
+            },
+            {
+                "name": "footer.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/content/footer.css",
+                "type": "css",
+                "size": 529
+            },
+            {
+                "name": "inline.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/content/inline.css",
+                "type": "css",
+                "size": 737
+            },
+            {
+                "name": "lists.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/content/lists.css",
+                "type": "css",
+                "size": 784
+            },
+            {
+                "name": "quote.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/content/quote.css",
+                "type": "css",
+                "size": 394
+            },
+            {
+                "name": "table.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/content/table.css",
+                "type": "css",
+                "size": 1290
+            },
+            {
+                "name": "columns.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/elements/columns.css",
+                "type": "css",
+                "size": 268
+            },
+            {
+                "name": "copyright.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/elements/copyright.css",
+                "type": "css",
+                "size": 562
+            },
+            {
+                "name": "cover.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/elements/cover.css",
+                "type": "css",
+                "size": 325
+            },
+            {
+                "name": "next.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/elements/next.css",
+                "type": "css",
+                "size": 143
+            },
+            {
+                "name": "place.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/elements/place.css",
+                "type": "css",
+                "size": 755
+            },
+            {
+                "name": "shout.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/elements/shout.css",
+                "type": "css",
+                "size": 1035
+            },
+            {
+                "name": "spotlight.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/elements/spotlight.css",
+                "type": "css",
+                "size": 551
+            },
+            {
+                "name": "black.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/modifiers/black.css",
+                "type": "css",
+                "size": 59
+            },
+            {
+                "name": "clear.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/modifiers/clear.css",
+                "type": "css",
+                "size": 142
+            },
+            {
+                "name": "gray.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/material/styles/slide/modifiers/gray.css",
+                "type": "css",
+                "size": 71
+            },
+            {
+                "name": "index.html",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/index.html",
+                "type": "html",
+                "size": 25627
+            },
+            {
+                "name": "LICENSE.md",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/LICENSE.md",
+                "type": "md",
+                "size": 3564
+            },
+            {
+                "name": "README.md",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/README.md",
+                "type": "md",
+                "size": 2263
+            },
+            {
+                "name": "LICENSE.txt",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/fonts/LICENSE.txt",
+                "type": "txt",
+                "size": 1926
+            },
+            {
+                "name": "pt-mono-regular.woff2",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/fonts/pt-mono-regular.woff2",
+                "type": "woff2",
+                "size": 68864
+            },
+            {
+                "name": "pt-sans-bold-italic.woff2",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/fonts/pt-sans-bold-italic.woff2",
+                "type": "woff2",
+                "size": 92528
+            },
+            {
+                "name": "pt-sans-bold.woff2",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/fonts/pt-sans-bold.woff2",
+                "type": "woff2",
+                "size": 131692
+            },
+            {
+                "name": "pt-sans-italic.woff2",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/fonts/pt-sans-italic.woff2",
+                "type": "woff2",
+                "size": 118468
+            },
+            {
+                "name": "pt-sans-narrow-bold.woff2",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/fonts/pt-sans-narrow-bold.woff2",
+                "type": "woff2",
+                "size": 142652
+            },
+            {
+                "name": "pt-sans-regular.woff2",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/fonts/pt-sans-regular.woff2",
+                "type": "woff2",
+                "size": 125692
+            },
+            {
+                "name": "canvas.png",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/pictures/canvas.png",
+                "type": "png",
+                "size": 107682
+            },
+            {
+                "name": "exact.svg",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/pictures/exact.svg",
+                "type": "svg",
+                "size": 124
+            },
+            {
+                "name": "picture-1.svg",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/pictures/picture-1.svg",
+                "type": "svg",
+                "size": 141
+            },
+            {
+                "name": "picture-2.svg",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/pictures/picture-2.svg",
+                "type": "svg",
+                "size": 141
+            },
+            {
+                "name": "picture-3.svg",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/pictures/picture-3.svg",
+                "type": "svg",
+                "size": 139
+            },
+            {
+                "name": "square.svg",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/pictures/square.svg",
+                "type": "svg",
+                "size": 118
+            },
+            {
+                "name": "tall.svg",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/pictures/tall.svg",
+                "type": "svg",
+                "size": 124
+            },
+            {
+                "name": "wide.svg",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/pictures/wide.svg",
+                "type": "svg",
+                "size": 124
+            },
+            {
+                "name": "fonts.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/fonts.css",
+                "type": "css",
+                "size": 1406
+            },
+            {
+                "name": "styles.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/styles.css",
+                "type": "css",
+                "size": 209
+            },
+            {
+                "name": "badge.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/blocks/badge.css",
+                "type": "css",
+                "size": 790
+            },
+            {
+                "name": "caption.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/blocks/caption.css",
+                "type": "css",
+                "size": 776
+            },
+            {
+                "name": "progress.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/blocks/progress.css",
+                "type": "css",
+                "size": 691
+            },
+            {
+                "name": "region.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/blocks/region.css",
+                "type": "css",
+                "size": 328
+            },
+            {
+                "name": "grid.svg",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/shower/grid.svg",
+                "type": "svg",
+                "size": 890
+            },
+            {
+                "name": "shower-full.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/shower/shower-full.css",
+                "type": "css",
+                "size": 384
+            },
+            {
+                "name": "shower-grid.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/shower/shower-grid.css",
+                "type": "css",
+                "size": 225
+            },
+            {
+                "name": "shower-list.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/shower/shower-list.css",
+                "type": "css",
+                "size": 1078
+            },
+            {
+                "name": "shower-pointless.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/shower/shower-pointless.css",
+                "type": "css",
+                "size": 63
+            },
+            {
+                "name": "shower-print.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/shower/shower-print.css",
+                "type": "css",
+                "size": 161
+            },
+            {
+                "name": "shower.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/shower/shower.css",
+                "type": "css",
+                "size": 874
+            },
+            {
+                "name": "ribbon.svg",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/ribbon.svg",
+                "type": "svg",
+                "size": 114
+            },
+            {
+                "name": "slide-full.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/slide-full.css",
+                "type": "css",
+                "size": 227
+            },
+            {
+                "name": "slide-list.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/slide-list.css",
+                "type": "css",
+                "size": 546
+            },
+            {
+                "name": "slide.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/slide.css",
+                "type": "css",
+                "size": 1272
+            },
+            {
+                "name": "basic.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/content/basic.css",
+                "type": "css",
+                "size": 336
+            },
+            {
+                "name": "code.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/content/code.css",
+                "type": "css",
+                "size": 1670
+            },
+            {
+                "name": "footer.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/content/footer.css",
+                "type": "css",
+                "size": 491
+            },
+            {
+                "name": "inline.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/content/inline.css",
+                "type": "css",
+                "size": 736
+            },
+            {
+                "name": "lists.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/content/lists.css",
+                "type": "css",
+                "size": 785
+            },
+            {
+                "name": "quote.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/content/quote.css",
+                "type": "css",
+                "size": 365
+            },
+            {
+                "name": "table.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/content/table.css",
+                "type": "css",
+                "size": 1167
+            },
+            {
+                "name": "columns.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/elements/columns.css",
+                "type": "css",
+                "size": 268
+            },
+            {
+                "name": "copyright.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/elements/copyright.css",
+                "type": "css",
+                "size": 562
+            },
+            {
+                "name": "cover.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/elements/cover.css",
+                "type": "css",
+                "size": 325
+            },
+            {
+                "name": "next.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/elements/next.css",
+                "type": "css",
+                "size": 143
+            },
+            {
+                "name": "place.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/elements/place.css",
+                "type": "css",
+                "size": 755
+            },
+            {
+                "name": "shout.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/elements/shout.css",
+                "type": "css",
+                "size": 983
+            },
+            {
+                "name": "spotlight.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/elements/spotlight.css",
+                "type": "css",
+                "size": 551
+            },
+            {
+                "name": "black.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/modifiers/black.css",
+                "type": "css",
+                "size": 59
+            },
+            {
+                "name": "clear.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/modifiers/clear.css",
+                "type": "css",
+                "size": 142
+            },
+            {
+                "name": "gray.css",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 5/shower/shower/themes/ribbon/styles/slide/modifiers/gray.css",
+                "type": "css",
+                "size": 59
+            },
+            {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ИСР тема 5 задание 5.6.pdf",
-                "path": "./1 курс/ИТ в математике_/Тема 5/ВСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР тема 5 задание 5.6.pdf",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/ВСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР тема 5 задание 5.6.pdf",
                 "type": "pdf",
                 "size": 333530
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 тема 5 ВСР задание 5.2.pdf",
-                "path": "./1 курс/ИТ в математике_/Тема 5/ВСР/Аннануров Даниил Петрович ИВТ 1.2 тема 5 ВСР задание 5.2.pdf",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/ВСР/Аннануров Даниил Петрович ИВТ 1.2 тема 5 ВСР задание 5.2.pdf",
                 "type": "pdf",
                 "size": 323400
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 тема 5 ВСР задание 5.4.pdf",
-                "path": "./1 курс/ИТ в математике_/Тема 5/ВСР/Аннануров Даниил Петрович ИВТ 1.2 тема 5 ВСР задание 5.4.pdf",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/ВСР/Аннануров Даниил Петрович ИВТ 1.2 тема 5 ВСР задание 5.4.pdf",
                 "type": "pdf",
                 "size": 446290
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ИСР тема 5 задание 5.5.pdf",
-                "path": "./1 курс/ИТ в математике_/Тема 5/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР тема 5 задание 5.5.pdf",
+                "path": "./1 курс/Информационные технологии в математике/Тема 5/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР тема 5 задание 5.5.pdf",
                 "type": "pdf",
                 "size": 54810
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 тема 6 ИСР задание 6.1.wxmx",
-                "path": "./1 курс/ИТ в математике_/Тема 6/Maxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 тема 6 ИСР задание 6.1.wxmx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 6/Maxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 тема 6 ИСР задание 6.1.wxmx",
                 "type": "wxmx",
                 "size": 6109
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 тема 6 ИСР задание 6.2.wxmx",
-                "path": "./1 курс/ИТ в математике_/Тема 6/Maxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 тема 6 ИСР задание 6.2.wxmx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 6/Maxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 тема 6 ИСР задание 6.2.wxmx",
                 "type": "wxmx",
                 "size": 16060
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 тема 6 ИСР задание 6.3.wxmx",
-                "path": "./1 курс/ИТ в математике_/Тема 6/Maxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 тема 6 ИСР задание 6.3.wxmx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 6/Maxima/ИСР/Аннануров Даниил Петрович ИВТ 1.2 тема 6 ИСР задание 6.3.wxmx",
                 "type": "wxmx",
                 "size": 12386
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 тема 6 ЛР задание 6.1.wxmx",
-                "path": "./1 курс/ИТ в математике_/Тема 6/Maxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 тема 6 ЛР задание 6.1.wxmx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 6/Maxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 тема 6 ЛР задание 6.1.wxmx",
                 "type": "wxmx",
                 "size": 3004
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 тема 6 ЛР задание 6.2.wxmx",
-                "path": "./1 курс/ИТ в математике_/Тема 6/Maxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 тема 6 ЛР задание 6.2.wxmx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 6/Maxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 тема 6 ЛР задание 6.2.wxmx",
                 "type": "wxmx",
                 "size": 3384
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 тема 6 ЛР задание 6.3.wxmx",
-                "path": "./1 курс/ИТ в математике_/Тема 6/Maxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 тема 6 ЛР задание 6.3.wxmx",
+                "path": "./1 курс/Информационные технологии в математике/Тема 6/Maxima/ЛБ/Аннануров Даниил Петрович ИВТ 1.2 тема 6 ЛР задание 6.3.wxmx",
                 "type": "wxmx",
                 "size": 3834
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ВСР задание 6.2.pdf",
-                "path": "./1 курс/ИТ в математике_/Тема 6/ВСР/Аннануров Даниил Петрович ИВТ 1.2 ВСР задание 6.2.pdf",
+                "path": "./1 курс/Информационные технологии в математике/Тема 6/ВСР/Аннануров Даниил Петрович ИВТ 1.2 ВСР задание 6.2.pdf",
                 "type": "pdf",
                 "size": 52293
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ВСР задание 6.3.pdf",
-                "path": "./1 курс/ИТ в математике_/Тема 6/ВСР/Аннануров Даниил Петрович ИВТ 1.2 ВСР задание 6.3.pdf",
+                "path": "./1 курс/Информационные технологии в математике/Тема 6/ВСР/Аннануров Даниил Петрович ИВТ 1.2 ВСР задание 6.3.pdf",
                 "type": "pdf",
                 "size": 264106
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ИСР 6.4.pdf",
-                "path": "./1 курс/ИТ в математике_/Тема 6/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР 6.4.pdf",
+                "path": "./1 курс/Информационные технологии в математике/Тема 6/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР 6.4.pdf",
                 "type": "pdf",
                 "size": 617033
             }
         ],
-        "ИТ в физике": [
+        "Информационные технологии в физике": [
             {
                 "name": "ITF_Zadacha_2_Komandnaya.xlsx",
-                "path": "./1 курс/ИТ в физике/ITF_Zadacha_2_Komandnaya.xlsx",
+                "path": "./1 курс/Информационные технологии в физике/ITF_Zadacha_2_Komandnaya.xlsx",
                 "type": "xlsx",
                 "size": 17948
             },
             {
                 "name": "Аннануров Д.П. ИВТ 1.2.docx",
-                "path": "./1 курс/ИТ в физике/Аннануров Д.П. ИВТ 1.2.docx",
+                "path": "./1 курс/Информационные технологии в физике/Аннануров Д.П. ИВТ 1.2.docx",
                 "type": "docx",
                 "size": 88520
             },
             {
                 "name": "Аннануров Д.П..xlsx",
-                "path": "./1 курс/ИТ в физике/Аннануров Д.П..xlsx",
+                "path": "./1 курс/Информационные технологии в физике/Аннануров Д.П..xlsx",
                 "type": "xlsx",
                 "size": 76222
             },
             {
+                "name": "Аннануров Даниил Петрович ИВТ 1.2 Задания Лекции Вывод формул.pdf",
+                "path": "./1 курс/Информационные технологии в физике/Аннануров Даниил Петрович ИВТ 1.2 Задания Лекции Вывод формул.pdf",
+                "type": "pdf",
+                "size": 963225
+            },
+            {
+                "name": "Аннануров Даниил Петрович ИВТ 1.2 ЛБ 3.docx",
+                "path": "./1 курс/Информационные технологии в физике/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 3.docx",
+                "type": "docx",
+                "size": 3894694
+            },
+            {
+                "name": "Источник постоянного тока.docx",
+                "path": "./1 курс/Информационные технологии в физике/Источник постоянного тока.docx",
+                "type": "docx",
+                "size": 67709
+            },
+            {
+                "name": "Источник постоянного тока.xlsx",
+                "path": "./1 курс/Информационные технологии в физике/Источник постоянного тока.xlsx",
+                "type": "xlsx",
+                "size": 16202
+            },
+            {
                 "name": "ИТФ лр2 .xlsx",
-                "path": "./1 курс/ИТ в физике/ИТФ лр2 .xlsx",
+                "path": "./1 курс/Информационные технологии в физике/ИТФ лр2 .xlsx",
                 "type": "xlsx",
                 "size": 62016
             },
             {
+                "name": "ЛАБ 4 ИТ в Ф.docx",
+                "path": "./1 курс/Информационные технологии в физике/ЛАБ 4 ИТ в Ф.docx",
+                "type": "docx",
+                "size": 111935
+            },
+            {
                 "name": "ЛАБ 4.xlsx",
-                "path": "./1 курс/ИТ в физике/ЛАБ 4.xlsx",
+                "path": "./1 курс/Информационные технологии в физике/ЛАБ 4.xlsx",
                 "type": "xlsx",
                 "size": 33972
+            },
+            {
+                "name": "Лаба 3.xlsx",
+                "path": "./1 курс/Информационные технологии в физике/Лаба 3.xlsx",
+                "type": "xlsx",
+                "size": 31412
             }
         ],
-        "ЛАТМ": [
+        "История": [
+            {
+                "name": "Соратники петра.pptx",
+                "path": "./1 курс/История/Соратники петра.pptx",
+                "type": "pptx",
+                "size": 2474277
+            }
+        ],
+        "Курсовая работа": [
+            {
+                "name": "Аннануров Даниил Петрович ИВТ 1.2 Курсовая работа.docx",
+                "path": "./1 курс/Курсовая работа/Аннануров Даниил Петрович ИВТ 1.2 Курсовая работа.docx",
+                "type": "docx",
+                "size": 285400
+            },
+            {
+                "name": "Аннануров Даниил Петрович ИВТ 1.2 Курсовая работа.xlsx",
+                "path": "./1 курс/Курсовая работа/Аннануров Даниил Петрович ИВТ 1.2 Курсовая работа.xlsx",
+                "type": "xlsx",
+                "size": 37182
+            }
+        ],
+        "Линейная алгебра и теория матриц": [
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ИСР задание 2.pdf",
-                "path": "./1 курс/ЛАТМ/Аннануров Даниил Петрович ИВТ 1.2 ИСР задание 2.pdf",
+                "path": "./1 курс/Линейная алгебра и теория матриц/Аннануров Даниил Петрович ИВТ 1.2 ИСР задание 2.pdf",
                 "type": "pdf",
                 "size": 29667462
             },
             {
                 "name": "Аннануров ДП ИВТ 1.2 ИСР 2.pdf",
-                "path": "./1 курс/ЛАТМ/Аннануров ДП ИВТ 1.2 ИСР 2.pdf",
+                "path": "./1 курс/Линейная алгебра и теория матриц/Аннануров ДП ИВТ 1.2 ИСР 2.pdf",
                 "type": "pdf",
                 "size": 20882565
             },
             {
                 "name": "Аннануров ДП ИВТ 1.2 МАТРИЦЫ ДЗ.pdf",
-                "path": "./1 курс/ЛАТМ/Аннануров ДП ИВТ 1.2 МАТРИЦЫ ДЗ.pdf",
+                "path": "./1 курс/Линейная алгебра и теория матриц/Аннануров ДП ИВТ 1.2 МАТРИЦЫ ДЗ.pdf",
                 "type": "pdf",
                 "size": 21974496
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ДЗ по рангу матриц.pdf",
-                "path": "./1 курс/ЛАТМ/Ранг Матриц/Аннануров Даниил Петрович ИВТ 1.2 ДЗ по рангу матриц.pdf",
+                "path": "./1 курс/Линейная алгебра и теория матриц/Ранг Матриц/Аннануров Даниил Петрович ИВТ 1.2 ДЗ по рангу матриц.pdf",
                 "type": "pdf",
                 "size": 20082849
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ИСР.pdf",
-                "path": "./1 курс/ЛАТМ/Ранг Матриц/Аннануров Даниил Петрович ИВТ 1.2 ИСР.pdf",
+                "path": "./1 курс/Линейная алгебра и теория матриц/Ранг Матриц/Аннануров Даниил Петрович ИВТ 1.2 ИСР.pdf",
                 "type": "pdf",
                 "size": 3862288
             },
             {
+                "name": "0.jpg",
+                "path": "./1 курс/Линейная алгебра и теория матриц/свойства сложения вычитания и умножения/0.jpg",
+                "type": "jpg",
+                "size": 1311124
+            },
+            {
+                "name": "1.jpg",
+                "path": "./1 курс/Линейная алгебра и теория матриц/свойства сложения вычитания и умножения/1.jpg",
+                "type": "jpg",
+                "size": 1153958
+            },
+            {
+                "name": "2.jpg",
+                "path": "./1 курс/Линейная алгебра и теория матриц/свойства сложения вычитания и умножения/2.jpg",
+                "type": "jpg",
+                "size": 1010731
+            },
+            {
+                "name": "3.jpg",
+                "path": "./1 курс/Линейная алгебра и теория матриц/свойства сложения вычитания и умножения/3.jpg",
+                "type": "jpg",
+                "size": 796844
+            },
+            {
+                "name": "Аннануров Даниил Петрович ИВТ 1.2 Свойства сложения вычитания.pdf",
+                "path": "./1 курс/Линейная алгебра и теория матриц/свойства сложения вычитания и умножения/Аннануров Даниил Петрович ИВТ 1.2 Свойства сложения вычитания.pdf",
+                "type": "pdf",
+                "size": 2703228
+            },
+            {
+                "name": "1.jpg",
+                "path": "./1 курс/Линейная алгебра и теория матриц/Свойства трансп матриц/1.jpg",
+                "type": "jpg",
+                "size": 731452
+            },
+            {
+                "name": "2.jpg",
+                "path": "./1 курс/Линейная алгебра и теория матриц/Свойства трансп матриц/2.jpg",
+                "type": "jpg",
+                "size": 891810
+            },
+            {
+                "name": "3.jpg",
+                "path": "./1 курс/Линейная алгебра и теория матриц/Свойства трансп матриц/3.jpg",
+                "type": "jpg",
+                "size": 505527
+            },
+            {
+                "name": "Аннануров Даниил Петрович ИВТ 1.2 Свойства транспн матриц.pdf",
+                "path": "./1 курс/Линейная алгебра и теория матриц/Свойства трансп матриц/Аннануров Даниил Петрович ИВТ 1.2 Свойства транспн матриц.pdf",
+                "type": "pdf",
+                "size": 1308509
+            },
+            {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 Дз По Слау.pdf",
-                "path": "./1 курс/ЛАТМ/СЛАУ/Аннануров Даниил Петрович ИВТ 1.2 Дз По Слау.pdf",
+                "path": "./1 курс/Линейная алгебра и теория матриц/СЛАУ/Аннануров Даниил Петрович ИВТ 1.2 Дз По Слау.pdf",
                 "type": "pdf",
                 "size": 74300581
             }
         ],
-        "ОКА": [
+        "Математическая логика": [
+            {
+                "name": "1.03.pdf",
+                "path": "./1 курс/Математическая логика/1.03.pdf",
+                "type": "pdf",
+                "size": 1744688
+            },
+            {
+                "name": "22.02.23.pdf",
+                "path": "./1 курс/Математическая логика/22.02.23.pdf",
+                "type": "pdf",
+                "size": 3386563
+            }
+        ],
+        "Математический анализ": [
+            {
+                "name": "Аннануров Даниил Петрович ИВТ 1.2 Функции.pdf",
+                "path": "./1 курс/Математический анализ/Аннануров Даниил Петрович ИВТ 1.2 Функции.pdf",
+                "type": "pdf",
+                "size": 5258957
+            },
+            {
+                "name": "Аннануров_Даниил_Петрович_ивт_1_2_пределы_и_функции_.pdf",
+                "path": "./1 курс/Математический анализ/Аннануров_Даниил_Петрович_ивт_1_2_пределы_и_функции_.pdf",
+                "type": "pdf",
+                "size": 21524757
+            },
+            {
+                "name": "Блокнот без названия (6).pdf",
+                "path": "./1 курс/Математический анализ/Блокнот без названия (6).pdf",
+                "type": "pdf",
+                "size": 7309870
+            },
+            {
+                "name": "Основные Элементарные Функции D(f) E(f).pdf",
+                "path": "./1 курс/Математический анализ/Дз/Основные Элементарные Функции D(f) E(f).pdf",
+                "type": "pdf",
+                "size": 5258958
+            },
+            {
+                "name": "Пределы.pdf",
+                "path": "./1 курс/Математический анализ/Дз/Пределы.pdf",
+                "type": "pdf",
+                "size": 21518840
+            },
+            {
+                "name": "20.03.pdf",
+                "path": "./1 курс/Математический анализ/Лекция/20.03.pdf",
+                "type": "pdf",
+                "size": 11334044
+            },
+            {
+                "name": "27.02.pdf",
+                "path": "./1 курс/Математический анализ/Лекция/27.02.pdf",
+                "type": "pdf",
+                "size": 2543613
+            },
+            {
+                "name": "3.04.pdf",
+                "path": "./1 курс/Математический анализ/Лекция/3.04.pdf",
+                "type": "pdf",
+                "size": 10702046
+            },
+            {
+                "name": "6.03.pdf",
+                "path": "./1 курс/Математический анализ/Лекция/6.03.pdf",
+                "type": "pdf",
+                "size": 14852346
+            },
+            {
+                "name": "Производные.pdf",
+                "path": "./1 курс/Математический анализ/Лекция/Производные.pdf",
+                "type": "pdf",
+                "size": 22131321
+            },
+            {
+                "name": "10.04.pdf",
+                "path": "./1 курс/Математический анализ/Практика/10.04.pdf",
+                "type": "pdf",
+                "size": 7103911
+            },
+            {
+                "name": "13.03.pdf",
+                "path": "./1 курс/Математический анализ/Практика/13.03.pdf",
+                "type": "pdf",
+                "size": 6127695
+            },
+            {
+                "name": "24.04.pdf",
+                "path": "./1 курс/Математический анализ/Практика/24.04.pdf",
+                "type": "pdf",
+                "size": 4369248
+            },
+            {
+                "name": "27.03.pdf",
+                "path": "./1 курс/Математический анализ/Практика/27.03.pdf",
+                "type": "pdf",
+                "size": 4722227
+            },
+            {
+                "name": "Предел Последовательности.pdf",
+                "path": "./1 курс/Математический анализ/Практика/Предел Последовательности.pdf",
+                "type": "pdf",
+                "size": 11748616
+            },
+            {
+                "name": "Предел Функции.pdf",
+                "path": "./1 курс/Математический анализ/Практика/Предел Функции.pdf",
+                "type": "pdf",
+                "size": 78517288
+            }
+        ],
+        "Основы компьютерной алгебры": [
+            {
+                "name": "Аннануров Даниил Петрович ИВТ 1.2 ВСР 2.2.3.docx",
+                "path": "./1 курс/Основы компьютерной алгебры/Аннануров Даниил Петрович ИВТ 1.2 ВСР 2.2.3.docx",
+                "type": "docx",
+                "size": 609524
+            },
+            {
+                "name": "Аннануров Даниил Петрович ИВТ 1.2 ВСР 3.1.docx",
+                "path": "./1 курс/Основы компьютерной алгебры/Аннануров Даниил Петрович ИВТ 1.2 ВСР 3.1.docx",
+                "type": "docx",
+                "size": 853820
+            },
+            {
+                "name": "Аннануров Даниил Петрович ИВТ 1.2 ВСР 3.2.docx",
+                "path": "./1 курс/Основы компьютерной алгебры/Аннануров Даниил Петрович ИВТ 1.2 ВСР 3.2.docx",
+                "type": "docx",
+                "size": 161309
+            },
+            {
+                "name": "Аннануров Даниил Петрович ИВТ 1.2 ВСР задание 2.1.1.docx",
+                "path": "./1 курс/Основы компьютерной алгебры/Аннануров Даниил Петрович ИВТ 1.2 ВСР задание 2.1.1.docx",
+                "type": "docx",
+                "size": 1082256
+            },
+            {
+                "name": "Аннануров Даниил Петрович ИВТ 1.2 ВСР задание 6.3.docx",
+                "path": "./1 курс/Основы компьютерной алгебры/Аннануров Даниил Петрович ИВТ 1.2 ВСР задание 6.3.docx",
+                "type": "docx",
+                "size": 102945
+            },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ЛБ 1 Задание 1.1.docx",
-                "path": "./1 курс/ОКА/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 1 Задание 1.1.docx",
+                "path": "./1 курс/Основы компьютерной алгебры/Аннануров Даниил Петрович ИВТ 1.2 ЛБ 1 Задание 1.1.docx",
                 "type": "docx",
                 "size": 23866
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ИСР задание 2.2 ч.2.mp4",
-                "path": "./1 курс/ОКА/Тема 2/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР задание 2.2 ч.2.mp4",
+                "path": "./1 курс/Основы компьютерной алгебры/Тема 2/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР задание 2.2 ч.2.mp4",
                 "type": "mp4",
                 "size": 9974556
             },
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 ИСР задание 2.2.mp4",
-                "path": "./1 курс/ОКА/Тема 2/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР задание 2.2.mp4",
+                "path": "./1 курс/Основы компьютерной алгебры/Тема 2/ИСР/Аннануров Даниил Петрович ИВТ 1.2 ИСР задание 2.2.mp4",
                 "type": "mp4",
                 "size": 20575784
+            }
+        ],
+        "Практика": [
+            {
+                "name": "задание на практику 1 курс.docx",
+                "path": "./1 курс/Практика/задание на практику 1 курс.docx",
+                "type": "docx",
+                "size": 25715
+            },
+            {
+                "name": "отчет по практике 1 курс.docx",
+                "path": "./1 курс/Практика/отчет по практике 1 курс.docx",
+                "type": "docx",
+                "size": 125223
+            }
+        ],
+        "Теория вероятности и комбинаторика": [
+            {
+                "name": "Аннануров Даниил Петрович Ивт 1.2 6.3.8.pdf",
+                "path": "./1 курс/Теория вероятности и комбинаторика/Дз/Аннануров Даниил Петрович Ивт 1.2 6.3.8.pdf",
+                "type": "pdf",
+                "size": 1419779
+            },
+            {
+                "name": "10.03.pdf",
+                "path": "./1 курс/Теория вероятности и комбинаторика/Практика/10.03.pdf",
+                "type": "pdf",
+                "size": 7926628
+            },
+            {
+                "name": "10.05.pdf",
+                "path": "./1 курс/Теория вероятности и комбинаторика/Практика/10.05.pdf",
+                "type": "pdf",
+                "size": 3404760
+            },
+            {
+                "name": "14.04.pdf",
+                "path": "./1 курс/Теория вероятности и комбинаторика/Практика/14.04.pdf",
+                "type": "pdf",
+                "size": 9585685
+            },
+            {
+                "name": "21.04.pdf",
+                "path": "./1 курс/Теория вероятности и комбинаторика/Практика/21.04.pdf",
+                "type": "pdf",
+                "size": 5439352
+            },
+            {
+                "name": "24.03.pdf",
+                "path": "./1 курс/Теория вероятности и комбинаторика/Практика/24.03.pdf",
+                "type": "pdf",
+                "size": 15813180
+            },
+            {
+                "name": "5.05.pdf",
+                "path": "./1 курс/Теория вероятности и комбинаторика/Практика/5.05.pdf",
+                "type": "pdf",
+                "size": 5585891
+            },
+            {
+                "name": "6.3.15.pdf",
+                "path": "./1 курс/Теория вероятности и комбинаторика/Практика/6.3.15.pdf",
+                "type": "pdf",
+                "size": 5811941
+            },
+            {
+                "name": "7.04.pdf",
+                "path": "./1 курс/Теория вероятности и комбинаторика/Практика/7.04.pdf",
+                "type": "pdf",
+                "size": 6715244
+            },
+            {
+                "name": "10.03.pdf",
+                "path": "./1 курс/Теория вероятности и комбинаторика/Теория/10.03.pdf",
+                "type": "pdf",
+                "size": 3006883
+            },
+            {
+                "name": "17.03.pdf",
+                "path": "./1 курс/Теория вероятности и комбинаторика/Теория/17.03.pdf",
+                "type": "pdf",
+                "size": 4671811
+            },
+            {
+                "name": "3.03.pdf",
+                "path": "./1 курс/Теория вероятности и комбинаторика/Теория/3.03.pdf",
+                "type": "pdf",
+                "size": 8674096
+            },
+            {
+                "name": "31.03 (1).pdf",
+                "path": "./1 курс/Теория вероятности и комбинаторика/Теория/31.03 (1).pdf",
+                "type": "pdf",
+                "size": 1577712
+            },
+            {
+                "name": "31.03.pdf",
+                "path": "./1 курс/Теория вероятности и комбинаторика/Теория/31.03.pdf",
+                "type": "pdf",
+                "size": 1432730
+            },
+            {
+                "name": "Аксиоматическое определение вероятности.pdf",
+                "path": "./1 курс/Теория вероятности и комбинаторика/Теория/Аксиоматическое определение вероятности.pdf",
+                "type": "pdf",
+                "size": 5006786
+            }
+        ],
+        "Физика": [
+            {
+                "name": "13.04.pdf",
+                "path": "./1 курс/Физика/Физика/13.04.pdf",
+                "type": "pdf",
+                "size": 2192127
+            },
+            {
+                "name": "25.10.pdf",
+                "path": "./1 курс/Физика/Физика/25.10.pdf",
+                "type": "pdf",
+                "size": 6730
+            },
+            {
+                "name": "Поляризация.pdf",
+                "path": "./1 курс/Физика/Физика/Поляризация.pdf",
+                "type": "pdf",
+                "size": 11613781
+            }
+        ],
+        "Философия": [
+            {
+                "name": "Аннануров Даниил Петрович ИВТ 1.2 Философия.docx",
+                "path": "./1 курс/Философия/Аннануров Даниил Петрович ИВТ 1.2 Философия.docx",
+                "type": "docx",
+                "size": 17255
+            },
+            {
+                "name": "Аннануров Даниил Петрович ИВТ 1.2 Функции.txt",
+                "path": "./1 курс/Философия/Аннануров Даниил Петрович ИВТ 1.2 Функции.txt",
+                "type": "txt",
+                "size": 39
+            },
+            {
+                "name": "Аннануров Даниил Петрович ИВТ 1.2.pptx",
+                "path": "./1 курс/Философия/Аннануров Даниил Петрович ИВТ 1.2.pptx",
+                "type": "pptx",
+                "size": 7266997
             }
         ]
     },
     "2 курс": {
+        "1С": [
+            {
+                "name": "1Cv8 (6).dt",
+                "path": "./2 курс/1С/1Cv8 (6).dt",
+                "type": "dt",
+                "size": 126396
+            },
+            {
+                "name": "лб10.dt",
+                "path": "./2 курс/1С/лб10.dt",
+                "type": "dt",
+                "size": 48158
+            },
+            {
+                "name": "лб11.dt",
+                "path": "./2 курс/1С/лб11.dt",
+                "type": "dt",
+                "size": 50419
+            },
+            {
+                "name": "лб12.dt",
+                "path": "./2 курс/1С/лб12.dt",
+                "type": "dt",
+                "size": 52236
+            },
+            {
+                "name": "лб13.dt",
+                "path": "./2 курс/1С/лб13.dt",
+                "type": "dt",
+                "size": 50368
+            },
+            {
+                "name": "лб14.dt",
+                "path": "./2 курс/1С/лб14.dt",
+                "type": "dt",
+                "size": 49595
+            },
+            {
+                "name": "лб15.dt",
+                "path": "./2 курс/1С/лб15.dt",
+                "type": "dt",
+                "size": 57132
+            },
+            {
+                "name": "лб16.dt",
+                "path": "./2 курс/1С/лб16.dt",
+                "type": "dt",
+                "size": 36133
+            },
+            {
+                "name": "лб18.dt",
+                "path": "./2 курс/1С/лб18.dt",
+                "type": "dt",
+                "size": 52981
+            },
+            {
+                "name": "лб19.dt",
+                "path": "./2 курс/1С/лб19.dt",
+                "type": "dt",
+                "size": 51989
+            },
+            {
+                "name": "лб20.dt",
+                "path": "./2 курс/1С/лб20.dt",
+                "type": "dt",
+                "size": 50150
+            },
+            {
+                "name": "лб3.dt",
+                "path": "./2 курс/1С/лб3.dt",
+                "type": "dt",
+                "size": 43329
+            },
+            {
+                "name": "лб4.dt",
+                "path": "./2 курс/1С/лб4.dt",
+                "type": "dt",
+                "size": 40451
+            },
+            {
+                "name": "лб6.dt",
+                "path": "./2 курс/1С/лб6.dt",
+                "type": "dt",
+                "size": 53849
+            },
+            {
+                "name": "лб7.dt",
+                "path": "./2 курс/1С/лб7.dt",
+                "type": "dt",
+                "size": 40261
+            },
+            {
+                "name": "лб8.dt",
+                "path": "./2 курс/1С/лб8.dt",
+                "type": "dt",
+                "size": 41612
+            },
+            {
+                "name": "лб9.dt",
+                "path": "./2 курс/1С/лб9.dt",
+                "type": "dt",
+                "size": 43459
+            }
+        ],
+        "Анализ Данных": [
+            {
+                "name": "Лекц.xlsx",
+                "path": "./2 курс/Анализ Данных/ЛЕКЦ/Лекц.xlsx",
+                "type": "xlsx",
+                "size": 10801
+            },
+            {
+                "name": "Анализ данных.xlsx",
+                "path": "./2 курс/Анализ Данных/ЛР/Анализ данных.xlsx",
+                "type": "xlsx",
+                "size": 42417
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 Вар Ряды.pdf",
+                "path": "./2 курс/Анализ Данных/ЛР/Аннануров ДП ИВТ 1.2 Вар Ряды.pdf",
+                "type": "pdf",
+                "size": 472103
+            },
+            {
+                "name": "Аннануров_Даниил_Петрович_ИВТ_1_2_ЛБ3.pdf",
+                "path": "./2 курс/Анализ Данных/ЛР/Аннануров_Даниил_Петрович_ИВТ_1_2_ЛБ3.pdf",
+                "type": "pdf",
+                "size": 660762
+            },
+            {
+                "name": "ЛБ4_Аннануров_Даниил_Петрович_ИВТ_1_2_1.pdf",
+                "path": "./2 курс/Анализ Данных/ЛР/ЛБ4_Аннануров_Даниил_Петрович_ИВТ_1_2_1.pdf",
+                "type": "pdf",
+                "size": 550251
+            },
+            {
+                "name": "Аннануров Даниил Петрович ИВТ 1.2 зачетн задание.rar",
+                "path": "./2 курс/Анализ Данных/ЛР/зачетн задание/Аннануров Даниил Петрович ИВТ 1.2 зачетн задание.rar",
+                "type": "rar",
+                "size": 432325
+            },
+            {
+                "name": "Зачетное задание АД Аннануров Даниил Петрович ИВТ 1.2.docx",
+                "path": "./2 курс/Анализ Данных/ЛР/зачетн задание/Зачетное задание АД Аннануров Даниил Петрович ИВТ 1.2.docx",
+                "type": "docx",
+                "size": 72865
+            },
+            {
+                "name": "Зачетное задание АД Аннануров Даниил Петрович ИВТ 1.2.pdf",
+                "path": "./2 курс/Анализ Данных/ЛР/зачетн задание/Зачетное задание АД Аннануров Даниил Петрович ИВТ 1.2.pdf",
+                "type": "pdf",
+                "size": 452074
+            },
+            {
+                "name": "прога зачетн задание.py",
+                "path": "./2 курс/Анализ Данных/ЛР/зачетн задание/прога зачетн задание.py",
+                "type": "py",
+                "size": 1863
+            },
+            {
+                "name": "АД.docx",
+                "path": "./2 курс/Анализ Данных/ЛР/ЛБ4/АД.docx",
+                "type": "docx",
+                "size": 71213
+            },
+            {
+                "name": "ЛБ4 Аннануров Даниил Петрович ИВТ 1.2.pdf",
+                "path": "./2 курс/Анализ Данных/ЛР/ЛБ4/ЛБ4 Аннануров Даниил Петрович ИВТ 1.2.pdf",
+                "type": "pdf",
+                "size": 550251
+            },
+            {
+                "name": "лб4.xlsx",
+                "path": "./2 курс/Анализ Данных/ЛР/ЛБ4/лб4.xlsx",
+                "type": "xlsx",
+                "size": 13566
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 Сам работа.pdf",
+                "path": "./2 курс/Анализ Данных/СР/Аннануров ДП ИВТ 1.2 Сам работа.pdf",
+                "type": "pdf",
+                "size": 7786051
+            }
+        ],
+        "Аналитическая геометрия": [
+            {
+                "name": "10.04.pdf",
+                "path": "./2 курс/Аналитическая геометрия/Лекция/10.04.pdf",
+                "type": "pdf",
+                "size": 515156
+            },
+            {
+                "name": "13.03.pdf",
+                "path": "./2 курс/Аналитическая геометрия/Лекция/13.03.pdf",
+                "type": "pdf",
+                "size": 3991072
+            },
+            {
+                "name": "27.02.pdf",
+                "path": "./2 курс/Аналитическая геометрия/Лекция/27.02.pdf",
+                "type": "pdf",
+                "size": 5639167
+            },
+            {
+                "name": "27.03.pdf",
+                "path": "./2 курс/Аналитическая геометрия/Лекция/27.03.pdf",
+                "type": "pdf",
+                "size": 7829202
+            },
+            {
+                "name": "6.03.pdf",
+                "path": "./2 курс/Аналитическая геометрия/Лекция/6.03.pdf",
+                "type": "pdf",
+                "size": 8425762
+            },
+            {
+                "name": "Гипербола.pdf",
+                "path": "./2 курс/Аналитическая геометрия/Лекция/Гипербола.pdf",
+                "type": "pdf",
+                "size": 3027749
+            },
+            {
+                "name": "Парабола.pdf",
+                "path": "./2 курс/Аналитическая геометрия/Лекция/Парабола.pdf",
+                "type": "pdf",
+                "size": 2922371
+            },
+            {
+                "name": "Поверхности Второго Порядка.pdf",
+                "path": "./2 курс/Аналитическая геометрия/Лекция/Поверхности Второго Порядка.pdf",
+                "type": "pdf",
+                "size": 8135124
+            },
+            {
+                "name": "Прямая В Пространстве.pdf",
+                "path": "./2 курс/Аналитическая геометрия/Лекция/Прямая В Пространстве.pdf",
+                "type": "pdf",
+                "size": 5250758
+            },
+            {
+                "name": "Угол между прямой.pdf",
+                "path": "./2 курс/Аналитическая геометрия/Лекция/Угол между прямой.pdf",
+                "type": "pdf",
+                "size": 4609342
+            },
+            {
+                "name": "10.4.pdf",
+                "path": "./2 курс/Аналитическая геометрия/Практика/10.4.pdf",
+                "type": "pdf",
+                "size": 2585178
+            },
+            {
+                "name": "13.03.pdf",
+                "path": "./2 курс/Аналитическая геометрия/Практика/13.03.pdf",
+                "type": "pdf",
+                "size": 5500956
+            },
+            {
+                "name": "22.05.pdf",
+                "path": "./2 курс/Аналитическая геометрия/Практика/22.05.pdf",
+                "type": "pdf",
+                "size": 16053659
+            },
+            {
+                "name": "24.04.pdf",
+                "path": "./2 курс/Аналитическая геометрия/Практика/24.04.pdf",
+                "type": "pdf",
+                "size": 4605748
+            },
+            {
+                "name": "27.02.pdf",
+                "path": "./2 курс/Аналитическая геометрия/Практика/27.02.pdf",
+                "type": "pdf",
+                "size": 7147433
+            },
+            {
+                "name": "27.03.pdf",
+                "path": "./2 курс/Аналитическая геометрия/Практика/27.03.pdf",
+                "type": "pdf",
+                "size": 4324084
+            }
+        ],
+        "Английский язык": [
+            {
+                "name": "Документ Microsoft Word.docx",
+                "path": "./2 курс/Английский язык/Документ Microsoft Word.docx",
+                "type": "docx",
+                "size": 13916
+            },
+            {
+                "name": "Презентация Microsoft PowerPoint.pptx",
+                "path": "./2 курс/Английский язык/Презентация Microsoft PowerPoint.pptx",
+                "type": "pptx",
+                "size": 1126391
+            }
+        ],
+        "База данных": [
+            {
+                "name": "Аннануров ДП ИВТ 1.2 ЛБ1 БД.pdf",
+                "path": "./2 курс/База данных/ЛБ1/Аннануров ДП ИВТ 1.2 ЛБ1 БД.pdf",
+                "type": "pdf",
+                "size": 882640
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 ЛБ2.pdf",
+                "path": "./2 курс/База данных/ЛБ2/Аннануров ДП ИВТ 1.2 ЛБ2.pdf",
+                "type": "pdf",
+                "size": 325584
+            },
+            {
+                "name": "Лабораторное занятие №6 БД4.pdf",
+                "path": "./2 курс/База данных/ЛБ6/Лабораторное занятие №6 БД4.pdf",
+                "type": "pdf",
+                "size": 131359
+            },
+            {
+                "name": "Самостоятельное задание 4 БД4.pdf",
+                "path": "./2 курс/База данных/СР4/Самостоятельное задание 4 БД4.pdf",
+                "type": "pdf",
+                "size": 256977
+            }
+        ],
+        "Вычислительная математика": [
+            {
+                "name": "ЛБ3.docx",
+                "path": "./2 курс/Вычислительная математика/ЛБ3/ЛБ3.docx",
+                "type": "docx",
+                "size": 35155
+            },
+            {
+                "name": "ЛБ3.pdf",
+                "path": "./2 курс/Вычислительная математика/ЛБ3/ЛБ3.pdf",
+                "type": "pdf",
+                "size": 524479
+            }
+        ],
+        "Вычислительная техника": [
+            {
+                "name": "Лабпрактикум 7.docx",
+                "path": "./2 курс/Вычислительная техника/Лабпрактикум 7.docx",
+                "type": "docx",
+                "size": 62008
+            },
+            {
+                "name": "ЛР2_арифметические_действия_в_debug.docx",
+                "path": "./2 курс/Вычислительная техника/ЛР2_арифметические_действия_в_debug.docx",
+                "type": "docx",
+                "size": 97468
+            },
+            {
+                "name": "ЛР3 вывод строки в debug.docx",
+                "path": "./2 курс/Вычислительная техника/ЛР3 вывод строки в debug.docx",
+                "type": "docx",
+                "size": 180412
+            },
+            {
+                "name": "ЛР4 вывод двоичного числа.docx",
+                "path": "./2 курс/Вычислительная техника/ЛР4 вывод двоичного числа.docx",
+                "type": "docx",
+                "size": 107388
+            },
+            {
+                "name": "ЛР5_вывод_шестнадцатеричного_числа.docx",
+                "path": "./2 курс/Вычислительная техника/ЛР5_вывод_шестнадцатеричного_числа.docx",
+                "type": "docx",
+                "size": 144044
+            },
+            {
+                "name": "ЛР6_ввод_шестнадцатеричного_числа.docx",
+                "path": "./2 курс/Вычислительная техника/ЛР6_ввод_шестнадцатеричного_числа.docx",
+                "type": "docx",
+                "size": 224516
+            },
+            {
+                "name": "ЛР8.docx",
+                "path": "./2 курс/Вычислительная техника/ЛР8.docx",
+                "type": "docx",
+                "size": 60110
+            }
+        ],
         "Интегралы": [
             {
                 "name": "Аннануров ДП ИВТ 1.2 3 часть.pdf",
@@ -1416,40 +2170,2144 @@ const fileData = {
                 "path": "./2 курс/Интегралы/Аннануров ДП2 часть.pdf",
                 "type": "pdf",
                 "size": 8998400
-            }
-        ],
-        "Мат Анализ": [
-            {
-                "name": "Аннануров Даниил Петрович ИВТ 1.2 Функции.pdf",
-                "path": "./2 курс/Мат Анализ/Аннануров Даниил Петрович ИВТ 1.2 Функции.pdf",
-                "type": "pdf",
-                "size": 5258957
             },
             {
-                "name": "Аннануров_Даниил_Петрович_ивт_1_2_пределы_и_функции_.pdf",
-                "path": "./2 курс/Мат Анализ/Аннануров_Даниил_Петрович_ивт_1_2_пределы_и_функции_.pdf",
+                "name": "1 часть.pdf",
+                "path": "./2 курс/Интегралы/Дз/1 часть.pdf",
                 "type": "pdf",
-                "size": 21524757
+                "size": 7317221
+            },
+            {
+                "name": "2 часть.pdf",
+                "path": "./2 курс/Интегралы/Дз/2 часть.pdf",
+                "type": "pdf",
+                "size": 8987975
+            },
+            {
+                "name": "3 часть.pdf",
+                "path": "./2 курс/Интегралы/Дз/3 часть.pdf",
+                "type": "pdf",
+                "size": 6913453
+            },
+            {
+                "name": "4 часть.pdf",
+                "path": "./2 курс/Интегралы/Дз/4 часть.pdf",
+                "type": "pdf",
+                "size": 3518521
+            },
+            {
+                "name": "02.10.23.pdf",
+                "path": "./2 курс/Интегралы/Практика/02.10.23.pdf",
+                "type": "pdf",
+                "size": 5317048
+            },
+            {
+                "name": "16.10.pdf",
+                "path": "./2 курс/Интегралы/Практика/16.10.pdf",
+                "type": "pdf",
+                "size": 1294632
+            },
+            {
+                "name": "23.10.pdf",
+                "path": "./2 курс/Интегралы/Практика/23.10.pdf",
+                "type": "pdf",
+                "size": 2796852
+            },
+            {
+                "name": "30.10.23.pdf",
+                "path": "./2 курс/Интегралы/Практика/30.10.23.pdf",
+                "type": "pdf",
+                "size": 1609224
+            },
+            {
+                "name": "02.02.24.pdf",
+                "path": "./2 курс/Интегралы/Теория/02.02.24.pdf",
+                "type": "pdf",
+                "size": 1954003
+            },
+            {
+                "name": "13.10.23.pdf",
+                "path": "./2 курс/Интегралы/Теория/13.10.23.pdf",
+                "type": "pdf",
+                "size": 8257673
+            },
+            {
+                "name": "16.10.pdf",
+                "path": "./2 курс/Интегралы/Теория/16.10.pdf",
+                "type": "pdf",
+                "size": 6122684
+            },
+            {
+                "name": "2.10.23.pdf",
+                "path": "./2 курс/Интегралы/Теория/2.10.23.pdf",
+                "type": "pdf",
+                "size": 1364270
+            },
+            {
+                "name": "20.11.23.pdf",
+                "path": "./2 курс/Интегралы/Теория/20.11.23.pdf",
+                "type": "pdf",
+                "size": 906226
+            },
+            {
+                "name": "23.10.pdf",
+                "path": "./2 курс/Интегралы/Теория/23.10.pdf",
+                "type": "pdf",
+                "size": 4110204
+            },
+            {
+                "name": "30.10.23.pdf",
+                "path": "./2 курс/Интегралы/Теория/30.10.23.pdf",
+                "type": "pdf",
+                "size": 4038623
+            },
+            {
+                "name": "Блокнот без названия.pdf",
+                "path": "./2 курс/Интегралы/Теория/Блокнот без названия.pdf",
+                "type": "pdf",
+                "size": 6730
             }
         ],
-        "СВТ": [
+        "Компьютерный практикум": [],
+        "Курсовая работа 2 курс": [
+            {
+                "name": "Аннануров Даниил Петрович ИВТ 1.2 Курсовая работа 2 курс.pdf",
+                "path": "./2 курс/Курсовая работа 2 курс/Аннануров Даниил Петрович ИВТ 1.2 Курсовая работа 2 курс.pdf",
+                "type": "pdf",
+                "size": 41309
+            },
+            {
+                "name": "Курсовая работа.mp4",
+                "path": "./2 курс/Курсовая работа 2 курс/Курсовая работа.mp4",
+                "type": "mp4",
+                "size": 306295421
+            },
+            {
+                "name": "Курсовая работа.pptx",
+                "path": "./2 курс/Курсовая работа 2 курс/Курсовая работа.pptx",
+                "type": "pptx",
+                "size": 2066748
+            }
+        ],
+        "Операционные системы": [
+            {
+                "name": "Аннануров ДП ИВТ 1.2 Лаб1.pdf",
+                "path": "./2 курс/Операционные системы/Аннануров ДП ИВТ 1.2 Лаб1.pdf",
+                "type": "pdf",
+                "size": 112354
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 ЛБ 2.pdf",
+                "path": "./2 курс/Операционные системы/Аннануров ДП ИВТ 1.2 ЛБ 2.pdf",
+                "type": "pdf",
+                "size": 101909
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 ЛБ 3.pdf",
+                "path": "./2 курс/Операционные системы/Аннануров ДП ИВТ 1.2 ЛБ 3.pdf",
+                "type": "pdf",
+                "size": 141066
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 ЛБ 4.pdf",
+                "path": "./2 курс/Операционные системы/Аннануров ДП ИВТ 1.2 ЛБ 4.pdf",
+                "type": "pdf",
+                "size": 219204
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 ЛБ5.pdf",
+                "path": "./2 курс/Операционные системы/Аннануров ДП ИВТ 1.2 ЛБ5.pdf",
+                "type": "pdf",
+                "size": 107880
+            }
+        ],
+        "Пакеты прикладных программ для статистической обработки и анализа данных": [
+            {
+                "name": "2 лекция.pdf",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/2 лекция.pdf",
+                "type": "pdf",
+                "size": 3073909
+            },
+            {
+                "name": "23.09.pdf",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/23.09.pdf",
+                "type": "pdf",
+                "size": 1547721
+            },
+            {
+                "name": "Абсолютные и относительные статистические величины.pdf",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Абсолютные и относительные статистические величины.pdf",
+                "type": "pdf",
+                "size": 361176
+            },
+            {
+                "name": "Аннануров Даниил Петрович ИВТ 1.2.xlsx",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2.xlsx",
+                "type": "xlsx",
+                "size": 40384
+            },
+            {
+                "name": "Виды группировок.pdf",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Виды группировок.pdf",
+                "type": "pdf",
+                "size": 205381
+            },
+            {
+                "name": "Сводка и группировка данных статистического наблюдения.pdf",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Сводка и группировка данных статистического наблюдения.pdf",
+                "type": "pdf",
+                "size": 821074
+            },
+            {
+                "name": "Статистические таблицы и графики.pdf",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Статистические таблицы и графики.pdf",
+                "type": "pdf",
+                "size": 428696
+            },
+            {
+                "name": "Статистическое наблюдение.pdf",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Статистическое наблюдение.pdf",
+                "type": "pdf",
+                "size": 2294638
+            },
+            {
+                "name": "Теория по (пакетам прикладных -.).pdf",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Теория по (пакетам прикладных -.).pdf",
+                "type": "pdf",
+                "size": 927965
+            },
+            {
+                "name": "Формы виды и способы наблюдения.pdf",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Формы виды и способы наблюдения.pdf",
+                "type": "pdf",
+                "size": 873477
+            },
+            {
+                "name": ".savedWithData",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/.savedWithData",
+                "type": "file",
+                "size": 214
+            },
+            {
+                "name": "workflow-metadata.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/workflow-metadata.xml",
+                "type": "xml",
+                "size": 255
+            },
+            {
+                "name": "workflow.knime",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/workflow.knime",
+                "type": "knime",
+                "size": 48539
+            },
+            {
+                "name": "workflow.svg",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/workflow.svg",
+                "type": "svg",
+                "size": 489674
+            },
+            {
+                "name": "workflowset.meta",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/workflowset.meta",
+                "type": "meta",
+                "size": 581
+            },
+            {
+                "name": "workflow-configuration-representation.json",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/.artifacts/workflow-configuration-representation.json",
+                "type": "json",
+                "size": 3
+            },
+            {
+                "name": "workflow-configuration.json",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/.artifacts/workflow-configuration.json",
+                "type": "json",
+                "size": 3
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Box Plot _JavaScript_ (#58)/settings.xml",
+                "type": "xml",
+                "size": 13037
+            },
+            {
+                "name": "representation.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Box Plot _JavaScript_ (#58)/internal/representation.xml",
+                "type": "xml",
+                "size": 43073
+            },
+            {
+                "name": "value.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Box Plot _JavaScript_ (#58)/internal/value.xml",
+                "type": "xml",
+                "size": 1544
+            },
+            {
+                "name": "portobject.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Box Plot _JavaScript_ (#58)/port_1/object/portobject.zip",
+                "type": "zip",
+                "size": 146
+            },
+            {
+                "name": "spec.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Box Plot _JavaScript_ (#58)/port_1/spec/spec.zip",
+                "type": "zip",
+                "size": 142
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#10)/settings.xml",
+                "type": "xml",
+                "size": 5035
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#10)/internalTables/object_0/data.xml",
+                "type": "xml",
+                "size": 498
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#10)/internalTables/object_0/spec.xml",
+                "type": "xml",
+                "size": 14706
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#10)/internalTables/object_1/data.xml",
+                "type": "xml",
+                "size": 498
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#10)/internalTables/object_1/spec.xml",
+                "type": "xml",
+                "size": 3887
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#10)/port_1/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#10)/port_1/data.zip",
+                "type": "zip",
+                "size": 953
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#10)/port_1/spec.xml",
+                "type": "xml",
+                "size": 14706
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#10)/port_2/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#10)/port_2/data.zip",
+                "type": "zip",
+                "size": 760
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#10)/port_2/spec.xml",
+                "type": "xml",
+                "size": 3887
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#12)/settings.xml",
+                "type": "xml",
+                "size": 5095
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#12)/internalTables/object_0/data.xml",
+                "type": "xml",
+                "size": 498
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#12)/internalTables/object_0/spec.xml",
+                "type": "xml",
+                "size": 14892
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#12)/internalTables/object_1/data.xml",
+                "type": "xml",
+                "size": 498
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#12)/internalTables/object_1/spec.xml",
+                "type": "xml",
+                "size": 3887
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#12)/port_1/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#12)/port_1/data.zip",
+                "type": "zip",
+                "size": 879
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#12)/port_1/spec.xml",
+                "type": "xml",
+                "size": 14892
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#12)/port_2/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#12)/port_2/data.zip",
+                "type": "zip",
+                "size": 762
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#12)/port_2/spec.xml",
+                "type": "xml",
+                "size": 3887
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#14)/settings.xml",
+                "type": "xml",
+                "size": 5045
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#14)/internalTables/object_0/data.xml",
+                "type": "xml",
+                "size": 498
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#14)/internalTables/object_0/spec.xml",
+                "type": "xml",
+                "size": 14714
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#14)/internalTables/object_1/data.xml",
+                "type": "xml",
+                "size": 498
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#14)/internalTables/object_1/spec.xml",
+                "type": "xml",
+                "size": 3887
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#14)/port_1/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#14)/port_1/data.zip",
+                "type": "zip",
+                "size": 840
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#14)/port_1/spec.xml",
+                "type": "xml",
+                "size": 14714
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#14)/port_2/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#14)/port_2/data.zip",
+                "type": "zip",
+                "size": 761
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#14)/port_2/spec.xml",
+                "type": "xml",
+                "size": 3887
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#16)/settings.xml",
+                "type": "xml",
+                "size": 5111
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#16)/internalTables/object_0/data.xml",
+                "type": "xml",
+                "size": 498
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#16)/internalTables/object_0/spec.xml",
+                "type": "xml",
+                "size": 14747
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#16)/internalTables/object_1/data.xml",
+                "type": "xml",
+                "size": 498
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#16)/internalTables/object_1/spec.xml",
+                "type": "xml",
+                "size": 3887
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#16)/port_1/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#16)/port_1/data.zip",
+                "type": "zip",
+                "size": 840
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#16)/port_1/spec.xml",
+                "type": "xml",
+                "size": 14747
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#16)/port_2/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#16)/port_2/data.zip",
+                "type": "zip",
+                "size": 762
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#16)/port_2/spec.xml",
+                "type": "xml",
+                "size": 3887
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#2)/settings.xml",
+                "type": "xml",
+                "size": 4921
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#2)/internalTables/object_0/data.xml",
+                "type": "xml",
+                "size": 498
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#2)/internalTables/object_0/spec.xml",
+                "type": "xml",
+                "size": 15193
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#2)/internalTables/object_1/data.xml",
+                "type": "xml",
+                "size": 498
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#2)/internalTables/object_1/spec.xml",
+                "type": "xml",
+                "size": 3887
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#2)/port_1/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#2)/port_1/data.zip",
+                "type": "zip",
+                "size": 899
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#2)/port_1/spec.xml",
+                "type": "xml",
+                "size": 15193
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#2)/port_2/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#2)/port_2/data.zip",
+                "type": "zip",
+                "size": 761
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#2)/port_2/spec.xml",
+                "type": "xml",
+                "size": 3887
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#4)/settings.xml",
+                "type": "xml",
+                "size": 5038
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#4)/internalTables/object_0/data.xml",
+                "type": "xml",
+                "size": 498
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#4)/internalTables/object_0/spec.xml",
+                "type": "xml",
+                "size": 15260
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#4)/internalTables/object_1/data.xml",
+                "type": "xml",
+                "size": 498
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#4)/internalTables/object_1/spec.xml",
+                "type": "xml",
+                "size": 3887
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#4)/port_1/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#4)/port_1/data.zip",
+                "type": "zip",
+                "size": 918
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#4)/port_1/spec.xml",
+                "type": "xml",
+                "size": 15260
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#4)/port_2/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#4)/port_2/data.zip",
+                "type": "zip",
+                "size": 762
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#4)/port_2/spec.xml",
+                "type": "xml",
+                "size": 3887
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#5)/settings.xml",
+                "type": "xml",
+                "size": 5069
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#5)/internalTables/object_0/data.xml",
+                "type": "xml",
+                "size": 498
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#5)/internalTables/object_0/spec.xml",
+                "type": "xml",
+                "size": 15293
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#5)/internalTables/object_1/data.xml",
+                "type": "xml",
+                "size": 498
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#5)/internalTables/object_1/spec.xml",
+                "type": "xml",
+                "size": 3887
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#5)/port_1/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#5)/port_1/data.zip",
+                "type": "zip",
+                "size": 929
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#5)/port_1/spec.xml",
+                "type": "xml",
+                "size": 15293
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#5)/port_2/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#5)/port_2/data.zip",
+                "type": "zip",
+                "size": 761
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#5)/port_2/spec.xml",
+                "type": "xml",
+                "size": 3887
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#6)/settings.xml",
+                "type": "xml",
+                "size": 5243
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#6)/internalTables/object_0/data.xml",
+                "type": "xml",
+                "size": 498
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#6)/internalTables/object_0/spec.xml",
+                "type": "xml",
+                "size": 14812
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#6)/internalTables/object_1/data.xml",
+                "type": "xml",
+                "size": 498
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#6)/internalTables/object_1/spec.xml",
+                "type": "xml",
+                "size": 3887
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#6)/port_1/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#6)/port_1/data.zip",
+                "type": "zip",
+                "size": 932
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#6)/port_1/spec.xml",
+                "type": "xml",
+                "size": 14812
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#6)/port_2/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#6)/port_2/data.zip",
+                "type": "zip",
+                "size": 760
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Crosstab (#6)/port_2/spec.xml",
+                "type": "xml",
+                "size": 3887
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Excel Reader (#1)/settings.xml",
+                "type": "xml",
+                "size": 36803
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Excel Reader (#1)/port_1/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Excel Reader (#1)/port_1/data.zip",
+                "type": "zip",
+                "size": 1228
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Excel Reader (#1)/port_1/spec.xml",
+                "type": "xml",
+                "size": 14443
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Excel Reader (#24)/settings.xml",
+                "type": "xml",
+                "size": 36803
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Excel Reader (#24)/port_1/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Excel Reader (#24)/port_1/data.zip",
+                "type": "zip",
+                "size": 1229
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Excel Reader (#24)/port_1/spec.xml",
+                "type": "xml",
+                "size": 14443
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Excel Reader (#59)/settings.xml",
+                "type": "xml",
+                "size": 36806
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Excel Reader (#59)/port_1/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Excel Reader (#59)/port_1/data.zip",
+                "type": "zip",
+                "size": 1225
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Excel Reader (#59)/port_1/spec.xml",
+                "type": "xml",
+                "size": 14095
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#11)/settings.xml",
+                "type": "xml",
+                "size": 4435
+            },
+            {
+                "name": "histoTableSpec",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#11)/internal/histoTableSpec",
+                "type": "file",
+                "size": 14707
+            },
+            {
+                "name": "dataFile.xml.gz",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#11)/internal/histoData/dataFile.xml.gz",
+                "type": "gz",
+                "size": 1894
+            },
+            {
+                "name": "settingFile.xml.gz",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#11)/internal/histoData/settingFile.xml.gz",
+                "type": "gz",
+                "size": 268
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#13)/settings.xml",
+                "type": "xml",
+                "size": 4494
+            },
+            {
+                "name": "histoTableSpec",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#13)/internal/histoTableSpec",
+                "type": "file",
+                "size": 14893
+            },
+            {
+                "name": "dataFile.xml.gz",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#13)/internal/histoData/dataFile.xml.gz",
+                "type": "gz",
+                "size": 1912
+            },
+            {
+                "name": "settingFile.xml.gz",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#13)/internal/histoData/settingFile.xml.gz",
+                "type": "gz",
+                "size": 268
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#15)/settings.xml",
+                "type": "xml",
+                "size": 4444
+            },
+            {
+                "name": "histoTableSpec",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#15)/internal/histoTableSpec",
+                "type": "file",
+                "size": 14715
+            },
+            {
+                "name": "dataFile.xml.gz",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#15)/internal/histoData/dataFile.xml.gz",
+                "type": "gz",
+                "size": 1790
+            },
+            {
+                "name": "settingFile.xml.gz",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#15)/internal/histoData/settingFile.xml.gz",
+                "type": "gz",
+                "size": 268
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#17)/settings.xml",
+                "type": "xml",
+                "size": 4510
+            },
+            {
+                "name": "histoTableSpec",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#17)/internal/histoTableSpec",
+                "type": "file",
+                "size": 14748
+            },
+            {
+                "name": "dataFile.xml.gz",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#17)/internal/histoData/dataFile.xml.gz",
+                "type": "gz",
+                "size": 1809
+            },
+            {
+                "name": "settingFile.xml.gz",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#17)/internal/histoData/settingFile.xml.gz",
+                "type": "gz",
+                "size": 268
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#3)/settings.xml",
+                "type": "xml",
+                "size": 4321
+            },
+            {
+                "name": "histoTableSpec",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#3)/internal/histoTableSpec",
+                "type": "file",
+                "size": 15194
+            },
+            {
+                "name": "dataFile.xml.gz",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#3)/internal/histoData/dataFile.xml.gz",
+                "type": "gz",
+                "size": 1874
+            },
+            {
+                "name": "settingFile.xml.gz",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#3)/internal/histoData/settingFile.xml.gz",
+                "type": "gz",
+                "size": 268
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#7)/settings.xml",
+                "type": "xml",
+                "size": 4438
+            },
+            {
+                "name": "histoTableSpec",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#7)/internal/histoTableSpec",
+                "type": "file",
+                "size": 15261
+            },
+            {
+                "name": "dataFile.xml.gz",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#7)/internal/histoData/dataFile.xml.gz",
+                "type": "gz",
+                "size": 1948
+            },
+            {
+                "name": "settingFile.xml.gz",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#7)/internal/histoData/settingFile.xml.gz",
+                "type": "gz",
+                "size": 268
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#8)/settings.xml",
+                "type": "xml",
+                "size": 4469
+            },
+            {
+                "name": "histoTableSpec",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#8)/internal/histoTableSpec",
+                "type": "file",
+                "size": 15294
+            },
+            {
+                "name": "dataFile.xml.gz",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#8)/internal/histoData/dataFile.xml.gz",
+                "type": "gz",
+                "size": 1970
+            },
+            {
+                "name": "settingFile.xml.gz",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#8)/internal/histoData/settingFile.xml.gz",
+                "type": "gz",
+                "size": 268
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#9)/settings.xml",
+                "type": "xml",
+                "size": 4643
+            },
+            {
+                "name": "histoTableSpec",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#9)/internal/histoTableSpec",
+                "type": "file",
+                "size": 14813
+            },
+            {
+                "name": "dataFile.xml.gz",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#9)/internal/histoData/dataFile.xml.gz",
+                "type": "gz",
+                "size": 1948
+            },
+            {
+                "name": "settingFile.xml.gz",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Interactive Histogram _legacy_ (#9)/internal/histoData/settingFile.xml.gz",
+                "type": "gz",
+                "size": 268
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Linear Regression Learner (#23)/settings.xml",
+                "type": "xml",
+                "size": 7844
+            },
+            {
+                "name": "model.xml.gz",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Linear Regression Learner (#23)/internal/model.xml.gz",
+                "type": "gz",
+                "size": 3378
+            },
+            {
+                "name": "rowcontainer.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Linear Regression Learner (#23)/internal/rowcontainer.zip",
+                "type": "zip",
+                "size": 2341
+            },
+            {
+                "name": "portobject.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Linear Regression Learner (#23)/port_1/object/portobject.zip",
+                "type": "zip",
+                "size": 1867
+            },
+            {
+                "name": "spec.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Linear Regression Learner (#23)/port_1/spec/spec.zip",
+                "type": "zip",
+                "size": 2508
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Linear Regression Learner (#23)/port_2/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Linear Regression Learner (#23)/port_2/data.zip",
+                "type": "zip",
+                "size": 1882
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Linear Regression Learner (#23)/port_2/spec.xml",
+                "type": "xml",
+                "size": 10978
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Polynomial Regression Learner (#19)/settings.xml",
+                "type": "xml",
+                "size": 7277
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Polynomial Regression Learner (#19)/internal/data.zip",
+                "type": "zip",
+                "size": 1843
+            },
+            {
+                "name": "internals.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Polynomial Regression Learner (#19)/internal/internals.xml",
+                "type": "xml",
+                "size": 3317
+            },
+            {
+                "name": "portobject.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Polynomial Regression Learner (#19)/port_1/object/portobject.zip",
+                "type": "zip",
+                "size": 1363
+            },
+            {
+                "name": "spec.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Polynomial Regression Learner (#19)/port_1/spec/spec.zip",
+                "type": "zip",
+                "size": 2407
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Polynomial Regression Learner (#19)/port_2/data.xml",
+                "type": "xml",
+                "size": 2441
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Polynomial Regression Learner (#19)/port_2/data.zip",
+                "type": "zip",
+                "size": 1016
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Polynomial Regression Learner (#19)/port_2/spec.xml",
+                "type": "xml",
+                "size": 16886
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Polynomial Regression Learner (#19)/port_3/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Polynomial Regression Learner (#19)/port_3/data.zip",
+                "type": "zip",
+                "size": 1352
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Polynomial Regression Learner (#19)/port_3/spec.xml",
+                "type": "xml",
+                "size": 9216
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/settings.xml",
+                "type": "xml",
+                "size": 9031
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/internalTables/object_0/data.xml",
+                "type": "xml",
+                "size": 498
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/internalTables/object_0/spec.xml",
+                "type": "xml",
+                "size": 13940
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_1/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_1/data.zip",
+                "type": "zip",
+                "size": 2734
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_1/spec.xml",
+                "type": "xml",
+                "size": 13125
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_2/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_2/data.zip",
+                "type": "zip",
+                "size": 1792
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_2/spec.xml",
+                "type": "xml",
+                "size": 13940
+            },
+            {
+                "name": "portobject.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_3/object/portobject.zip",
+                "type": "zip",
+                "size": 146
+            },
+            {
+                "name": "spec.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_3/spec/spec.zip",
+                "type": "zip",
+                "size": 2223
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/data.xml",
+                "type": "xml",
+                "size": 2266
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/data.zip",
+                "type": "zip",
+                "size": 744
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/spec.xml",
+                "type": "xml",
+                "size": 12898
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/data.xml",
+                "type": "xml",
+                "size": 2266
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/data.zip",
+                "type": "zip",
+                "size": 770
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/spec.xml",
+                "type": "xml",
+                "size": 12867
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/data.xml",
+                "type": "xml",
+                "size": 2266
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/data.zip",
+                "type": "zip",
+                "size": 759
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/spec.xml",
+                "type": "xml",
+                "size": 12835
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/r0/data.xml",
+                "type": "xml",
+                "size": 2266
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/r0/data.zip",
+                "type": "zip",
+                "size": 753
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/r0/spec.xml",
+                "type": "xml",
+                "size": 12803
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/r0/r0/data.xml",
+                "type": "xml",
+                "size": 2266
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/r0/r0/data.zip",
+                "type": "zip",
+                "size": 779
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/r0/r0/spec.xml",
+                "type": "xml",
+                "size": 12976
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/r0/r0/r0/data.xml",
+                "type": "xml",
+                "size": 2266
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/r0/r0/r0/data.zip",
+                "type": "zip",
+                "size": 782
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/r0/r0/r0/spec.xml",
+                "type": "xml",
+                "size": 12944
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/r0/r0/r0/r0/data.xml",
+                "type": "xml",
+                "size": 2266
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/r0/r0/r0/r0/data.zip",
+                "type": "zip",
+                "size": 770
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/r0/r0/r0/r0/spec.xml",
+                "type": "xml",
+                "size": 12912
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/r0/r0/r0/r0/r0/data.xml",
+                "type": "xml",
+                "size": 2266
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/r0/r0/r0/r0/r0/data.zip",
+                "type": "zip",
+                "size": 772
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/r0/r0/r0/r0/r0/spec.xml",
+                "type": "xml",
+                "size": 13448
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/r0/r0/r0/r0/r0/r0/data.xml",
+                "type": "xml",
+                "size": 2266
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/r0/r0/r0/r0/r0/r0/data.zip",
+                "type": "zip",
+                "size": 763
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/r0/r0/r0/r0/r0/r0/spec.xml",
+                "type": "xml",
+                "size": 13964
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/r0/r0/r0/r0/r0/r0/r0/data.xml",
+                "type": "xml",
+                "size": 2266
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/r0/r0/r0/r0/r0/r0/r0/data.zip",
+                "type": "zip",
+                "size": 802
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/r0/r0/r0/r0/r0/r0/r0/spec.xml",
+                "type": "xml",
+                "size": 14474
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/r0/r0/r0/r0/r0/r0/r0/r0/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/r0/r0/r0/r0/r0/r0/r0/r0/data.zip",
+                "type": "zip",
+                "size": 1228
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Rank Correlation (#21)/port_4/r0/r0/r0/r0/r0/r0/r0/r0/r0/r0/spec.xml",
+                "type": "xml",
+                "size": 14443
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Scatter Plot _JavaScript_ (#22)/settings.xml",
+                "type": "xml",
+                "size": 10809
+            },
+            {
+                "name": "representation.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Scatter Plot _JavaScript_ (#22)/internal/representation.xml",
+                "type": "xml",
+                "size": 26193
+            },
+            {
+                "name": "value.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Scatter Plot _JavaScript_ (#22)/internal/value.xml",
+                "type": "xml",
+                "size": 1314
+            },
+            {
+                "name": "portobject.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Scatter Plot _JavaScript_ (#22)/port_1/object/portobject.zip",
+                "type": "zip",
+                "size": 146
+            },
+            {
+                "name": "spec.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Scatter Plot _JavaScript_ (#22)/port_1/spec/spec.zip",
+                "type": "zip",
+                "size": 142
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Scatter Plot _JavaScript_ (#22)/port_2/data.xml",
+                "type": "xml",
+                "size": 2327
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Scatter Plot _JavaScript_ (#22)/port_2/data.zip",
+                "type": "zip",
+                "size": 731
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Scatter Plot _JavaScript_ (#22)/port_2/spec.xml",
+                "type": "xml",
+                "size": 16136
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Statistics (#18)/settings.xml",
+                "type": "xml",
+                "size": 10223
+            },
+            {
+                "name": "histograms.xml.gz",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Statistics (#18)/internal/histograms.xml.gz",
+                "type": "gz",
+                "size": 1318
+            },
+            {
+                "name": "statistic.xml.gz",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Statistics (#18)/internal/statistic.xml.gz",
+                "type": "gz",
+                "size": 44838
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Statistics (#18)/port_1/data.xml",
+                "type": "xml",
+                "size": 2949
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Statistics (#18)/port_1/data.zip",
+                "type": "zip",
+                "size": 4276
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Statistics (#18)/port_1/spec.xml",
+                "type": "xml",
+                "size": 20885
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Statistics (#18)/port_1/r0/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Statistics (#18)/port_1/r0/data.zip",
+                "type": "zip",
+                "size": 1523
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Statistics (#18)/port_1/r0/spec.xml",
+                "type": "xml",
+                "size": 20010
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Statistics (#18)/port_2/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Statistics (#18)/port_2/data.zip",
+                "type": "zip",
+                "size": 4618
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Statistics (#18)/port_2/spec.xml",
+                "type": "xml",
+                "size": 6880
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Statistics (#18)/port_3/data.xml",
+                "type": "xml",
+                "size": 759
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Statistics (#18)/port_3/spec.xml",
+                "type": "xml",
+                "size": 35889
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Statistics (#18)/port_3/r0/data.xml",
+                "type": "xml",
+                "size": 563
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Statistics (#18)/port_3/r0/data.zip",
+                "type": "zip",
+                "size": 1174
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/Statistics (#18)/port_3/r0/spec.xml",
+                "type": "xml",
+                "size": 35871
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#43)/settings.xml",
+                "type": "xml",
+                "size": 4074
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#43)/port_1/data.xml",
+                "type": "xml",
+                "size": 2214
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#43)/port_1/data.zip",
+                "type": "zip",
+                "size": 771
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#43)/port_1/spec.xml",
+                "type": "xml",
+                "size": 14092
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#44)/settings.xml",
+                "type": "xml",
+                "size": 4059
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#44)/port_1/data.xml",
+                "type": "xml",
+                "size": 2214
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#44)/port_1/data.zip",
+                "type": "zip",
+                "size": 764
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#44)/port_1/spec.xml",
+                "type": "xml",
+                "size": 14088
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#45)/settings.xml",
+                "type": "xml",
+                "size": 4159
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#45)/port_1/data.xml",
+                "type": "xml",
+                "size": 2214
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#45)/port_1/data.zip",
+                "type": "zip",
+                "size": 779
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#45)/port_1/spec.xml",
+                "type": "xml",
+                "size": 14081
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#46)/settings.xml",
+                "type": "xml",
+                "size": 4155
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#46)/port_1/data.xml",
+                "type": "xml",
+                "size": 2214
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#46)/port_1/data.zip",
+                "type": "zip",
+                "size": 768
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#46)/port_1/spec.xml",
+                "type": "xml",
+                "size": 14076
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#48)/settings.xml",
+                "type": "xml",
+                "size": 4152
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#48)/port_1/data.xml",
+                "type": "xml",
+                "size": 2214
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#48)/port_1/data.zip",
+                "type": "zip",
+                "size": 775
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#48)/port_1/spec.xml",
+                "type": "xml",
+                "size": 14042
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#49)/settings.xml",
+                "type": "xml",
+                "size": 4143
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#49)/port_1/data.xml",
+                "type": "xml",
+                "size": 2214
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#49)/port_1/data.zip",
+                "type": "zip",
+                "size": 757
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#49)/port_1/spec.xml",
+                "type": "xml",
+                "size": 14030
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#50)/settings.xml",
+                "type": "xml",
+                "size": 4158
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#50)/port_1/data.xml",
+                "type": "xml",
+                "size": 2214
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#50)/port_1/data.zip",
+                "type": "zip",
+                "size": 769
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#50)/port_1/spec.xml",
+                "type": "xml",
+                "size": 14069
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#51)/settings.xml",
+                "type": "xml",
+                "size": 4141
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#51)/port_1/data.xml",
+                "type": "xml",
+                "size": 2214
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#51)/port_1/data.zip",
+                "type": "zip",
+                "size": 778
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#51)/port_1/spec.xml",
+                "type": "xml",
+                "size": 14058
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#52)/settings.xml",
+                "type": "xml",
+                "size": 4154
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#52)/port_1/data.xml",
+                "type": "xml",
+                "size": 2214
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#52)/port_1/data.zip",
+                "type": "zip",
+                "size": 747
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#52)/port_1/spec.xml",
+                "type": "xml",
+                "size": 14012
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#53)/settings.xml",
+                "type": "xml",
+                "size": 4170
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#53)/port_1/data.xml",
+                "type": "xml",
+                "size": 2214
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#53)/port_1/data.zip",
+                "type": "zip",
+                "size": 770
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String Replacer (#53)/port_1/spec.xml",
+                "type": "xml",
+                "size": 14023
+            },
+            {
+                "name": "settings.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String to Number (#47)/settings.xml",
+                "type": "xml",
+                "size": 6513
+            },
+            {
+                "name": "data.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String to Number (#47)/port_1/data.xml",
+                "type": "xml",
+                "size": 2217
+            },
+            {
+                "name": "data.zip",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String to Number (#47)/port_1/data.zip",
+                "type": "zip",
+                "size": 850
+            },
+            {
+                "name": "spec.xml",
+                "path": "./2 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2/String to Number (#47)/port_1/spec.xml",
+                "type": "xml",
+                "size": 12704
+            }
+        ],
+        "Программирование": [
+            {
+                "name": "Аннануров ДП ИВТ 1.2 ЛБ10 ПРОГ4 (1).pdf",
+                "path": "./2 курс/Программирование/Аннануров ДП ИВТ 1.2 ЛБ10 ПРОГ4 (1).pdf",
+                "type": "pdf",
+                "size": 130054
+            }
+        ],
+        "Серверные веб-технологии": [
             {
                 "name": "Аннануров ДП ИВТ 1.2 Скринкаст openedu.mp4",
-                "path": "./2 курс/СВТ/Аннануров ДП ИВТ 1.2 Скринкаст openedu.mp4",
+                "path": "./2 курс/Серверные веб-технологии/Аннануров ДП ИВТ 1.2 Скринкаст openedu.mp4",
                 "type": "mp4",
                 "size": 16962336
             }
         ],
-        "ТКМ": [
+        "Технологии компьютерного моделирования": [
             {
                 "name": "Аннануров Даниил Петрович ИВТ 1.2 2 курс Ручной метод Гаусса.pdf",
-                "path": "./2 курс/ТКМ/Аннануров Даниил Петрович ИВТ 1.2 2 курс Ручной метод Гаусса.pdf",
+                "path": "./2 курс/Технологии компьютерного моделирования/Аннануров Даниил Петрович ИВТ 1.2 2 курс Ручной метод Гаусса.pdf",
                 "type": "pdf",
                 "size": 3430194
+            },
+            {
+                "name": "Документ Microsoft Word.docx",
+                "path": "./2 курс/Технологии компьютерного моделирования/ЛБ1 Решение систем линейных алгебраических уравнений/Документ Microsoft Word.docx",
+                "type": "docx",
+                "size": 0
             }
         ]
     },
     "3 курс": {
+        "IT-менеджмент": [
+            {
+                "name": "Аннануров ДП ИВТ 1.2 Отчет 2.1.pdf",
+                "path": "./3 курс/IT-менеджмент/Аннануров ДП ИВТ 1.2 Отчет 2.1.pdf",
+                "type": "pdf",
+                "size": 155623
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 Отчет 2.2.pdf",
+                "path": "./3 курс/IT-менеджмент/Аннануров ДП ИВТ 1.2 Отчет 2.2.pdf",
+                "type": "pdf",
+                "size": 143124
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 Отчет 3.2 (1).pdf",
+                "path": "./3 курс/IT-менеджмент/Аннануров ДП ИВТ 1.2 Отчет 3.2 (1).pdf",
+                "type": "pdf",
+                "size": 151988
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 Отчет 3.2.pdf",
+                "path": "./3 курс/IT-менеджмент/Аннануров ДП ИВТ 1.2 Отчет 3.2.pdf",
+                "type": "pdf",
+                "size": 122916
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 практ 1 (1).archimate",
+                "path": "./3 курс/IT-менеджмент/Аннануров ДП ИВТ 1.2 практ 1 (1).archimate",
+                "type": "archimate",
+                "size": 104735
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 практ2 (1).archimate",
+                "path": "./3 курс/IT-менеджмент/Аннануров ДП ИВТ 1.2 практ2 (1).archimate",
+                "type": "archimate",
+                "size": 130998
+            }
+        ],
+        "Английский язык": [],
+        "Инженерная графика": [
+            {
+                "name": "Инженерная Графика .pdf",
+                "path": "./3 курс/Инженерная графика/Инженерная Графика .pdf",
+                "type": "pdf",
+                "size": 2008733
+            }
+        ],
+        "Информационные технологии в изучении иностранных языков": [
+            {
+                "name": "Аннануров_ДП_Зачет_Задание_ИНФТЕХВИНЯЗ.pdf",
+                "path": "./3 курс/Информационные технологии в изучении иностранных языков/Аннануров_ДП_Зачет_Задание_ИНФТЕХВИНЯЗ.pdf",
+                "type": "pdf",
+                "size": 162862
+            },
+            {
+                "name": "Текст 5.docx",
+                "path": "./3 курс/Информационные технологии в изучении иностранных языков/ДЗ1/Текст 5.docx",
+                "type": "docx",
+                "size": 22261
+            },
+            {
+                "name": "Текст 5.pdf",
+                "path": "./3 курс/Информационные технологии в изучении иностранных языков/ДЗ1/Текст 5.pdf",
+                "type": "pdf",
+                "size": 135063
+            }
+        ],
+        "ИТ и С бизнес-аналитики": [
+            {
+                "name": "Аннануров ДП ИВТ 1.2 ЛБ123.pdf",
+                "path": "./3 курс/ИТ и С бизнес-аналитики/Аннануров ДП ИВТ 1.2 ЛБ123.pdf",
+                "type": "pdf",
+                "size": 615575
+            },
+            {
+                "name": "ЛБ5.zip",
+                "path": "./3 курс/ИТ и С бизнес-аналитики/ЛБ5/ЛБ5.zip",
+                "type": "zip",
+                "size": 668495
+            },
+            {
+                "name": "Новая модель.docx",
+                "path": "./3 курс/ИТ и С бизнес-аналитики/ЛБ5/Новая модель.docx",
+                "type": "docx",
+                "size": 28597
+            },
+            {
+                "name": "Новая модель.pdf",
+                "path": "./3 курс/ИТ и С бизнес-аналитики/ЛБ5/Новая модель.pdf",
+                "type": "pdf",
+                "size": 67916
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 лб6.pdf",
+                "path": "./3 курс/ИТ и С бизнес-аналитики/ЛБ6/Аннануров ДП ИВТ 1.2 лб6.pdf",
+                "type": "pdf",
+                "size": 191222
+            },
+            {
+                "name": "Аннануров ДП  лаб 7.xlsx",
+                "path": "./3 курс/ИТ и С бизнес-аналитики/ЛБ7/Аннануров ДП  лаб 7.xlsx",
+                "type": "xlsx",
+                "size": 11027
+            },
+            {
+                "name": "АннануровДП_лб7.docx",
+                "path": "./3 курс/ИТ и С бизнес-аналитики/ЛБ7/АннануровДП_лб7.docx",
+                "type": "docx",
+                "size": 95146
+            },
+            {
+                "name": "АннануровДП_лб7.pdf",
+                "path": "./3 курс/ИТ и С бизнес-аналитики/ЛБ7/АннануровДП_лб7.pdf",
+                "type": "pdf",
+                "size": 138721
+            },
+            {
+                "name": "Аннануров ДП  лаб 8.xlsx",
+                "path": "./3 курс/ИТ и С бизнес-аналитики/ЛБ8/Аннануров ДП  лаб 8.xlsx",
+                "type": "xlsx",
+                "size": 11242
+            },
+            {
+                "name": "Диаграмма 1 (1).bpmn",
+                "path": "./3 курс/ИТ и С бизнес-аналитики/ЛБ8/Диаграмма 1 (1).bpmn",
+                "type": "bpmn",
+                "size": 91451
+            },
+            {
+                "name": "Аннануров ДП  лаб 9xlsx.xlsx",
+                "path": "./3 курс/ИТ и С бизнес-аналитики/ЛБ9/Аннануров ДП  лаб 9xlsx.xlsx",
+                "type": "xlsx",
+                "size": 13194
+            },
+            {
+                "name": "Диаграмма 1.bpmn",
+                "path": "./3 курс/ИТ и С бизнес-аналитики/ЛБ9/Диаграмма 1.bpmn",
+                "type": "bpmn",
+                "size": 91451
+            },
+            {
+                "name": "312.xlsx",
+                "path": "./3 курс/ИТ и С бизнес-аналитики/Проект/312.xlsx",
+                "type": "xlsx",
+                "size": 13246
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 Проект.docx",
+                "path": "./3 курс/ИТ и С бизнес-аналитики/Проект/Аннануров ДП ИВТ 1.2 Проект.docx",
+                "type": "docx",
+                "size": 372028
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 Проект.pdf",
+                "path": "./3 курс/ИТ и С бизнес-аналитики/Проект/Аннануров ДП ИВТ 1.2 Проект.pdf",
+                "type": "pdf",
+                "size": 538576
+            },
+            {
+                "name": "Проект (1).bpm",
+                "path": "./3 курс/ИТ и С бизнес-аналитики/Проект/Проект (1).bpm",
+                "type": "bpm",
+                "size": 31777
+            }
+        ],
+        "Компьютерная графика": [
+            {
+                "name": "КР 2.1.1 Аннануров ДП ИВТ 1.2.adf",
+                "path": "./3 курс/Компьютерная графика/КР 2.1.1 Аннануров ДП ИВТ 1.2.adf",
+                "type": "adf",
+                "size": 140139
+            },
+            {
+                "name": "КР 2.3.1 Аннануров ДП ИВТ 1.2.adf",
+                "path": "./3 курс/Компьютерная графика/КР 2.3.1 Аннануров ДП ИВТ 1.2.adf",
+                "type": "adf",
+                "size": 114409
+            },
+            {
+                "name": "КР 2.5.1 Аннануров ДП ИВТ 1.2.adf",
+                "path": "./3 курс/Компьютерная графика/КР 2.5.1 Аннануров ДП ИВТ 1.2.adf",
+                "type": "adf",
+                "size": 45361
+            },
+            {
+                "name": "КР 2.7.1 Аннануров ДП ИВТ 1.2.adf",
+                "path": "./3 курс/Компьютерная графика/КР 2.7.1 Аннануров ДП ИВТ 1.2.adf",
+                "type": "adf",
+                "size": 63308
+            },
+            {
+                "name": "КР 2.8.1 Аннануров ДП ИВТ1.2.adf",
+                "path": "./3 курс/Компьютерная графика/КР 2.8.1 Аннануров ДП ИВТ1.2.adf",
+                "type": "adf",
+                "size": 110335
+            },
+            {
+                "name": "КР2.4.1 Аннануров ДП ИВТ 1.2.adf",
+                "path": "./3 курс/Компьютерная графика/КР2.4.1 Аннануров ДП ИВТ 1.2.adf",
+                "type": "adf",
+                "size": 92569
+            },
+            {
+                "name": "КР2.6.1 Аннануров ДП ИВТ 1.2.adf",
+                "path": "./3 курс/Компьютерная графика/КР2.6.1 Аннануров ДП ИВТ 1.2.adf",
+                "type": "adf",
+                "size": 229549
+            }
+        ],
+        "Компьютерное моделирование": [
+            {
+                "name": "Аннануров_ДП_ИВТ_1_2_Статья_Комп_Моделирование.pdf",
+                "path": "./3 курс/Компьютерное моделирование/Аннануров_ДП_ИВТ_1_2_Статья_Комп_Моделирование.pdf",
+                "type": "pdf",
+                "size": 158254
+            }
+        ],
+        "Курсовая работа 3 курс": [
+            {
+                "name": "Аннануров ДП ИВТ 1.2 Курсовая 3 курс (1).knwf",
+                "path": "./3 курс/Курсовая работа 3 курс/Аннануров ДП ИВТ 1.2 Курсовая 3 курс (1).knwf",
+                "type": "knwf",
+                "size": 90226
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 Курсовая Работа 3 курс Пакеты (1).docx",
+                "path": "./3 курс/Курсовая работа 3 курс/Аннануров ДП ИВТ 1.2 Курсовая Работа 3 курс Пакеты (1).docx",
+                "type": "docx",
+                "size": 4083169
+            },
+            {
+                "name": "Курсовая Работа Аннануров (1).xlsx",
+                "path": "./3 курс/Курсовая работа 3 курс/Курсовая Работа Аннануров (1).xlsx",
+                "type": "xlsx",
+                "size": 1066152
+            }
+        ],
         "Основы Корпоративного электроного обучения": [
             {
                 "name": "Аннануров ДП ИВТ 1.2 проект.mkv",
@@ -1458,18 +4316,66 @@ const fileData = {
                 "size": 17472521
             }
         ],
-        "Перевод": [
+        "Пакеты прикладных программ для статистической обработки и анализа данных": [
             {
-                "name": "Текст 5.docx",
-                "path": "./3 курс/Перевод/ДЗ1/Текст 5.docx",
-                "type": "docx",
-                "size": 22261
+                "name": "Аннануров Даниил Петрович ИВТ 1.2 ЛБ1.pdf",
+                "path": "./3 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров Даниил Петрович ИВТ 1.2 ЛБ1.pdf",
+                "type": "pdf",
+                "size": 163215
             },
             {
-                "name": "Текст 5.pdf",
-                "path": "./3 курс/Перевод/ДЗ1/Текст 5.pdf",
+                "name": "Аннануров ДП ИВТ 1.2  Опорн конспект 2.pdf",
+                "path": "./3 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров ДП ИВТ 1.2  Опорн конспект 2.pdf",
                 "type": "pdf",
-                "size": 135063
+                "size": 166080
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 здн1.pdf",
+                "path": "./3 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров ДП ИВТ 1.2 здн1.pdf",
+                "type": "pdf",
+                "size": 154930
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 ИСР 1.2.docx",
+                "path": "./3 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров ДП ИВТ 1.2 ИСР 1.2.docx",
+                "type": "docx",
+                "size": 1083410
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 ИСР1.1.pdf",
+                "path": "./3 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров ДП ИВТ 1.2 ИСР1.1.pdf",
+                "type": "pdf",
+                "size": 138808
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 Логотип.png",
+                "path": "./3 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров ДП ИВТ 1.2 Логотип.png",
+                "type": "png",
+                "size": 31357
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 Отчет 3 през.pptx",
+                "path": "./3 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров ДП ИВТ 1.2 Отчет 3 през.pptx",
+                "type": "pptx",
+                "size": 2599545
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 През2.pdf",
+                "path": "./3 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров ДП ИВТ 1.2 През2.pdf",
+                "type": "pdf",
+                "size": 51124
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 Презентация (2).pptx",
+                "path": "./3 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров ДП ИВТ 1.2 Презентация (2).pptx",
+                "type": "pptx",
+                "size": 921011
+            },
+            {
+                "name": "Аннануров ДП, гр 1 подгр 2, ВСР_1 по теме 1 .pdf",
+                "path": "./3 курс/Пакеты прикладных программ для статистической обработки и анализа данных/Аннануров ДП, гр 1 подгр 2, ВСР_1 по теме 1 .pdf",
+                "type": "pdf",
+                "size": 167928
             }
         ],
         "Прикладные информационные технологии (3 к ИВТ)": [
@@ -1486,19 +4392,124 @@ const fileData = {
                 "size": 16032356
             }
         ],
-        "ПРОГ5": [
+        "Программирование": [
             {
                 "name": "FASTAPI Аннануров Антипов.pptx",
-                "path": "./3 курс/ПРОГ5/FASTAPI Аннануров Антипов.pptx",
+                "path": "./3 курс/Программирование/FASTAPI Аннануров Антипов.pptx",
                 "type": "pptx",
                 "size": 161274
             },
             {
                 "name": "FastAPI.pdf",
-                "path": "./3 курс/ПРОГ5/FastAPI.pdf",
+                "path": "./3 курс/Программирование/FastAPI.pdf",
                 "type": "pdf",
                 "size": 57852
             }
+        ],
+        "Сети и телекоммуникации": [
+            {
+                "name": "2025-06-23_21-24-41.mp4",
+                "path": "./3 курс/Сети и телекоммуникации/2025-06-23_21-24-41.mp4",
+                "type": "mp4",
+                "size": 6843325
+            },
+            {
+                "name": "photo_5406808834741231842_y.jpg",
+                "path": "./3 курс/Сети и телекоммуникации/photo_5406808834741231842_y.jpg",
+                "type": "jpg",
+                "size": 193284
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2  Получение сертификата Let's encrypt для Nginx (без Docker).mkv",
+                "path": "./3 курс/Сети и телекоммуникации/Аннануров ДП ИВТ 1.2  Получение сертификата Let's encrypt для Nginx (без Docker).mkv",
+                "type": "mkv",
+                "size": 18735271
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 Wireshark.pdf",
+                "path": "./3 курс/Сети и телекоммуникации/Аннануров ДП ИВТ 1.2 Wireshark.pdf",
+                "type": "pdf",
+                "size": 288858
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 Анализ Wi fi.pdf",
+                "path": "./3 курс/Сети и телекоммуникации/Аннануров ДП ИВТ 1.2 Анализ Wi fi.pdf",
+                "type": "pdf",
+                "size": 121238
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 Транспорт.pdf",
+                "path": "./3 курс/Сети и телекоммуникации/Аннануров ДП ИВТ 1.2 Транспорт.pdf",
+                "type": "pdf",
+                "size": 409660
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 Транспрт.pdf",
+                "path": "./3 курс/Сети и телекоммуникации/Аннануров ДП ИВТ 1.2 Транспрт.pdf",
+                "type": "pdf",
+                "size": 119581
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 установка докера и node приложения.mkv",
+                "path": "./3 курс/Сети и телекоммуникации/Аннануров ДП ИВТ 1.2 установка докера и node приложения.mkv",
+                "type": "mkv",
+                "size": 16032356
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2.pdf",
+                "path": "./3 курс/Сети и телекоммуникации/Аннануров ДП ИВТ 1.2.pdf",
+                "type": "pdf",
+                "size": 519914
+            },
+            {
+                "name": "Аннануров_ДП_ИВТ_1_2_Создание_и_настройка_VDS,_подключение_к_серверу.pdf",
+                "path": "./3 курс/Сети и телекоммуникации/Аннануров_ДП_ИВТ_1_2_Создание_и_настройка_VDS,_подключение_к_серверу.pdf",
+                "type": "pdf",
+                "size": 253920
+            }
+        ],
+        "Техники и технологии визуализации данных": [
+            {
+                "name": "photo_2025-12-17_22-50-45.jpg",
+                "path": "./3 курс/Техники и технологии визуализации данных/photo_2025-12-17_22-50-45.jpg",
+                "type": "jpg",
+                "size": 188837
+            },
+            {
+                "name": "photo_2025-12-17_22-50-59.jpg",
+                "path": "./3 курс/Техники и технологии визуализации данных/photo_2025-12-17_22-50-59.jpg",
+                "type": "jpg",
+                "size": 121009
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 Сторит тем3.pdf",
+                "path": "./3 курс/Техники и технологии визуализации данных/Аннануров ДП ИВТ 1.2 Сторит тем3.pdf",
+                "type": "pdf",
+                "size": 142398
+            }
         ]
+    },
+    "4 курс": {
+        "Образовательный инжиниринг": [
+            {
+                "name": "Аннануров ДП ИВТ 1.2 1.1зд.pdf",
+                "path": "./4 курс/Образовательный инжиниринг/Аннануров ДП ИВТ 1.2 1.1зд.pdf",
+                "type": "pdf",
+                "size": 195672
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 Задание 1.2..pdf",
+                "path": "./4 курс/Образовательный инжиниринг/Аннануров ДП ИВТ 1.2 Задание 1.2..pdf",
+                "type": "pdf",
+                "size": 80748
+            },
+            {
+                "name": "Аннануров ДП ИВТ 1.2 задание 1.3.pdf",
+                "path": "./4 курс/Образовательный инжиниринг/Аннануров ДП ИВТ 1.2 задание 1.3.pdf",
+                "type": "pdf",
+                "size": 146040
+            }
+        ],
+        "Программирование": []
     }
 };
