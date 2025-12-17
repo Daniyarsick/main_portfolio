@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Просмотр файлов - Портфолио</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="#" id="back-btn" class="back-link">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Назад
+            </a>
+            <h1 id="folder-title">Загрузка...</h1>
+            <p class="subtitle" id="folder-subtitle">Список файлов</p>
+        </header>
+
+        <main class="file-grid" id="file-list">
+            <!-- Files will be injected here -->
+        </main>
+    </div>
+
+    <script src="files.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const path = params.get('path'); // e.g., "1 курс/ИТ"
+
+            if (!path) {
+                document.getElementById('folder-title').textContent = "Ошибка: Путь не указан";
+                return;
+            }
+
+            const parts = path.split('/');
+            const course = parts[0];
+            const subject = parts[1];
+
+            document.getElementById('folder-title').textContent = subject || course;
+            document.getElementById('folder-subtitle').textContent = path;
+
+            // Set back button
+            const backBtn = document.getElementById('back-btn');
+            if (course === "1 курс") backBtn.href = "course1.html";
+            else if (course === "2 курс") backBtn.href = "course2.html";
+            else if (course === "3 курс") backBtn.href = "course3.html";
+            else backBtn.href = "index.html";
+
+            const fileList = document.getElementById('file-list');
+
+            if (fileData[course] && fileData[course][subject]) {
+                const files = fileData[course][subject];
+
+                if (files.length === 0) {
+                    fileList.innerHTML = '<p class="empty-msg">Папка пуста</p>';
+                    return;
+                }
+
+                files.forEach(file => {
+                    const fileCard = document.createElement('a');
+                    fileCard.href = file.path;
+                    fileCard.className = 'file-card';
+                    fileCard.target = '_blank';
+
+                    let iconClass = 'fa-file';
+                    if (['jpg', 'png', 'jpeg', 'gif'].includes(file.type)) iconClass = 'fa-file-image';
+                    else if (['pdf'].includes(file.type)) iconClass = 'fa-file-pdf';
+                    else if (['doc', 'docx'].includes(file.type)) iconClass = 'fa-file-word';
+                    else if (['zip', 'rar'].includes(file.type)) iconClass = 'fa-file-archive';
+                    else if (['mp4', 'avi'].includes(file.type)) iconClass = 'fa-file-video';
+                    else if (['py', 'js', 'html', 'css', 'cpp'].includes(file.type)) iconClass = 'fa-file-code';
+
+                    fileCard.innerHTML = `
+                        <div class="file-icon"><i class="fas ${iconClass}"></i></div>
+                        <div class="file-info">
+                            <div class="file-name">${file.name}</div>
+                            <div class="file-size">${formatSize(file.size)}</div>
+                        </div>
+                    `;
+                    fileList.appendChild(fileCard);
+                });
+            } else {
+                fileList.innerHTML = '<p class="empty-msg">Папка не найдена или пуста</p>';
+            }
+        });
+
+        function formatSize(bytes) {
+            if (bytes === 0) return '0 B';
+            const k = 1024;
+            const sizes = ['B', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+    </script>
+</body>
+
+</html>
