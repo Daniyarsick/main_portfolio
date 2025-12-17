@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="internals">
+    <config key="betas">
+        <entry key="array-size" type="xint" value="5"/>
+        <entry key="0" type="xdouble" value="10.944978353649176"/>
+        <entry key="1" type="xdouble" value="-0.8477693512235562"/>
+        <entry key="2" type="xdouble" value="-0.2113359329423685"/>
+        <entry key="3" type="xdouble" value="0.1456292793760937"/>
+        <entry key="4" type="xdouble" value="-0.7615523964506125"/>
+    </config>
+    <config key="columnNames">
+        <entry key="array-size" type="xint" value="4"/>
+        <entry key="0" type="xstring" value="Как часто вы проводите время в социальных сетях в ущерб другим активностям (учеба, работа и т.д.)?"/>
+        <entry key="1" type="xstring" value="Сравниваете ли вы свою жизнь с другими?"/>
+        <entry key="2" type="xstring" value="Вы обсуждали политику в социальных сетях?"/>
+        <entry key="3" type="xstring" value="Считаете ли вы, что социальные сети связывают людей или нет?"/>
+    </config>
+    <entry key="squaredError" type="xdouble" value="0.09266195286490664"/>
+    <entry key="adjustedSquaredError" type="xdouble" value="-0.2702732659891307"/>
+    <config key="meanValues">
+        <entry key="array-size" type="xint" value="4"/>
+        <entry key="0" type="xdouble" value="2.5333333333333337"/>
+        <entry key="1" type="xdouble" value="1.5999999999999999"/>
+        <entry key="2" type="xdouble" value="0.3333333333333333"/>
+        <entry key="3" type="xdouble" value="0.6666666666666666"/>
+    </config>
+    <config key="stdErrors">
+        <entry key="array-size" type="xint" value="5"/>
+        <entry key="0" type="xdouble" value="1.0083629555743323"/>
+        <entry key="1" type="xdouble" value="0.8970073072648934"/>
+        <entry key="2" type="xdouble" value="2.877878797752303"/>
+        <entry key="3" type="xdouble" value="2.80742416345916"/>
+        <entry key="4" type="xdouble" value="3.8664296387812973"/>
+    </config>
+    <config key="tValues">
+        <entry key="array-size" type="xint" value="5"/>
+        <entry key="0" type="xdouble" value="-0.8407382942193597"/>
+        <entry key="1" type="xdouble" value="-0.2356011274721526"/>
+        <entry key="2" type="xdouble" value="0.050602992554736465"/>
+        <entry key="3" type="xdouble" value="-0.27126374644872603"/>
+        <entry key="4" type="xdouble" value="2.830771377259317"/>
+    </config>
+    <config key="pValues">
+        <entry key="array-size" type="xint" value="5"/>
+        <entry key="0" type="xdouble" value="0.4201429168616668"/>
+        <entry key="1" type="xdouble" value="0.8184970932766569"/>
+        <entry key="2" type="xdouble" value="0.9606383806373473"/>
+        <entry key="3" type="xdouble" value="0.7917055221324409"/>
+        <entry key="4" type="xdouble" value="0.017828306314189968"/>
+    </config>
+</config>
