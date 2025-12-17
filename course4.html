@@ -17,62 +17,88 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                 </svg>
-                Назад на главную
-            </a>
-            <h1>4 Курс</h1>
-            <p class="subtitle">Программирование и проекты (7 семестр)</p>
-        </header>
+                <!DOCTYPE html>
+                <html lang="ru">
 
-        <main class="subject-list">
-            <a href="viewer.html?path=4%20курс/Образовательный%20инжиниринг" class="subject-item">
-                <span class="subject-name">Образовательный инжиниринг</span>
-                <span class="folder-icon">📁</span>
-            </a>
-            <a href="viewer.html?path=4%20курс/Программирование" class="subject-item">
-                <span class="subject-name">Программирование</span>
-                <span class="folder-icon">📁</span>
-            </a>
-            <a href="https://github.com/Daniyarsick/Django_Prog7" class="subject-item" target="_blank">
-                <span class="subject-name">Django Tutorial (Prog7)</span>
-                <span class="folder-icon"><i class="fab fa-github"></i></span>
-            </a>
-            <a href="https://github.com/Daniyarsick/Lab5_Prog7" class="subject-item" target="_blank">
-                <span class="subject-name">Lab 5 (Prog7)</span>
-                <span class="folder-icon"><i class="fab fa-github"></i></span>
-            </a>
-            <a href="https://github.com/Daniyarsick/Lb5-prog7_microservisev" class="subject-item" target="_blank">
-                <span class="subject-name">Microservices (Lb5 Prog7)</span>
-                <span class="folder-icon"><i class="fab fa-github"></i></span>
-            </a>
-            <a href="https://github.com/Daniyarsick/RESTfull-SpringBoot-Prog7" class="subject-item" target="_blank">
-                <span class="subject-name">RESTful SpringBoot (Prog7)</span>
-                <span class="folder-icon"><i class="fab fa-github"></i></span>
-            </a>
-            <a href="https://github.com/Daniyarsick/Oauth2.0_Prog7" class="subject-item" target="_blank">
-                <span class="subject-name">OAuth 2.0 (Prog7)</span>
-                <span class="folder-icon"><i class="fab fa-github"></i></span>
-            </a>
-            <a href="https://github.com/Daniyarsick/RestApi_prog7" class="subject-item" target="_blank">
-                <span class="subject-name">REST API (Prog7)</span>
-                <span class="folder-icon"><i class="fab fa-github"></i></span>
-            </a>
-            <a href="https://github.com/Daniyarsick/Linear-Prog7/blob/main/Linear_Programming_Lab.ipynb"
-                class="subject-item" target="_blank">
-                <span class="subject-name">Linear Programming (Jupyter)</span>
-                <span class="folder-icon"><i class="fas fa-book"></i></span>
-            </a>
-            <a href="https://github.com/Daniyarsick/RabbitMq_Prog7/blob/main/weather-aggregator-system/README.md"
-                class="subject-item" target="_blank">
-                <span class="subject-name">RabbitMQ Weather Aggregator</span>
-                <span class="folder-icon"><i class="fas fa-cloud"></i></span>
-            </a>
-            <a href="https://github.com/Daniyarsick/educational-project_prog7" class="subject-item" target="_blank">
-                <span class="subject-name">Educational Project (Prog7)</span>
-                <span class="folder-icon"><i class="fab fa-github"></i></span>
-            </a>
-        </main>
-    </div>
-    <script src="script.js"></script>
-</body>
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>4 Курс - Портфолио</title>
+                    <link rel="stylesheet" href="style.css">
+                    <link rel="stylesheet"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+                </head>
 
-</html>
+                <body>
+                    <div class="container">
+                        <header>
+                            <a href="index.html" class="back-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                                </svg>
+                                Назад на главную
+                            </a>
+                            <h1>4 Курс</h1>
+                            <p class="subtitle">Программирование и проекты (7 семестр)</p>
+                        </header>
+
+                        <main class="subject-list">
+                            <div id="dynamic-folders" style="display: contents;"></div>
+
+                            <!-- Manual Links -->
+                            <a href="https://github.com/Daniyarsick/Django_Prog7" class="subject-item" target="_blank">
+                                <span class="subject-name">Django Tutorial (Prog7)</span>
+                                <span class="folder-icon"><i class="fab fa-github"></i></span>
+                            </a>
+                            <a href="https://github.com/Daniyarsick/Lab5_Prog7" class="subject-item" target="_blank">
+                                <span class="subject-name">Lab 5 (Prog7)</span>
+                                <span class="folder-icon"><i class="fab fa-github"></i></span>
+                            </a>
+                            <a href="https://github.com/Daniyarsick/Lb5-prog7_microservisev" class="subject-item"
+                                target="_blank">
+                                <span class="subject-name">Microservices (Lb5 Prog7)</span>
+                                <span class="folder-icon"><i class="fab fa-github"></i></span>
+                            </a>
+                            <a href="https://github.com/Daniyarsick/RESTfull-SpringBoot-Prog7" class="subject-item"
+                                target="_blank">
+                                <span class="subject-name">RESTful SpringBoot (Prog7)</span>
+                                <span class="folder-icon"><i class="fab fa-github"></i></span>
+                            </a>
+                            <a href="https://github.com/Daniyarsick/Oauth2.0_Prog7" class="subject-item"
+                                target="_blank">
+                                <span class="subject-name">OAuth 2.0 (Prog7)</span>
+                                <span class="folder-icon"><i class="fab fa-github"></i></span>
+                            </a>
+                            <a href="https://github.com/Daniyarsick/RestApi_prog7" class="subject-item" target="_blank">
+                                <span class="subject-name">REST API (Prog7)</span>
+                                <span class="folder-icon"><i class="fab fa-github"></i></span>
+                            </a>
+                            <a href="https://github.com/Daniyarsick/Linear-Prog7/blob/main/Linear_Programming_Lab.ipynb"
+                                class="subject-item" target="_blank">
+                                <span class="subject-name">Linear Programming (Jupyter)</span>
+                                <span class="folder-icon"><i class="fas fa-book"></i></span>
+                            </a>
+                            <a href="https://github.com/Daniyarsick/RabbitMq_Prog7/blob/main/weather-aggregator-system/README.md"
+                                class="subject-item" target="_blank">
+                                <span class="subject-name">RabbitMQ Weather Aggregator</span>
+                                <span class="folder-icon"><i class="fas fa-cloud"></i></span>
+                            </a>
+                            <a href="https://github.com/Daniyarsick/educational-project_prog7" class="subject-item"
+                                target="_blank">
+                                <span class="subject-name">Educational Project (Prog7)</span>
+                                <span class="folder-icon"><i class="fab fa-github"></i></span>
+                            </a>
+                        </main>
+                    </div>
+                    <script src="files.js"></script>
+                    <script src="script.js"></script>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', () => {
+                            renderCourseFolders("4 курс");
+                        });
+                    </script>
+                </body>
+
+                </html>
