@@ -19,3 +19,26 @@ window.addEventListener('scroll', () => {
         nav.style.boxShadow = 'none';
     }
 });
+
+// Render course folders
+function renderCourseFolders(courseName) {
+    const container = document.getElementById('dynamic-folders');
+    // Check if fileData is defined
+    if (!container || typeof fileData === 'undefined' || !fileData[courseName]) return;
+
+    const subjects = Object.keys(fileData[courseName]);
+
+    subjects.forEach(subject => {
+        const link = document.createElement('a');
+        // Encode path components properly
+        link.href = `viewer.html?path=${encodeURIComponent(courseName)}/${encodeURIComponent(subject)}`;
+        link.className = 'subject-item';
+
+        link.innerHTML = `
+            <span class="subject-name">${subject}</span>
+            <span class="folder-icon"><i class="fas fa-folder"></i></span>
+        `;
+
+        container.appendChild(link);
+    });
+}
