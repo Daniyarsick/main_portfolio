@@ -79,38 +79,67 @@
             return githubFetchJson(`/repos/${encodeURIComponent(GITHUB_OWNER)}/${encodeURIComponent(GITHUB_REPO)}/contents/${encoded}?ref=${encodeURIComponent(GITHUB_BRANCH)}`);
         }
 
-        async function listFilesRecursively(rootRepoPath) {
+        function buildViewerHref(pathParam) {
+            return `viewer.html?path=${encodeURIComponent(pathParam)}`;
+        }
+
+        function splitPath(pathParam) {
+            return String(pathParam)
+                .split('/')
+                .map(s => s.trim())
+                .filter(Boolean);
+        }
+
+        function parentPath(pathParam) {
+            const parts = splitPath(pathParam);
+            if (parts.length <= 1) return null;
+            return parts.slice(0, -1).join('/');
+        }
+
+        function entriesFromFileData(pathParam) {
+            if (typeof fileData === 'undefined') return null;
+
+            const parts = splitPath(pathParam);
+            const course = parts[0];
+            const subject = parts[1];
+            if (!course || !subject) return null;
+
+            const subjectFiles = fileData?.[course]?.[subject];
+            if (!Array.isArray(subjectFiles)) return null;
+
+            const base = parts.join('/');
+            const basePrefix = base + '/';
+
+            const folderSet = new Set();
             const files = [];
-            const dirs = [rootRepoPath];
-            const concurrency = 4;
 
-            while (dirs.length > 0) {
-                const batch = dirs.splice(0, concurrency);
-                const results = await Promise.all(batch.map(async (dirPath) => ({
-                    dirPath,
-                    entries: await githubListContents(dirPath)
-                })));
+            for (const f of subjectFiles) {
+                const repoPath = String(f?.path || '').startsWith('./') ? String(f.path).slice(2) : String(f?.path || '');
+                if (!repoPath) continue;
+                if (!repoPath.startsWith(basePrefix)) continue;
 
-                for (const { entries } of results) {
-                    if (!Array.isArray(entries)) continue;
-                    for (const entry of entries) {
-                        if (!entry || typeof entry !== 'object') continue;
+                const rest = repoPath.slice(basePrefix.length);
+                const restParts = rest.split('/').filter(Boolean);
+                if (restParts.length === 0) continue;
 
-                        if (entry.type === 'dir' && entry.path) {
-                            dirs.push(entry.path);
-                        } else if (entry.type === 'file' && entry.path) {
-                            files.push({
-                                name: entry.name || entry.path.split('/').pop(),
-                                repoPath: entry.path,
-                                type: getFileType(entry.name || entry.path),
-                                size: typeof entry.size === 'number' ? entry.size : 0
-                            });
-                        }
-                    }
+                if (restParts.length === 1) {
+                    files.push({
+                        name: f.name,
+                        repoPath,
+                        type: f.type || getFileType(f.name),
+                        size: typeof f.size === 'number' ? f.size : 0
+                    });
+                } else {
+                    folderSet.add(restParts[0]);
                 }
             }
 
-            return files;
+            const dirs = Array.from(folderSet).map(name => ({
+                name,
+                repoPath: basePrefix + name
+            }));
+
+            return { dirs, files };
         }
 
         function iconForType(type) {
@@ -136,36 +165,53 @@
                 return;
             }
 
-            const parts = pathParam.split('/');
+            const parts = splitPath(pathParam);
             const course = parts[0];
             const subject = parts[1];
+            const currentTitle = parts.length > 0 ? parts[parts.length - 1] : pathParam;
 
-            document.getElementById('folder-title').textContent = subject || course;
+            document.getElementById('folder-title').textContent = currentTitle;
             document.getElementById('folder-subtitle').textContent = pathParam;
 
             // Set back button
             const backBtn = document.getElementById('back-btn');
-            if (course === "1 курс") backBtn.href = "course1.html";
-            else if (course === "2 курс") backBtn.href = "course2.html";
-            else if (course === "3 курс") backBtn.href = "course3.html";
-            else if (course === "4 курс") backBtn.href = "course4.html";
-            else backBtn.href = "index.html";
+            const parent = parentPath(pathParam);
+            if (parent && parts.length > 2) {
+                backBtn.href = buildViewerHref(parent);
+            } else {
+                if (course === "1 курс") backBtn.href = "course1.html";
+                else if (course === "2 курс") backBtn.href = "course2.html";
+                else if (course === "3 курс") backBtn.href = "course3.html";
+                else if (course === "4 курс") backBtn.href = "course4.html";
+                else backBtn.href = "index.html";
+            }
 
             const fileList = document.getElementById('file-list');
             fileList.innerHTML = '<p class="empty-msg">Загрузка…</p>';
 
+            let dirs = [];
             let files = [];
             try {
-                files = await listFilesRecursively(pathParam);
-            } catch (error) {
-                // Fallback to pre-generated index if present
-                if (typeof fileData !== 'undefined' && fileData[course] && fileData[course][subject]) {
-                    files = fileData[course][subject].map(f => ({
-                        name: f.name,
-                        repoPath: String(f.path || '').startsWith('./') ? String(f.path).slice(2) : String(f.path),
-                        type: f.type,
-                        size: f.size
+                const entries = await githubListContents(pathParam);
+                if (!Array.isArray(entries)) throw new Error('Unexpected GitHub API response');
+
+                dirs = entries
+                    .filter(e => e && e.type === 'dir' && e.path && e.name)
+                    .map(e => ({ name: e.name, repoPath: e.path }));
+
+                files = entries
+                    .filter(e => e && e.type === 'file' && e.path && e.name)
+                    .map(e => ({
+                        name: e.name,
+                        repoPath: e.path,
+                        type: getFileType(e.name),
+                        size: typeof e.size === 'number' ? e.size : 0
                     }));
+            } catch (error) {
+                const fallback = entriesFromFileData(pathParam);
+                if (fallback) {
+                    dirs = fallback.dirs;
+                    files = fallback.files;
                 } else {
                     fileList.innerHTML = '<p class="empty-msg">Не удалось загрузить файлы</p>';
                     // eslint-disable-next-line no-console
@@ -174,10 +220,12 @@
                 }
             }
 
-            if (!files || files.length === 0) {
+            if ((!dirs || dirs.length === 0) && (!files || files.length === 0)) {
                 fileList.innerHTML = '<p class="empty-msg">Папка пуста</p>';
                 return;
             }
+
+            dirs.sort((a, b) => String(a.name).localeCompare(String(b.name), 'ru'));
 
             // Sort: PDFs first, then others
             files.sort((a, b) => {
@@ -187,6 +235,22 @@
             });
 
             fileList.innerHTML = '';
+
+            dirs.forEach(dir => {
+                const folderCard = document.createElement('a');
+                folderCard.href = buildViewerHref(dir.repoPath);
+                folderCard.className = 'file-card';
+                folderCard.target = '_self';
+
+                folderCard.innerHTML = `
+                    <div class="file-icon"><i class="fas fa-folder"></i></div>
+                    <div class="file-info">
+                        <div class="file-name">${dir.name}</div>
+                        <div class="file-size">Папка</div>
+                    </div>
+                `;
+                fileList.appendChild(folderCard);
+            });
 
             files.forEach(file => {
                 const fileCard = document.createElement('a');
