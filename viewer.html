@@ -30,39 +30,118 @@
 
     <script src="files.js"></script>
     <script>
-        // Функция для правильного кодирования пути
-        function encodePath(filePath) {
-            // Удаляем ./ в начале если есть
-            const cleanPath = filePath.startsWith('./') ? filePath.substring(2) : filePath;
-            // Разбиваем путь на части и кодируем каждую
-            const parts = cleanPath.split('/');
-            const encodedParts = parts.map(part => encodeURIComponent(part));
-            return './' + encodedParts.join('/');
+        const GITHUB_OWNER = 'Daniyarsick';
+        const GITHUB_REPO = 'main_portfolio';
+        const GITHUB_BRANCH = 'main';
+
+        function encodePathSegments(path) {
+            return String(path)
+                .split('/')
+                .filter(Boolean)
+                .map(seg => encodeURIComponent(seg))
+                .join('/');
         }
 
-        // Функция для создания GitHub URL
-        function getGitHubUrl(filePath) {
-            const cleanPath = filePath.startsWith('./') ? filePath.substring(2) : filePath;
-            const parts = cleanPath.split('/');
-            const encodedParts = parts.map(part => encodeURIComponent(part));
-            return `https://github.com/Daniyarsick/main_portfolio/blob/main/${encodedParts.join('/')}`;
+        // Относительный путь для GitHub Pages (с правильным URL-encoding)
+        function toPagesHref(repoPath) {
+            return './' + encodePathSegments(repoPath);
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
+        // GitHub Blob viewer (лучше для PDF/LFS и крупных файлов)
+        function toGitHubBlobHref(repoPath) {
+            return `https://github.com/${encodeURIComponent(GITHUB_OWNER)}/${encodeURIComponent(GITHUB_REPO)}/blob/${encodeURIComponent(GITHUB_BRANCH)}/${encodePathSegments(repoPath)}`;
+        }
+
+        function getFileType(filename) {
+            const idx = filename.lastIndexOf('.');
+            if (idx === -1) return 'file';
+            return filename.slice(idx + 1).toLowerCase();
+        }
+
+        async function githubFetchJson(pathnameWithQuery) {
+            const url = `https://api.github.com${pathnameWithQuery}`;
+            const response = await fetch(url, {
+                headers: {
+                    'Accept': 'application/vnd.github+json'
+                }
+            });
+
+            if (!response.ok) {
+                const text = await response.text().catch(() => '');
+                throw new Error(`GitHub API error ${response.status}: ${text || response.statusText}`);
+            }
+
+            return response.json();
+        }
+
+        async function githubListContents(repoPath) {
+            const encoded = encodePathSegments(repoPath);
+            return githubFetchJson(`/repos/${encodeURIComponent(GITHUB_OWNER)}/${encodeURIComponent(GITHUB_REPO)}/contents/${encoded}?ref=${encodeURIComponent(GITHUB_BRANCH)}`);
+        }
+
+        async function listFilesRecursively(rootRepoPath) {
+            const files = [];
+            const dirs = [rootRepoPath];
+            const concurrency = 4;
+
+            while (dirs.length > 0) {
+                const batch = dirs.splice(0, concurrency);
+                const results = await Promise.all(batch.map(async (dirPath) => ({
+                    dirPath,
+                    entries: await githubListContents(dirPath)
+                })));
+
+                for (const { entries } of results) {
+                    if (!Array.isArray(entries)) continue;
+                    for (const entry of entries) {
+                        if (!entry || typeof entry !== 'object') continue;
+
+                        if (entry.type === 'dir' && entry.path) {
+                            dirs.push(entry.path);
+                        } else if (entry.type === 'file' && entry.path) {
+                            files.push({
+                                name: entry.name || entry.path.split('/').pop(),
+                                repoPath: entry.path,
+                                type: getFileType(entry.name || entry.path),
+                                size: typeof entry.size === 'number' ? entry.size : 0
+                            });
+                        }
+                    }
+                }
+            }
+
+            return files;
+        }
+
+        function iconForType(type) {
+            if (['jpg', 'png', 'jpeg', 'gif', 'svg'].includes(type)) return 'fa-file-image';
+            if (type === 'pdf') return 'fa-file-pdf';
+            if (['doc', 'docx'].includes(type)) return 'fa-file-word';
+            if (['xls', 'xlsx'].includes(type)) return 'fa-file-excel';
+            if (['ppt', 'pptx'].includes(type)) return 'fa-file-powerpoint';
+            if (['zip', 'rar', '7z'].includes(type)) return 'fa-file-archive';
+            if (['mp4', 'avi', 'mkv', 'mov'].includes(type)) return 'fa-file-video';
+            if (['mp3', 'wav', 'ogg'].includes(type)) return 'fa-file-audio';
+            if (['py', 'js', 'html', 'css', 'cpp', 'java', 'c', 'h'].includes(type)) return 'fa-file-code';
+            if (['txt', 'md'].includes(type)) return 'fa-file-alt';
+            return 'fa-file';
+        }
+
+        document.addEventListener('DOMContentLoaded', async () => {
             const params = new URLSearchParams(window.location.search);
-            const path = params.get('path'); // e.g., "1 курс/ИТ"
+            const pathParam = params.get('path'); // e.g., "1 курс/Дискретная математика"
 
-            if (!path) {
+            if (!pathParam) {
                 document.getElementById('folder-title').textContent = "Ошибка: Путь не указан";
                 return;
             }
 
-            const parts = path.split('/');
+            const parts = pathParam.split('/');
             const course = parts[0];
             const subject = parts[1];
 
             document.getElementById('folder-title').textContent = subject || course;
-            document.getElementById('folder-subtitle').textContent = path;
+            document.getElementById('folder-subtitle').textContent = pathParam;
 
             // Set back button
             const backBtn = document.getElementById('back-btn');
@@ -73,65 +152,69 @@
             else backBtn.href = "index.html";
 
             const fileList = document.getElementById('file-list');
+            fileList.innerHTML = '<p class="empty-msg">Загрузка…</p>';
 
-            if (fileData[course] && fileData[course][subject]) {
-                let files = fileData[course][subject];
-
-                if (files.length === 0) {
-                    fileList.innerHTML = '<p class="empty-msg">Папка пуста</p>';
+            let files = [];
+            try {
+                files = await listFilesRecursively(pathParam);
+            } catch (error) {
+                // Fallback to pre-generated index if present
+                if (typeof fileData !== 'undefined' && fileData[course] && fileData[course][subject]) {
+                    files = fileData[course][subject].map(f => ({
+                        name: f.name,
+                        repoPath: String(f.path || '').startsWith('./') ? String(f.path).slice(2) : String(f.path),
+                        type: f.type,
+                        size: f.size
+                    }));
+                } else {
+                    fileList.innerHTML = '<p class="empty-msg">Не удалось загрузить файлы</p>';
+                    // eslint-disable-next-line no-console
+                    console.error(error);
                     return;
                 }
-
-                // Sort: PDFs first, then others
-                files.sort((a, b) => {
-                    if (a.type === 'pdf' && b.type !== 'pdf') return -1;
-                    if (a.type !== 'pdf' && b.type === 'pdf') return 1;
-                    return a.name.localeCompare(b.name);
-                });
-
-                files.forEach(file => {
-                    const fileCard = document.createElement('a');
-
-                    // PDF и большие файлы открываем через GitHub (из-за LFS)
-                    // Остальные файлы через относительные пути
-                    if (file.type === 'pdf') {
-                        // PDF открываем через GitHub Blob viewer (LFS файлы не работают напрямую на Pages)
-                        fileCard.href = getGitHubUrl(file.path);
-                    } else if (['mp4', 'avi', 'mp3'].includes(file.type) && file.size > 50000000) {
-                        // Большие медиафайлы (>50MB) через GitHub
-                        fileCard.href = getGitHubUrl(file.path);
-                    } else {
-                        // Остальные файлы через относительные пути с правильным кодированием
-                        fileCard.href = encodePath(file.path);
-                    }
-
-                    fileCard.className = 'file-card';
-                    fileCard.target = '_blank';
-
-                    let iconClass = 'fa-file';
-                    if (['jpg', 'png', 'jpeg', 'gif', 'svg'].includes(file.type)) iconClass = 'fa-file-image';
-                    else if (['pdf'].includes(file.type)) iconClass = 'fa-file-pdf';
-                    else if (['doc', 'docx'].includes(file.type)) iconClass = 'fa-file-word';
-                    else if (['xls', 'xlsx'].includes(file.type)) iconClass = 'fa-file-excel';
-                    else if (['ppt', 'pptx'].includes(file.type)) iconClass = 'fa-file-powerpoint';
-                    else if (['zip', 'rar', '7z'].includes(file.type)) iconClass = 'fa-file-archive';
-                    else if (['mp4', 'avi', 'mkv', 'mov'].includes(file.type)) iconClass = 'fa-file-video';
-                    else if (['mp3', 'wav', 'ogg'].includes(file.type)) iconClass = 'fa-file-audio';
-                    else if (['py', 'js', 'html', 'css', 'cpp', 'java', 'c', 'h'].includes(file.type)) iconClass = 'fa-file-code';
-                    else if (['txt', 'md'].includes(file.type)) iconClass = 'fa-file-alt';
-
-                    fileCard.innerHTML = `
-                        <div class="file-icon"><i class="fas ${iconClass}"></i></div>
-                        <div class="file-info">
-                            <div class="file-name">${file.name}</div>
-                            <div class="file-size">${formatSize(file.size)}</div>
-                        </div>
-                    `;
-                    fileList.appendChild(fileCard);
-                });
-            } else {
-                fileList.innerHTML = '<p class="empty-msg">Папка не найдена или пуста</p>';
             }
+
+            if (!files || files.length === 0) {
+                fileList.innerHTML = '<p class="empty-msg">Папка пуста</p>';
+                return;
+            }
+
+            // Sort: PDFs first, then others
+            files.sort((a, b) => {
+                if (a.type === 'pdf' && b.type !== 'pdf') return -1;
+                if (a.type !== 'pdf' && b.type === 'pdf') return 1;
+                return String(a.name).localeCompare(String(b.name), 'ru');
+            });
+
+            fileList.innerHTML = '';
+
+            files.forEach(file => {
+                const fileCard = document.createElement('a');
+                const fileType = file.type || getFileType(file.name);
+                const fileSize = typeof file.size === 'number' ? file.size : 0;
+
+                // PDF и большие файлы открываем через GitHub (из-за LFS/ограничений Pages)
+                if (fileType === 'pdf') {
+                    fileCard.href = toGitHubBlobHref(file.repoPath);
+                } else if (['mp4', 'avi', 'mp3'].includes(fileType) && fileSize > 50000000) {
+                    fileCard.href = toGitHubBlobHref(file.repoPath);
+                } else {
+                    fileCard.href = toPagesHref(file.repoPath);
+                }
+
+                fileCard.className = 'file-card';
+                fileCard.target = '_blank';
+
+                const iconClass = iconForType(fileType);
+                fileCard.innerHTML = `
+                    <div class="file-icon"><i class="fas ${iconClass}"></i></div>
+                    <div class="file-info">
+                        <div class="file-name">${file.name}</div>
+                        <div class="file-size">${formatSize(fileSize)}</div>
+                    </div>
+                `;
+                fileList.appendChild(fileCard);
+            });
         });
 
         function formatSize(bytes) {
