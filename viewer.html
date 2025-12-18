@@ -40,16 +40,10 @@
             return './' + parts.map(part => encodeURIComponent(part)).join('/');
         }
 
-        function getGitHubRawUrl(filePath) {
+        function getGitHubBlobUrl(filePath) {
             const cleanPath = String(filePath).startsWith('./') ? String(filePath).slice(2) : String(filePath);
             const parts = cleanPath.split('/').filter(Boolean);
-            return `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/${parts.map(part => encodeURIComponent(part)).join('/')}`;
-        }
-
-        function getGitHubUrl(filePath) {
-            const cleanPath = String(filePath).startsWith('./') ? String(filePath).slice(2) : String(filePath);
-            const parts = cleanPath.split('/').filter(Boolean);
-            return `https://github.com/${encodeURIComponent(GITHUB_OWNER)}/${encodeURIComponent(GITHUB_REPO)}/blob/${encodeURIComponent(GITHUB_BRANCH)}/${parts.map(part => encodeURIComponent(part)).join('/')}`;
+            return `https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}/blob/${GITHUB_BRANCH}/${parts.map(part => encodeURIComponent(part)).join('/')}`;
         }
 
         function buildViewerHref(pathParam) {
@@ -214,8 +208,8 @@
                 const fileType = file.type || getFileType(file.name);
                 const fileSize = typeof file.size === 'number' ? file.size : 0;
 
-                // Use GitHub raw URL for all files to avoid GitHub Pages limitations
-                fileCard.href = getGitHubRawUrl(file.path);
+                // Use GitHub blob URL for all files (shows in GitHub viewer)
+                fileCard.href = getGitHubBlobUrl(file.path);
 
                 fileCard.className = 'file-card';
                 fileCard.target = '_blank';

@@ -3,11 +3,11 @@ const GITHUB_OWNER = 'Daniyarsick';
 const GITHUB_REPO = 'main_portfolio';
 const GITHUB_BRANCH = 'main';
 
-// Get GitHub raw URL for a file path
-function getGitHubRawUrl(filePath) {
+// Get GitHub blob URL for a file path (shows in GitHub viewer)
+function getGitHubBlobUrl(filePath) {
     const cleanPath = String(filePath).startsWith('./') ? String(filePath).slice(2) : String(filePath);
     const parts = cleanPath.split('/').filter(Boolean);
-    return `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/${parts.map(part => encodeURIComponent(part)).join('/')}`;
+    return `https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}/blob/${GITHUB_BRANCH}/${parts.map(part => encodeURIComponent(part)).join('/')}`;
 }
 
 // Smooth scroll for nav links
@@ -186,8 +186,8 @@ function renderCourseFolders(courseName) {
                 // Render files in this folder
                 tree.files.forEach(file => {
                     const fileLink = document.createElement('a');
-                    // Use GitHub raw URL for all files to avoid GitHub Pages limitations
-                    fileLink.href = getGitHubRawUrl(file.path);
+                    // Use GitHub blob URL for all files (shows in GitHub viewer)
+                    fileLink.href = getGitHubBlobUrl(file.path);
                     fileLink.className = 'subject-item link-item subfolder-file';
                     fileLink.target = '_blank';
                     fileLink.style.marginLeft = (depth * 0.5) + 'rem';
