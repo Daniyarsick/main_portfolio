@@ -113,18 +113,59 @@ function renderCourseFolders(courseName) {
         const linksContainer = document.createElement('div');
         linksContainer.className = 'folder-links';
 
-        // Add local files if they exist
+        // Add local files if they exist, grouped by subfolders
         if (hasLocalFiles && localKey) {
             const files = fileData[courseName][localKey];
+
+            // Group files by subfolder
+            const subfolders = {};
+            const rootFiles = [];
+
             files.forEach(file => {
+                // Extract subfolder from path: ./course/subject/subfolder/.../file.ext
+                const pathParts = file.path.split('/');
+                // Remove ./course/subject from beginning and filename from end
+                if (pathParts.length > 4) {
+                    // Has subfolder(s)
+                    const subfolderPath = pathParts.slice(3, -1).join('/');
+                    if (!subfolders[subfolderPath]) {
+                        subfolders[subfolderPath] = [];
+                    }
+                    subfolders[subfolderPath].push(file);
+                } else {
+                    // File is in root of subject
+                    rootFiles.push(file);
+                }
+            });
+
+            // Render subfolders first
+            Object.keys(subfolders).sort().forEach(subfolderPath => {
+                const subfolderHeader = document.createElement('div');
+                subfolderHeader.className = 'subfolder-header';
+                subfolderHeader.innerHTML = `<i class="fas fa-folder"></i> ${subfolderPath}`;
+                linksContainer.appendChild(subfolderHeader);
+
+                subfolders[subfolderPath].forEach(file => {
+                    const fileLink = document.createElement('a');
+                    fileLink.href = file.path;
+                    fileLink.className = 'subject-item link-item subfolder-file';
+                    fileLink.target = '_blank';
+                    const iconClass = getFileIcon(file.type);
+                    fileLink.innerHTML = `
+                        <span class="subject-name">${file.name}</span>
+                        <span class="folder-icon"><i class="${iconClass}"></i></span>
+                    `;
+                    linksContainer.appendChild(fileLink);
+                });
+            });
+
+            // Render root files
+            rootFiles.forEach(file => {
                 const fileLink = document.createElement('a');
                 fileLink.href = file.path;
                 fileLink.className = 'subject-item link-item';
                 fileLink.target = '_blank';
-
-                // Get file icon based on type
                 const iconClass = getFileIcon(file.type);
-
                 fileLink.innerHTML = `
                     <span class="subject-name">${file.name}</span>
                     <span class="folder-icon"><i class="${iconClass}"></i></span>
