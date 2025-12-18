@@ -26,35 +26,55 @@ function renderCourseFolders(courseName) {
     const container = document.getElementById('dynamic-folders');
     if (!container) return;
 
-    // Collect all disciplines from both sources
-    const allDisciplines = new Set();
+    // Normalize string for comparison (trim, normalize unicode, collapse whitespace)
+    function normalize(s) {
+        return s.normalize('NFC').trim().replace(/\s+/g, ' ').toLowerCase();
+    }
+
+    // Build a map of normalized name -> { displayName, hasLocalFiles, hasExternalLinks, localKey, externalKey }
+    const disciplineMap = new Map();
 
     // From fileData (local folders)
     if (typeof fileData !== 'undefined' && fileData[courseName]) {
-        Object.keys(fileData[courseName]).forEach(d => allDisciplines.add(d));
+        Object.keys(fileData[courseName]).forEach(key => {
+            const norm = normalize(key);
+            if (!disciplineMap.has(norm)) {
+                disciplineMap.set(norm, { displayName: key, hasLocalFiles: true, localKey: key, externalKey: null });
+            } else {
+                const entry = disciplineMap.get(norm);
+                entry.hasLocalFiles = true;
+                entry.localKey = key;
+            }
+        });
     }
 
     // From externalLinks
     if (typeof externalLinks !== 'undefined' && externalLinks[courseName]) {
-        Object.keys(externalLinks[courseName]).forEach(d => allDisciplines.add(d));
+        Object.keys(externalLinks[courseName]).forEach(key => {
+            const norm = normalize(key);
+            if (!disciplineMap.has(norm)) {
+                disciplineMap.set(norm, { displayName: key, hasLocalFiles: false, hasExternalLinks: true, localKey: null, externalKey: key });
+            } else {
+                const entry = disciplineMap.get(norm);
+                entry.hasExternalLinks = true;
+                entry.externalKey = key;
+            }
+        });
     }
 
-    // Sort and render each discipline
-    Array.from(allDisciplines).sort().forEach(discipline => {
-        const hasLocalFiles = typeof fileData !== 'undefined' &&
-            fileData[courseName] &&
-            fileData[courseName][discipline];
-        const hasExternalLinks = typeof externalLinks !== 'undefined' &&
-            externalLinks[courseName] &&
-            externalLinks[courseName][discipline];
+    // Sort by display name and render
+    const sorted = Array.from(disciplineMap.values()).sort((a, b) => a.displayName.localeCompare(b.displayName, 'ru'));
+
+    sorted.forEach(discipline => {
+        const { displayName, hasLocalFiles, hasExternalLinks, localKey, externalKey } = discipline;
 
         // If only local files exist (no external links for this discipline)
         if (hasLocalFiles && !hasExternalLinks) {
             const link = document.createElement('a');
-            link.href = `viewer.html?path=${encodeURIComponent(courseName)}/${encodeURIComponent(discipline)}`;
+            link.href = `viewer.html?path=${encodeURIComponent(courseName)}/${encodeURIComponent(localKey)}`;
             link.className = 'subject-item';
             link.innerHTML = `
-                <span class="subject-name">${discipline}</span>
+                <span class="subject-name">${displayName}</span>
                 <span class="folder-icon"><i class="fas fa-folder"></i></span>
             `;
             container.appendChild(link);
@@ -69,7 +89,7 @@ function renderCourseFolders(courseName) {
         header.className = 'subject-item folder-header';
         header.onclick = function () { toggleFolder(this); };
         header.innerHTML = `
-            <span class="subject-name">${discipline}</span>
+            <span class="subject-name">${displayName}</span>
             <span class="folder-icon"><i class="fas fa-folder"></i></span>
         `;
 
@@ -77,9 +97,9 @@ function renderCourseFolders(courseName) {
         linksContainer.className = 'folder-links';
 
         // Add link to local files if they exist
-        if (hasLocalFiles) {
+        if (hasLocalFiles && localKey) {
             const filesLink = document.createElement('a');
-            filesLink.href = `viewer.html?path=${encodeURIComponent(courseName)}/${encodeURIComponent(discipline)}`;
+            filesLink.href = `viewer.html?path=${encodeURIComponent(courseName)}/${encodeURIComponent(localKey)}`;
             filesLink.className = 'subject-item link-item';
             filesLink.innerHTML = `
                 <span class="subject-name">📂 Файлы</span>
@@ -89,8 +109,8 @@ function renderCourseFolders(courseName) {
         }
 
         // Add external links
-        if (hasExternalLinks) {
-            externalLinks[courseName][discipline].forEach(item => {
+        if (hasExternalLinks && externalKey) {
+            externalLinks[courseName][externalKey].forEach(item => {
                 const link = document.createElement('a');
                 link.href = item.url;
                 link.className = 'subject-item link-item';
