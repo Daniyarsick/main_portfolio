@@ -1238,12 +1238,6 @@ const fileData = {
                 "size": 382469
             },
             {
-                "name": "httpssites.google.comviewannanurov-d-p-portfolioглавная-страница.pdf",
-                "path": "./1 курс/Информационные технологии в математике/Тема 1/ЛР/httpssites.google.comviewannanurov-d-p-portfolioглавная-страница.pdf",
-                "type": "pdf",
-                "size": 55770
-            },
-            {
                 "name": "ЛР тема 1 задание 2.pdf",
                 "path": "./1 курс/Информационные технологии в математике/Тема 1/ЛР/ЛР тема 1 задание 2.pdf",
                 "type": "pdf",
