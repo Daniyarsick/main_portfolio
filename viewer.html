@@ -40,6 +40,12 @@
             return './' + parts.map(part => encodeURIComponent(part)).join('/');
         }
 
+        function getGitHubRawUrl(filePath) {
+            const cleanPath = String(filePath).startsWith('./') ? String(filePath).slice(2) : String(filePath);
+            const parts = cleanPath.split('/').filter(Boolean);
+            return `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/${parts.map(part => encodeURIComponent(part)).join('/')}`;
+        }
+
         function getGitHubUrl(filePath) {
             const cleanPath = String(filePath).startsWith('./') ? String(filePath).slice(2) : String(filePath);
             const parts = cleanPath.split('/').filter(Boolean);
@@ -208,14 +214,8 @@
                 const fileType = file.type || getFileType(file.name);
                 const fileSize = typeof file.size === 'number' ? file.size : 0;
 
-                // PDF и большие файлы открываем через GitHub (из-за LFS/ограничений Pages)
-                if (fileType === 'pdf') {
-                    fileCard.href = getGitHubUrl(file.path);
-                } else if (['mp4', 'avi', 'mp3'].includes(fileType) && fileSize > 50000000) {
-                    fileCard.href = getGitHubUrl(file.path);
-                } else {
-                    fileCard.href = encodePath(file.path);
-                }
+                // Use GitHub raw URL for all files to avoid GitHub Pages limitations
+                fileCard.href = getGitHubRawUrl(file.path);
 
                 fileCard.className = 'file-card';
                 fileCard.target = '_blank';
