@@ -26,7 +26,7 @@ function renderCourseFolders(courseName) {
     const container = document.getElementById('dynamic-folders');
     if (!container) return;
 
-    // Render folder links from fileData
+    // Render folder links from fileData (local files)
     if (typeof fileData !== 'undefined' && fileData[courseName]) {
         const subjects = Object.keys(fileData[courseName]).sort();
 
@@ -44,20 +44,47 @@ function renderCourseFolders(courseName) {
         });
     }
 
-    // Render external links from externalLinks
+    // Render external links from externalLinks (grouped by discipline)
     if (typeof externalLinks !== 'undefined' && externalLinks[courseName]) {
-        externalLinks[courseName].forEach(item => {
-            const link = document.createElement('a');
-            link.href = item.url;
-            link.className = 'subject-item';
-            link.target = '_blank';
+        const disciplines = Object.keys(externalLinks[courseName]).sort();
 
-            link.innerHTML = `
-                <span class="subject-name">${item.name}</span>
-                <span class="folder-icon"><i class="${item.icon}"></i></span>
+        disciplines.forEach(discipline => {
+            const links = externalLinks[courseName][discipline];
+
+            // Create folder wrapper
+            const wrapper = document.createElement('div');
+            wrapper.className = 'folder-wrapper';
+
+            // Create folder header
+            const header = document.createElement('div');
+            header.className = 'subject-item folder-header';
+            header.onclick = function () { toggleFolder(this); };
+            header.innerHTML = `
+                <span class="subject-name">${discipline}</span>
+                <span class="folder-icon"><i class="fas fa-folder"></i></span>
             `;
 
-            container.appendChild(link);
+            // Create links container
+            const linksContainer = document.createElement('div');
+            linksContainer.className = 'folder-links';
+
+            links.forEach(item => {
+                const link = document.createElement('a');
+                link.href = item.url;
+                link.className = 'subject-item link-item';
+                link.target = '_blank';
+
+                link.innerHTML = `
+                    <span class="subject-name">${item.name}</span>
+                    <span class="folder-icon"><i class="${item.icon}"></i></span>
+                `;
+
+                linksContainer.appendChild(link);
+            });
+
+            wrapper.appendChild(header);
+            wrapper.appendChild(linksContainer);
+            container.appendChild(wrapper);
         });
     }
 }

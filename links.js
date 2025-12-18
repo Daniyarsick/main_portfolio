@@ -1,82 +1,117 @@
 const externalLinks = {
-    "1 курс": [
-        { name: "Учебная практика (1 курс)", url: "https://github.com/Daniyarsick/Practice_1", icon: "fab fa-github" }
-    ],
-    "2 курс": [
-        { name: "Учебная практика (2 курс)", url: "https://github.com/Daniyarsick/practice2sem", icon: "fab fa-github" },
-        { name: "Программирование (2 курс)", url: "https://github.com/Daniyarsick/pop/blob/main/LAB1.ipynb", icon: "fab fa-github" },
-        { name: "Программирование (3 семестр)", url: "https://github.com/Daniyarsick/Programming-Python---3", icon: "fab fa-github" },
-        { name: "СВТ (Web Lab 2)", url: "https://daniyarsick.github.io/Web-lab2/", icon: "fas fa-globe" },
-        { name: "Компьютерный практикум (KP-8 Bot)", url: "https://github.com/Daniyarsick/KP-8-bot", icon: "fab fa-github" },
-        { name: "Проект по Базам Данных", url: "https://github.com/Daniyarsick/Project_Database_sem4", icon: "fab fa-github" },
-        { name: "База данных (Yandex Disk)", url: "https://disk.yandex.ru/i/hhMwHwMb3mvIPw", icon: "fas fa-database" },
-        { name: "База данных (Google Doc)", url: "https://docs.google.com/document/d/1gKRi9LupOtTjre0HP1O50-zMRFf5B_KgZEdf8Zu8qOg/edit?usp=sharing", icon: "fas fa-database" },
-        { name: "Компьютерный практикум LR-7 (Replit)", url: "https://replit.com/@Daniyarsick/KP-LR-7?v=1", icon: "fas fa-code" },
-        { name: "Компьютерный практикум LR-6 (Replit)", url: "https://replit.com/@Daniyarsick/KP-LR-6?v=1", icon: "fas fa-code" },
-        { name: "Компьютерный практикум LB-5 (Replit)", url: "https://replit.com/@Daniyarsick/kp-lb5-sem4", icon: "fas fa-code" },
-        { name: "ТКМ (Newton Formula 1)", url: "https://replit.com/@Daniyarsick/TKM-Intierpoliatsionnaia-formula-Niutona-Zadachi?v=1", icon: "fas fa-code" },
-        { name: "ТКМ (Newton Formula 2)", url: "https://replit.com/@Daniyarsick/TKM-Intierpoliatsionnaia-formula-Niutona-Zadachi-2?v=1", icon: "fas fa-code" },
-        { name: "ТКМ (Newton Formula 2.2)", url: "https://replit.com/@Daniyarsick/TKM-Intierpoliatsionnaia-formula-Niutona-Zadachi-22?v=1", icon: "fas fa-code" },
-        { name: "ТКМ (Newton Formula 2.3)", url: "https://replit.com/@Daniyarsick/TKM-Intierpoliatsionnaia-formula-Niutona-Zadachi-23?v=1", icon: "fas fa-code" },
-        { name: "Вычислительная математика (Google Doc)", url: "https://docs.google.com/document/d/1RpZac5VY9yGorVVL4sd0qwHvfqNydk0LCgiz8SPGXDA/edit", icon: "fas fa-calculator" }
-    ],
-    "3 курс": [
-        { name: "Учебная практика (3 курс)", url: "https://github.com/Daniyarsick/educational-practice-3-year", icon: "fab fa-github" },
-        { name: "Prog5 LB1", url: "https://github.com/Daniyarsick/Prog5_LB1", icon: "fab fa-github" },
-        { name: "Prog5 LB2", url: "https://github.com/Daniyarsick/Prog5_LB2", icon: "fab fa-github" },
-        { name: "Prog LB3", url: "https://github.com/Daniyarsick/Prog_LB3", icon: "fab fa-github" },
-        { name: "Prog5 LB4", url: "https://github.com/Daniyarsick/Prog5-LB4", icon: "fab fa-github" },
-        { name: "Prog5 LB5", url: "https://github.com/Daniyarsick/Prog5_LB5", icon: "fab fa-github" },
-        { name: "Prog5 LB6", url: "https://github.com/Daniyarsick/Prog5_LB6", icon: "fab fa-github" },
-        { name: "Prog6 LB8", url: "https://github.com/Daniyarsick/Prog6-LB8", icon: "fab fa-github" },
-        { name: "Prog5 LB9", url: "https://github.com/Daniyarsick/Prog5-LB9", icon: "fab fa-github" },
-        { name: "Prog6 LB1", url: "https://github.com/Daniyarsick/Prog6-LB1", icon: "fab fa-github" },
-        { name: "Prog6 LB2", url: "https://github.com/Daniyarsick/PROG6-LB2", icon: "fab fa-github" },
-        { name: "Prog6 LB6", url: "https://github.com/Daniyarsick/Prog6-LB6", icon: "fab fa-github" },
-        { name: "MathGraph Pract", url: "https://github.com/Daniyarsick/MathGraph-Pract", icon: "fas fa-brain" },
-        { name: "Comp LB4 Javadoc", url: "https://github.com/Daniyarsick/Comp-LB4Javadoc", icon: "fas fa-brain" },
-        { name: "Comp LB4", url: "https://github.com/Daniyarsick/Comp-LB4", icon: "fas fa-brain" },
-        { name: "Pract 2 (Math)", url: "https://github.com/Daniyarsick/Pract2", icon: "fas fa-brain" },
-        { name: "PRK4 Math Osnov", url: "https://github.com/Daniyarsick/PRK4_math_osnov", icon: "fas fa-brain" },
-        { name: "LB5 Math", url: "https://github.com/Daniyarsick/LB5_math", icon: "fas fa-brain" },
-        { name: "Math Deep Learning Colab 1", url: "https://colab.research.google.com/drive/15i3Lp6ria5XhlvROHYWj5ae4OQdQ9CtB?usp=sharing", icon: "fab fa-google" },
-        { name: "Math Deep Learning Colab 2", url: "https://colab.research.google.com/drive/1V27Lblv4xJ11VENcPOEnwvZI4fMCjARR?usp=sharing", icon: "fab fa-google" },
-        { name: "Math Deep Learning Colab 3", url: "https://colab.research.google.com/drive/16nxsvL_o_MuAn7kSyaY8WSPBj9K9XA06?usp=sharing", icon: "fab fa-google" },
-        { name: "Math Deep Learning Colab 4", url: "https://colab.research.google.com/drive/1eXnmNt7dc4RjuLAmOvzZ5LjbbxpyLsTA?usp=sharing", icon: "fab fa-google" },
-        { name: "Math Deep Learning Colab 5", url: "https://colab.research.google.com/drive/1paN96WuKcCQTYus9Ashx4ctZz6pbqK72?usp=sharing", icon: "fab fa-google" },
-        { name: "Math Deep Learning Colab 6", url: "https://colab.research.google.com/drive/1LZqBdfP7dYILOmV5OdROE1OKssa7o9jw?usp=sharing", icon: "fab fa-google" },
-        { name: "ML Basics LB1", url: "https://github.com/Daniyarsick/Bas_Mach_Learn_LB1?tab=readme-ov-file", icon: "fas fa-robot" },
-        { name: "ML Basics LB3", url: "https://github.com/Daniyarsick/Bas_Mach_Learn_Lb3", icon: "fas fa-robot" },
-        { name: "ML Basics LB6", url: "https://github.com/Daniyarsick/Basic_Mach_Learn_LB6", icon: "fas fa-robot" },
-        { name: "ML Basics RFM Cluster", url: "https://github.com/Daniyarsick/Bas_Mach_Learn_RFM_claster", icon: "fas fa-robot" },
-        { name: "ML Basics Pract 2", url: "https://github.com/Daniyarsick/Bas_Mach_Learn_Pract2", icon: "fas fa-robot" },
-        { name: "ML Basics Pract 1", url: "https://github.com/Daniyarsick/Bas_Mach_Learn_Pract1", icon: "fas fa-robot" },
-        { name: "Math ML LB4", url: "https://github.com/Daniyarsick/Math_Bas_Lear_Lb4/blob/main/Lb4.ipynb", icon: "fas fa-robot" },
-        { name: "Math ML LB5 (RNN/LSTM)", url: "https://github.com/Daniyarsick/Math_Bas_Learn_LB5/blob/main/lab5_rnn_lstm_analysis.ipynb", icon: "fas fa-robot" },
-        { name: "gRPC Glossary Mindmap", url: "https://github.com/Daniyarsick/grpc-glossary-mindmap", icon: "fas fa-robot" },
-        { name: "ML Basics Colab 1", url: "https://colab.research.google.com/drive/1ZxzuPO3oWSMFRXICmmlTHU9XGxAcCUc3?usp=sharing", icon: "fab fa-google" },
-        { name: "ML Basics Colab 2", url: "https://colab.research.google.com/drive/1ZIxS3bGt86UR3OG8LgrSJp51OKkBZAao?usp=sharing", icon: "fab fa-google" },
-        { name: "ML Basics Colab 3", url: "https://colab.research.google.com/drive/1zacmUta6TGW2koxnKT1PJk2rQQbULzAd?usp=sharing", icon: "fab fa-google" },
-        { name: "ML Basics Colab 4", url: "https://colab.research.google.com/drive/1LYXxwcdIpBZWY8ffTOHIGmkE-EP4fjU_?usp=sharing", icon: "fab fa-google" },
-        { name: "Nginx Proxy Config", url: "https://github.com/Daniyarsick/nginx-proxy-final-config", icon: "fas fa-network-wired" },
-        { name: "PingPong Flask", url: "https://github.com/Daniyarsick/pingpong-flask-final", icon: "fas fa-network-wired" },
-        { name: "Cryptography Course Materials", url: "https://github.com/Daniyarsick/cryptography-course-materials", icon: "fas fa-shield-alt" },
-        { name: "Practice 6 (3 Year)", url: "https://github.com/Daniyarsick/pract6-3-year", icon: "fab fa-github" },
-        { name: "English Language (Presentation)", url: "https://docs.google.com/presentation/d/1Kmg84FpCjCYWnfdWVgTKhAgNSl9jh9oxugbkyMAiwdA/edit?usp=sharing", icon: "fas fa-language" },
-        { name: "Documentation Part 1 (Overleaf)", url: "https://www.overleaf.com/7996998361dpdfkytdnzsr#faa11a", icon: "fas fa-file-alt" },
-        { name: "Documentation Part 2 (Overleaf)", url: "https://www.overleaf.com/4414492646yhcrshkbjrzy#b54e93", icon: "fas fa-file-alt" },
-        { name: "Documentation Part 3 (Overleaf)", url: "https://www.overleaf.com/4733142576gqhjsdxtfzpk#86fe20", icon: "fas fa-file-alt" },
-        { name: "Documentation Part 4 (Overleaf)", url: "https://www.overleaf.com/8178184876wfvwywtbrcmw#93e22c", icon: "fas fa-file-alt" }
-    ],
-    "4 курс": [
-        { name: "Django Tutorial (Prog7)", url: "https://github.com/Daniyarsick/Django_Prog7", icon: "fab fa-github" },
-        { name: "Lab 5 (Prog7)", url: "https://github.com/Daniyarsick/Lab5_Prog7", icon: "fab fa-github" },
-        { name: "Microservices (Lb5 Prog7)", url: "https://github.com/Daniyarsick/Lb5-prog7_microservisev", icon: "fab fa-github" },
-        { name: "RESTful SpringBoot (Prog7)", url: "https://github.com/Daniyarsick/RESTfull-SpringBoot-Prog7", icon: "fab fa-github" },
-        { name: "OAuth 2.0 (Prog7)", url: "https://github.com/Daniyarsick/Oauth2.0_Prog7", icon: "fab fa-github" },
-        { name: "REST API (Prog7)", url: "https://github.com/Daniyarsick/RestApi_prog7", icon: "fab fa-github" },
-        { name: "Linear Programming (Jupyter)", url: "https://github.com/Daniyarsick/Linear-Prog7/blob/main/Linear_Programming_Lab.ipynb", icon: "fas fa-book" },
-        { name: "RabbitMQ Weather Aggregator", url: "https://github.com/Daniyarsick/RabbitMq_Prog7/blob/main/weather-aggregator-system/README.md", icon: "fas fa-cloud" },
-        { name: "Educational Project (Prog7)", url: "https://github.com/Daniyarsick/educational-project_prog7", icon: "fab fa-github" }
-    ]
+    "1 курс": {
+        "Учебная практика": [
+            { name: "Учебная практика (1 курс)", url: "https://github.com/Daniyarsick/Practice_1", icon: "fab fa-github" }
+        ]
+    },
+    "2 курс": {
+        "Учебная практика": [
+            { name: "Учебная практика (2 курс)", url: "https://github.com/Daniyarsick/practice2sem", icon: "fab fa-github" }
+        ],
+        "Программирование": [
+            { name: "Программирование (2 курс)", url: "https://github.com/Daniyarsick/pop/blob/main/LAB1.ipynb", icon: "fab fa-github" },
+            { name: "Программирование (3 семестр)", url: "https://github.com/Daniyarsick/Programming-Python---3", icon: "fab fa-github" }
+        ],
+        "Серверные веб-технологии": [
+            { name: "Web Lab 2", url: "https://daniyarsick.github.io/Web-lab2/", icon: "fas fa-globe" }
+        ],
+        "Компьютерный практикум": [
+            { name: "KP-8 Bot", url: "https://github.com/Daniyarsick/KP-8-bot", icon: "fab fa-github" },
+            { name: "LR-7 (Replit)", url: "https://replit.com/@Daniyarsick/KP-LR-7?v=1", icon: "fas fa-code" },
+            { name: "LR-6 (Replit)", url: "https://replit.com/@Daniyarsick/KP-LR-6?v=1", icon: "fas fa-code" },
+            { name: "LB-5 (Replit)", url: "https://replit.com/@Daniyarsick/kp-lb5-sem4", icon: "fas fa-code" }
+        ],
+        "База данных": [
+            { name: "Проект по Базам Данных", url: "https://github.com/Daniyarsick/Project_Database_sem4", icon: "fab fa-github" },
+            { name: "Yandex Disk", url: "https://disk.yandex.ru/i/hhMwHwMb3mvIPw", icon: "fas fa-database" },
+            { name: "Google Doc", url: "https://docs.google.com/document/d/1gKRi9LupOtTjre0HP1O50-zMRFf5B_KgZEdf8Zu8qOg/edit?usp=sharing", icon: "fas fa-database" }
+        ],
+        "Технологии компьютерного моделирования": [
+            { name: "Newton Formula 1", url: "https://replit.com/@Daniyarsick/TKM-Intierpoliatsionnaia-formula-Niutona-Zadachi?v=1", icon: "fas fa-code" },
+            { name: "Newton Formula 2", url: "https://replit.com/@Daniyarsick/TKM-Intierpoliatsionnaia-formula-Niutona-Zadachi-2?v=1", icon: "fas fa-code" },
+            { name: "Newton Formula 2.2", url: "https://replit.com/@Daniyarsick/TKM-Intierpoliatsionnaia-formula-Niutona-Zadachi-22?v=1", icon: "fas fa-code" },
+            { name: "Newton Formula 2.3", url: "https://replit.com/@Daniyarsick/TKM-Intierpoliatsionnaia-formula-Niutona-Zadachi-23?v=1", icon: "fas fa-code" }
+        ],
+        "Вычислительная математика": [
+            { name: "Google Doc", url: "https://docs.google.com/document/d/1RpZac5VY9yGorVVL4sd0qwHvfqNydk0LCgiz8SPGXDA/edit", icon: "fas fa-calculator" }
+        ]
+    },
+    "3 курс": {
+        "Учебная практика": [
+            { name: "Учебная практика (3 курс)", url: "https://github.com/Daniyarsick/educational-practice-3-year", icon: "fab fa-github" },
+            { name: "Practice 6", url: "https://github.com/Daniyarsick/pract6-3-year", icon: "fab fa-github" }
+        ],
+        "Программирование 5 семестр": [
+            { name: "LB1", url: "https://github.com/Daniyarsick/Prog5_LB1", icon: "fab fa-github" },
+            { name: "LB2", url: "https://github.com/Daniyarsick/Prog5_LB2", icon: "fab fa-github" },
+            { name: "LB3", url: "https://github.com/Daniyarsick/Prog_LB3", icon: "fab fa-github" },
+            { name: "LB4", url: "https://github.com/Daniyarsick/Prog5-LB4", icon: "fab fa-github" },
+            { name: "LB5", url: "https://github.com/Daniyarsick/Prog5_LB5", icon: "fab fa-github" },
+            { name: "LB6", url: "https://github.com/Daniyarsick/Prog5_LB6", icon: "fab fa-github" },
+            { name: "LB9", url: "https://github.com/Daniyarsick/Prog5-LB9", icon: "fab fa-github" }
+        ],
+        "Программирование 6 семестр": [
+            { name: "LB1", url: "https://github.com/Daniyarsick/Prog6-LB1", icon: "fab fa-github" },
+            { name: "LB2", url: "https://github.com/Daniyarsick/PROG6-LB2", icon: "fab fa-github" },
+            { name: "LB6", url: "https://github.com/Daniyarsick/Prog6-LB6", icon: "fab fa-github" },
+            { name: "LB8", url: "https://github.com/Daniyarsick/Prog6-LB8", icon: "fab fa-github" }
+        ],
+        "Математические основы глубокого обучения": [
+            { name: "MathGraph Pract", url: "https://github.com/Daniyarsick/MathGraph-Pract", icon: "fas fa-brain" },
+            { name: "PRK4", url: "https://github.com/Daniyarsick/PRK4_math_osnov", icon: "fas fa-brain" },
+            { name: "LB4", url: "https://github.com/Daniyarsick/Math_Bas_Lear_Lb4/blob/main/Lb4.ipynb", icon: "fas fa-brain" },
+            { name: "LB5", url: "https://github.com/Daniyarsick/LB5_math", icon: "fas fa-brain" },
+            { name: "LB5 (RNN/LSTM)", url: "https://github.com/Daniyarsick/Math_Bas_Learn_LB5/blob/main/lab5_rnn_lstm_analysis.ipynb", icon: "fas fa-brain" },
+            { name: "Colab 1", url: "https://colab.research.google.com/drive/15i3Lp6ria5XhlvROHYWj5ae4OQdQ9CtB?usp=sharing", icon: "fab fa-google" },
+            { name: "Colab 2", url: "https://colab.research.google.com/drive/1V27Lblv4xJ11VENcPOEnwvZI4fMCjARR?usp=sharing", icon: "fab fa-google" },
+            { name: "Colab 3", url: "https://colab.research.google.com/drive/16nxsvL_o_MuAn7kSyaY8WSPBj9K9XA06?usp=sharing", icon: "fab fa-google" },
+            { name: "Colab 4", url: "https://colab.research.google.com/drive/1eXnmNt7dc4RjuLAmOvzZ5LjbbxpyLsTA?usp=sharing", icon: "fab fa-google" },
+            { name: "Colab 5", url: "https://colab.research.google.com/drive/1paN96WuKcCQTYus9Ashx4ctZz6pbqK72?usp=sharing", icon: "fab fa-google" },
+            { name: "Colab 6", url: "https://colab.research.google.com/drive/1LZqBdfP7dYILOmV5OdROE1OKssa7o9jw?usp=sharing", icon: "fab fa-google" }
+        ],
+        "Основы машинного обучения": [
+            { name: "LB1", url: "https://github.com/Daniyarsick/Bas_Mach_Learn_LB1?tab=readme-ov-file", icon: "fas fa-robot" },
+            { name: "LB3", url: "https://github.com/Daniyarsick/Bas_Mach_Learn_Lb3", icon: "fas fa-robot" },
+            { name: "LB6", url: "https://github.com/Daniyarsick/Basic_Mach_Learn_LB6", icon: "fas fa-robot" },
+            { name: "RFM Cluster", url: "https://github.com/Daniyarsick/Bas_Mach_Learn_RFM_claster", icon: "fas fa-robot" },
+            { name: "Pract 1", url: "https://github.com/Daniyarsick/Bas_Mach_Learn_Pract1", icon: "fas fa-robot" },
+            { name: "Pract 2", url: "https://github.com/Daniyarsick/Bas_Mach_Learn_Pract2", icon: "fas fa-robot" },
+            { name: "Colab 1", url: "https://colab.research.google.com/drive/1ZxzuPO3oWSMFRXICmmlTHU9XGxAcCUc3?usp=sharing", icon: "fab fa-google" },
+            { name: "Colab 2", url: "https://colab.research.google.com/drive/1ZIxS3bGt86UR3OG8LgrSJp51OKkBZAao?usp=sharing", icon: "fab fa-google" },
+            { name: "Colab 3", url: "https://colab.research.google.com/drive/1zacmUta6TGW2koxnKT1PJk2rQQbULzAd?usp=sharing", icon: "fab fa-google" },
+            { name: "Colab 4", url: "https://colab.research.google.com/drive/1LYXxwcdIpBZWY8ffTOHIGmkE-EP4fjU_?usp=sharing", icon: "fab fa-google" }
+        ],
+        "Документация": [
+            { name: "LB4 Javadoc", url: "https://github.com/Daniyarsick/Comp-LB4Javadoc", icon: "fas fa-file-alt" },
+            { name: "LB4", url: "https://github.com/Daniyarsick/Comp-LB4", icon: "fas fa-file-alt" },
+            { name: "Pract 2", url: "https://github.com/Daniyarsick/Pract2", icon: "fas fa-file-alt" },
+            { name: "Part 1 (Overleaf)", url: "https://www.overleaf.com/7996998361dpdfkytdnzsr#faa11a", icon: "fas fa-file-alt" },
+            { name: "Part 2 (Overleaf)", url: "https://www.overleaf.com/4414492646yhcrshkbjrzy#b54e93", icon: "fas fa-file-alt" },
+            { name: "Part 3 (Overleaf)", url: "https://www.overleaf.com/4733142576gqhjsdxtfzpk#86fe20", icon: "fas fa-file-alt" },
+            { name: "Part 4 (Overleaf)", url: "https://www.overleaf.com/8178184876wfvwywtbrcmw#93e22c", icon: "fas fa-file-alt" }
+        ],
+        "Сети и телекоммуникации": [
+            { name: "Nginx Proxy Config", url: "https://github.com/Daniyarsick/nginx-proxy-final-config", icon: "fas fa-network-wired" },
+            { name: "PingPong Flask", url: "https://github.com/Daniyarsick/pingpong-flask-final", icon: "fas fa-network-wired" }
+        ],
+        "Защита информации": [
+            { name: "Cryptography Course Materials", url: "https://github.com/Daniyarsick/cryptography-course-materials", icon: "fas fa-shield-alt" }
+        ],
+        "Английский язык": [
+            { name: "Presentation", url: "https://docs.google.com/presentation/d/1Kmg84FpCjCYWnfdWVgTKhAgNSl9jh9oxugbkyMAiwdA/edit?usp=sharing", icon: "fas fa-language" }
+        ]
+    },
+    "4 курс": {
+        "Программирование 7 семестр": [
+            { name: "Django Tutorial", url: "https://github.com/Daniyarsick/Django_Prog7", icon: "fab fa-github" },
+            { name: "Lab 5", url: "https://github.com/Daniyarsick/Lab5_Prog7", icon: "fab fa-github" },
+            { name: "Microservices", url: "https://github.com/Daniyarsick/Lb5-prog7_microservisev", icon: "fab fa-github" },
+            { name: "RESTful SpringBoot", url: "https://github.com/Daniyarsick/RESTfull-SpringBoot-Prog7", icon: "fab fa-github" },
+            { name: "OAuth 2.0", url: "https://github.com/Daniyarsick/Oauth2.0_Prog7", icon: "fab fa-github" },
+            { name: "REST API", url: "https://github.com/Daniyarsick/RestApi_prog7", icon: "fab fa-github" },
+            { name: "Linear Programming (Jupyter)", url: "https://github.com/Daniyarsick/Linear-Prog7/blob/main/Linear_Programming_Lab.ipynb", icon: "fas fa-book" },
+            { name: "RabbitMQ Weather Aggregator", url: "https://github.com/Daniyarsick/RabbitMq_Prog7/blob/main/weather-aggregator-system/README.md", icon: "fas fa-cloud" },
+            { name: "Educational Project", url: "https://github.com/Daniyarsick/educational-project_prog7", icon: "fab fa-github" }
+        ]
+    }
 };
