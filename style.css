@@ -57,6 +57,7 @@ body {
     font-weight: 800;
     background: var(--gradient);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     text-decoration: none;
 }
@@ -290,6 +291,7 @@ body {
     margin-bottom: 1rem;
     background: var(--gradient);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -501,33 +503,47 @@ header .subtitle {
     margin-bottom: 2.5rem;
 }
 
-/* Collapsible Folder Styles */
-.folder-group {
-    cursor: pointer;
+/* Folder Wrapper Styles */
+.folder-wrapper {
+    display: flex;
+    flex-direction: column;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-.folder-content {
+.folder-header {
+    cursor: pointer;
+    border-radius: 12px 12px 0 0;
+    margin: 0;
+    border: none;
+}
+
+.folder-wrapper .folder-header {
+    border-radius: 0;
+}
+
+.folder-links {
     display: none;
     flex-direction: column;
-    gap: 0.8rem;
-    padding-left: 2rem;
-    margin-top: -0.5rem;
-    margin-bottom: 1rem;
-    border-left: 2px solid var(--card-border);
-    margin-left: 1.5rem;
+    padding: 0.5rem 1rem 1rem 2rem;
+    gap: 0.5rem;
+    border-top: 1px solid var(--card-border);
+    background: rgba(15, 23, 42, 0.5);
 }
 
-.folder-content.active {
+.folder-links.active {
     display: flex;
     animation: fadeInUp 0.3s ease-out;
 }
 
-.folder-content .subject-item {
-    background: rgba(30, 41, 59, 0.4);
+.folder-links .subject-item {
     padding: 1rem;
     font-size: 0.95rem;
+    background: rgba(30, 41, 59, 0.5);
 }
 
-.folder-content .subject-item:hover {
+.folder-links .subject-item:hover {
     background: rgba(255, 255, 255, 0.08);
 }
