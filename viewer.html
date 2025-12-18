@@ -30,6 +30,24 @@
 
     <script src="files.js"></script>
     <script>
+        // Функция для правильного кодирования пути
+        function encodePath(filePath) {
+            // Удаляем ./ в начале если есть
+            const cleanPath = filePath.startsWith('./') ? filePath.substring(2) : filePath;
+            // Разбиваем путь на части и кодируем каждую
+            const parts = cleanPath.split('/');
+            const encodedParts = parts.map(part => encodeURIComponent(part));
+            return './' + encodedParts.join('/');
+        }
+
+        // Функция для создания GitHub URL
+        function getGitHubUrl(filePath) {
+            const cleanPath = filePath.startsWith('./') ? filePath.substring(2) : filePath;
+            const parts = cleanPath.split('/');
+            const encodedParts = parts.map(part => encodeURIComponent(part));
+            return `https://github.com/Daniyarsick/main_portfolio/blob/main/${encodedParts.join('/')}`;
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             const params = new URLSearchParams(window.location.search);
             const path = params.get('path'); // e.g., "1 курс/ИТ"
@@ -51,6 +69,7 @@
             if (course === "1 курс") backBtn.href = "course1.html";
             else if (course === "2 курс") backBtn.href = "course2.html";
             else if (course === "3 курс") backBtn.href = "course3.html";
+            else if (course === "4 курс") backBtn.href = "course4.html";
             else backBtn.href = "index.html";
 
             const fileList = document.getElementById('file-list');
@@ -73,29 +92,33 @@
                 files.forEach(file => {
                     const fileCard = document.createElement('a');
 
-                    // Fix for PDF LFS: open in GitHub Blob viewer
+                    // PDF и большие файлы открываем через GitHub (из-за LFS)
+                    // Остальные файлы через относительные пути
                     if (file.type === 'pdf') {
-                        // Remove './' from start and construct GitHub URL
-                        // Assuming path starts with "./"
-                        const cleanPath = file.path.startsWith('./') ? file.path.substring(2) : file.path;
-                        // URL encode the path parts for safety, though browser might handle it. 
-                        // GitHub blob URL needs raw path but spaces encoded usually.
-                        // Let's use the path as is but ensure it matches repo structure.
-                        fileCard.href = `https://github.com/Daniyarsick/main_portfolio/blob/main/${cleanPath}`;
+                        // PDF открываем через GitHub Blob viewer (LFS файлы не работают напрямую на Pages)
+                        fileCard.href = getGitHubUrl(file.path);
+                    } else if (['mp4', 'avi', 'mp3'].includes(file.type) && file.size > 50000000) {
+                        // Большие медиафайлы (>50MB) через GitHub
+                        fileCard.href = getGitHubUrl(file.path);
                     } else {
-                        fileCard.href = file.path;
+                        // Остальные файлы через относительные пути с правильным кодированием
+                        fileCard.href = encodePath(file.path);
                     }
 
                     fileCard.className = 'file-card';
                     fileCard.target = '_blank';
 
                     let iconClass = 'fa-file';
-                    if (['jpg', 'png', 'jpeg', 'gif'].includes(file.type)) iconClass = 'fa-file-image';
+                    if (['jpg', 'png', 'jpeg', 'gif', 'svg'].includes(file.type)) iconClass = 'fa-file-image';
                     else if (['pdf'].includes(file.type)) iconClass = 'fa-file-pdf';
                     else if (['doc', 'docx'].includes(file.type)) iconClass = 'fa-file-word';
-                    else if (['zip', 'rar'].includes(file.type)) iconClass = 'fa-file-archive';
-                    else if (['mp4', 'avi'].includes(file.type)) iconClass = 'fa-file-video';
-                    else if (['py', 'js', 'html', 'css', 'cpp'].includes(file.type)) iconClass = 'fa-file-code';
+                    else if (['xls', 'xlsx'].includes(file.type)) iconClass = 'fa-file-excel';
+                    else if (['ppt', 'pptx'].includes(file.type)) iconClass = 'fa-file-powerpoint';
+                    else if (['zip', 'rar', '7z'].includes(file.type)) iconClass = 'fa-file-archive';
+                    else if (['mp4', 'avi', 'mkv', 'mov'].includes(file.type)) iconClass = 'fa-file-video';
+                    else if (['mp3', 'wav', 'ogg'].includes(file.type)) iconClass = 'fa-file-audio';
+                    else if (['py', 'js', 'html', 'css', 'cpp', 'java', 'c', 'h'].includes(file.type)) iconClass = 'fa-file-code';
+                    else if (['txt', 'md'].includes(file.type)) iconClass = 'fa-file-alt';
 
                     fileCard.innerHTML = `
                         <div class="file-icon"><i class="fas ${iconClass}"></i></div>
