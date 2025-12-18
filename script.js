@@ -24,23 +24,42 @@ window.addEventListener('scroll', () => {
 // Render course folders dynamically
 function renderCourseFolders(courseName) {
     const container = document.getElementById('dynamic-folders');
-    if (!container || typeof fileData === 'undefined' || !fileData[courseName]) return;
+    if (!container) return;
 
-    const subjects = Object.keys(fileData[courseName]);
+    // Render folder links from fileData
+    if (typeof fileData !== 'undefined' && fileData[courseName]) {
+        const subjects = Object.keys(fileData[courseName]).sort();
 
-    subjects.forEach(subject => {
-        const link = document.createElement('a');
-        // Encode path components properly
-        link.href = `viewer.html?path=${encodeURIComponent(courseName)}/${encodeURIComponent(subject)}`;
-        link.className = 'subject-item';
+        subjects.forEach(subject => {
+            const link = document.createElement('a');
+            link.href = `viewer.html?path=${encodeURIComponent(courseName)}/${encodeURIComponent(subject)}`;
+            link.className = 'subject-item';
 
-        link.innerHTML = `
-            <span class="subject-name">${subject}</span>
-            <span class="folder-icon"><i class="fas fa-folder"></i></span>
-        `;
+            link.innerHTML = `
+                <span class="subject-name">${subject}</span>
+                <span class="folder-icon"><i class="fas fa-folder"></i></span>
+            `;
 
-        container.appendChild(link);
-    });
+            container.appendChild(link);
+        });
+    }
+
+    // Render external links from externalLinks
+    if (typeof externalLinks !== 'undefined' && externalLinks[courseName]) {
+        externalLinks[courseName].forEach(item => {
+            const link = document.createElement('a');
+            link.href = item.url;
+            link.className = 'subject-item';
+            link.target = '_blank';
+
+            link.innerHTML = `
+                <span class="subject-name">${item.name}</span>
+                <span class="folder-icon"><i class="${item.icon}"></i></span>
+            `;
+
+            container.appendChild(link);
+        });
+    }
 }
 
 // Toggle folder expansion
