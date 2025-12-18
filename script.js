@@ -98,20 +98,7 @@ function renderCourseFolders(courseName) {
     sorted.forEach(discipline => {
         const { displayName, hasLocalFiles, hasExternalLinks, localKey, externalKey } = discipline;
 
-        // If only local files exist (no external links for this discipline)
-        if (hasLocalFiles && !hasExternalLinks) {
-            const link = document.createElement('a');
-            link.href = `viewer.html?path=${encodeURIComponent(courseName)}/${encodeURIComponent(localKey)}`;
-            link.className = 'subject-item';
-            link.innerHTML = `
-                <span class="subject-name">${displayName}</span>
-                <span class="folder-icon"><i class="fas fa-folder"></i></span>
-            `;
-            container.appendChild(link);
-            return;
-        }
-
-        // Create expandable folder for disciplines with external links
+        // Create expandable folder for all disciplines
         const wrapper = document.createElement('div');
         wrapper.className = 'folder-wrapper';
 
