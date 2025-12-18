@@ -21,6 +21,36 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Get file icon based on file type
+function getFileIcon(type) {
+    const icons = {
+        'pdf': 'fas fa-file-pdf',
+        'doc': 'fas fa-file-word',
+        'docx': 'fas fa-file-word',
+        'xls': 'fas fa-file-excel',
+        'xlsx': 'fas fa-file-excel',
+        'ppt': 'fas fa-file-powerpoint',
+        'pptx': 'fas fa-file-powerpoint',
+        'zip': 'fas fa-file-archive',
+        'rar': 'fas fa-file-archive',
+        'mp4': 'fas fa-file-video',
+        'mp3': 'fas fa-file-audio',
+        'jpg': 'fas fa-file-image',
+        'jpeg': 'fas fa-file-image',
+        'png': 'fas fa-file-image',
+        'gif': 'fas fa-file-image',
+        'svg': 'fas fa-file-image',
+        'html': 'fas fa-file-code',
+        'css': 'fas fa-file-code',
+        'js': 'fas fa-file-code',
+        'py': 'fab fa-python',
+        'java': 'fab fa-java',
+        'md': 'fas fa-file-alt',
+        'txt': 'fas fa-file-alt'
+    };
+    return icons[type] || 'fas fa-file';
+}
+
 // Render course folders dynamically
 function renderCourseFolders(courseName) {
     const container = document.getElementById('dynamic-folders');
@@ -96,16 +126,24 @@ function renderCourseFolders(courseName) {
         const linksContainer = document.createElement('div');
         linksContainer.className = 'folder-links';
 
-        // Add link to local files if they exist
+        // Add local files if they exist
         if (hasLocalFiles && localKey) {
-            const filesLink = document.createElement('a');
-            filesLink.href = `viewer.html?path=${encodeURIComponent(courseName)}/${encodeURIComponent(localKey)}`;
-            filesLink.className = 'subject-item link-item';
-            filesLink.innerHTML = `
-                <span class="subject-name">📂 Файлы</span>
-                <span class="folder-icon"><i class="fas fa-folder-open"></i></span>
-            `;
-            linksContainer.appendChild(filesLink);
+            const files = fileData[courseName][localKey];
+            files.forEach(file => {
+                const fileLink = document.createElement('a');
+                fileLink.href = file.path;
+                fileLink.className = 'subject-item link-item';
+                fileLink.target = '_blank';
+
+                // Get file icon based on type
+                const iconClass = getFileIcon(file.type);
+
+                fileLink.innerHTML = `
+                    <span class="subject-name">${file.name}</span>
+                    <span class="folder-icon"><i class="${iconClass}"></i></span>
+                `;
+                linksContainer.appendChild(fileLink);
+            });
         }
 
         // Add external links
