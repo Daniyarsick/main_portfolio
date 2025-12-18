@@ -26,67 +26,87 @@ function renderCourseFolders(courseName) {
     const container = document.getElementById('dynamic-folders');
     if (!container) return;
 
-    // Render folder links from fileData (local files)
+    // Collect all disciplines from both sources
+    const allDisciplines = new Set();
+
+    // From fileData (local folders)
     if (typeof fileData !== 'undefined' && fileData[courseName]) {
-        const subjects = Object.keys(fileData[courseName]).sort();
-
-        subjects.forEach(subject => {
-            const link = document.createElement('a');
-            link.href = `viewer.html?path=${encodeURIComponent(courseName)}/${encodeURIComponent(subject)}`;
-            link.className = 'subject-item';
-
-            link.innerHTML = `
-                <span class="subject-name">${subject}</span>
-                <span class="folder-icon"><i class="fas fa-folder"></i></span>
-            `;
-
-            container.appendChild(link);
-        });
+        Object.keys(fileData[courseName]).forEach(d => allDisciplines.add(d));
     }
 
-    // Render external links from externalLinks (grouped by discipline)
+    // From externalLinks
     if (typeof externalLinks !== 'undefined' && externalLinks[courseName]) {
-        const disciplines = Object.keys(externalLinks[courseName]).sort();
+        Object.keys(externalLinks[courseName]).forEach(d => allDisciplines.add(d));
+    }
 
-        disciplines.forEach(discipline => {
-            const links = externalLinks[courseName][discipline];
+    // Sort and render each discipline
+    Array.from(allDisciplines).sort().forEach(discipline => {
+        const hasLocalFiles = typeof fileData !== 'undefined' &&
+            fileData[courseName] &&
+            fileData[courseName][discipline];
+        const hasExternalLinks = typeof externalLinks !== 'undefined' &&
+            externalLinks[courseName] &&
+            externalLinks[courseName][discipline];
 
-            // Create folder wrapper
-            const wrapper = document.createElement('div');
-            wrapper.className = 'folder-wrapper';
-
-            // Create folder header
-            const header = document.createElement('div');
-            header.className = 'subject-item folder-header';
-            header.onclick = function () { toggleFolder(this); };
-            header.innerHTML = `
+        // If only local files exist (no external links for this discipline)
+        if (hasLocalFiles && !hasExternalLinks) {
+            const link = document.createElement('a');
+            link.href = `viewer.html?path=${encodeURIComponent(courseName)}/${encodeURIComponent(discipline)}`;
+            link.className = 'subject-item';
+            link.innerHTML = `
                 <span class="subject-name">${discipline}</span>
                 <span class="folder-icon"><i class="fas fa-folder"></i></span>
             `;
+            container.appendChild(link);
+            return;
+        }
 
-            // Create links container
-            const linksContainer = document.createElement('div');
-            linksContainer.className = 'folder-links';
+        // Create expandable folder for disciplines with external links
+        const wrapper = document.createElement('div');
+        wrapper.className = 'folder-wrapper';
 
-            links.forEach(item => {
+        const header = document.createElement('div');
+        header.className = 'subject-item folder-header';
+        header.onclick = function () { toggleFolder(this); };
+        header.innerHTML = `
+            <span class="subject-name">${discipline}</span>
+            <span class="folder-icon"><i class="fas fa-folder"></i></span>
+        `;
+
+        const linksContainer = document.createElement('div');
+        linksContainer.className = 'folder-links';
+
+        // Add link to local files if they exist
+        if (hasLocalFiles) {
+            const filesLink = document.createElement('a');
+            filesLink.href = `viewer.html?path=${encodeURIComponent(courseName)}/${encodeURIComponent(discipline)}`;
+            filesLink.className = 'subject-item link-item';
+            filesLink.innerHTML = `
+                <span class="subject-name">📂 Файлы</span>
+                <span class="folder-icon"><i class="fas fa-folder-open"></i></span>
+            `;
+            linksContainer.appendChild(filesLink);
+        }
+
+        // Add external links
+        if (hasExternalLinks) {
+            externalLinks[courseName][discipline].forEach(item => {
                 const link = document.createElement('a');
                 link.href = item.url;
                 link.className = 'subject-item link-item';
                 link.target = '_blank';
-
                 link.innerHTML = `
                     <span class="subject-name">${item.name}</span>
                     <span class="folder-icon"><i class="${item.icon}"></i></span>
                 `;
-
                 linksContainer.appendChild(link);
             });
+        }
 
-            wrapper.appendChild(header);
-            wrapper.appendChild(linksContainer);
-            container.appendChild(wrapper);
-        });
-    }
+        wrapper.appendChild(header);
+        wrapper.appendChild(linksContainer);
+        container.appendChild(wrapper);
+    });
 }
 
 // Toggle folder expansion
