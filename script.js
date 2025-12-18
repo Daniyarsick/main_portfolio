@@ -113,65 +113,90 @@ function renderCourseFolders(courseName) {
         const linksContainer = document.createElement('div');
         linksContainer.className = 'folder-links';
 
-        // Add local files if they exist, grouped by subfolders
+        // Add local files if they exist, grouped by subfolders (hierarchical)
         if (hasLocalFiles && localKey) {
             const files = fileData[courseName][localKey];
 
-            // Group files by subfolder
-            const subfolders = {};
-            const rootFiles = [];
-
-            files.forEach(file => {
-                // Extract subfolder from path: ./course/subject/subfolder/.../file.ext
-                const pathParts = file.path.split('/');
-                // Remove ./course/subject from beginning and filename from end
-                if (pathParts.length > 4) {
-                    // Has subfolder(s)
-                    const subfolderPath = pathParts.slice(3, -1).join('/');
-                    if (!subfolders[subfolderPath]) {
-                        subfolders[subfolderPath] = [];
+            // Build a tree structure for folders
+            function buildFolderTree(files) {
+                const tree = { folders: {}, files: [] };
+                
+                files.forEach(file => {
+                    const pathParts = file.path.split('/');
+                    // Remove ./course/subject from beginning and filename from end
+                    const subParts = pathParts.slice(3, -1); // folders only
+                    
+                    if (subParts.length === 0) {
+                        // Root file
+                        tree.files.push(file);
+                    } else {
+                        // Navigate/create folder structure
+                        let current = tree;
+                        subParts.forEach((folderName, idx) => {
+                            if (!current.folders[folderName]) {
+                                current.folders[folderName] = { folders: {}, files: [] };
+                            }
+                            current = current.folders[folderName];
+                        });
+                        current.files.push(file);
                     }
-                    subfolders[subfolderPath].push(file);
-                } else {
-                    // File is in root of subject
-                    rootFiles.push(file);
-                }
-            });
+                });
+                
+                return tree;
+            }
 
-            // Render subfolders first
-            Object.keys(subfolders).sort().forEach(subfolderPath => {
-                const subfolderHeader = document.createElement('div');
-                subfolderHeader.className = 'subfolder-header';
-                subfolderHeader.innerHTML = `<i class="fas fa-folder"></i> ${subfolderPath}`;
-                linksContainer.appendChild(subfolderHeader);
+            function renderTree(tree, container, depth = 0) {
+                // Render folders first (sorted)
+                Object.keys(tree.folders).sort((a, b) => a.localeCompare(b, 'ru')).forEach(folderName => {
+                    const folder = tree.folders[folderName];
+                    const fileCount = countFiles(folder);
+                    
+                    const subfolderWrapper = document.createElement('div');
+                    subfolderWrapper.className = 'subfolder-wrapper';
+                    subfolderWrapper.style.marginLeft = (depth * 0.5) + 'rem';
 
-                subfolders[subfolderPath].forEach(file => {
+                    const subfolderHeader = document.createElement('div');
+                    subfolderHeader.className = 'subfolder-header';
+                    subfolderHeader.innerHTML = `<i class="fas fa-folder"></i> ${folderName} <span class="subfolder-count">(${fileCount})</span>`;
+                    subfolderHeader.onclick = function(e) { e.stopPropagation(); toggleSubfolder(this); };
+
+                    const subfolderContent = document.createElement('div');
+                    subfolderContent.className = 'subfolder-content';
+
+                    // Recursively render nested folders and files
+                    renderTree(folder, subfolderContent, depth + 1);
+
+                    subfolderWrapper.appendChild(subfolderHeader);
+                    subfolderWrapper.appendChild(subfolderContent);
+                    container.appendChild(subfolderWrapper);
+                });
+
+                // Render files in this folder
+                tree.files.forEach(file => {
                     const fileLink = document.createElement('a');
                     fileLink.href = file.path;
                     fileLink.className = 'subject-item link-item subfolder-file';
                     fileLink.target = '_blank';
+                    fileLink.style.marginLeft = (depth * 0.5) + 'rem';
                     const iconClass = getFileIcon(file.type);
                     fileLink.innerHTML = `
                         <span class="subject-name">${file.name}</span>
                         <span class="folder-icon"><i class="${iconClass}"></i></span>
                     `;
-                    linksContainer.appendChild(fileLink);
+                    container.appendChild(fileLink);
                 });
-            });
+            }
 
-            // Render root files
-            rootFiles.forEach(file => {
-                const fileLink = document.createElement('a');
-                fileLink.href = file.path;
-                fileLink.className = 'subject-item link-item';
-                fileLink.target = '_blank';
-                const iconClass = getFileIcon(file.type);
-                fileLink.innerHTML = `
-                    <span class="subject-name">${file.name}</span>
-                    <span class="folder-icon"><i class="${iconClass}"></i></span>
-                `;
-                linksContainer.appendChild(fileLink);
-            });
+            function countFiles(folder) {
+                let count = folder.files.length;
+                Object.values(folder.folders).forEach(subfolder => {
+                    count += countFiles(subfolder);
+                });
+                return count;
+            }
+
+            const tree = buildFolderTree(files);
+            renderTree(tree, linksContainer);
         }
 
         // Add external links
@@ -201,6 +226,21 @@ function toggleFolder(header) {
     const content = wrapper.querySelector('.folder-links');
     content.classList.toggle('active');
     const icon = header.querySelector('.folder-icon i');
+    if (content.classList.contains('active')) {
+        icon.classList.remove('fa-folder');
+        icon.classList.add('fa-folder-open');
+    } else {
+        icon.classList.remove('fa-folder-open');
+        icon.classList.add('fa-folder');
+    }
+}
+
+// Toggle subfolder expansion
+function toggleSubfolder(header) {
+    const wrapper = header.closest('.subfolder-wrapper');
+    const content = wrapper.querySelector('.subfolder-content');
+    content.classList.toggle('active');
+    const icon = header.querySelector('i');
     if (content.classList.contains('active')) {
         icon.classList.remove('fa-folder');
         icon.classList.add('fa-folder-open');
