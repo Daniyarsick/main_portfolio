@@ -45,3 +45,17 @@ function renderCourseFolders(courseName) {
         container.appendChild(link);
     });
 }
+
+// Toggle folder expansion
+function toggleFolder(header) {
+    const content = header.nextElementSibling;
+    content.classList.toggle('active');
+    const icon = header.querySelector('.folder-icon i');
+    if (content.classList.contains('active')) {
+        icon.classList.remove('fa-folder');
+        icon.classList.add('fa-folder-open');
+    } else {
+        icon.classList.remove('fa-folder-open');
+        icon.classList.add('fa-folder');
+    }
+}
