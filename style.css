@@ -623,6 +623,14 @@ footer {
 }
 
 /* File Viewer Styles */
+#folder-subtitle {
+    margin-bottom: 2.5rem;
+}
+
+#file-list {
+    margin-top: 0.5rem;
+}
+
 .file-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
