@@ -34,49 +34,16 @@
         const GITHUB_REPO = 'main_portfolio';
         const GITHUB_BRANCH = 'main';
 
-        function encodePathSegments(path) {
-            return String(path)
-                .split('/')
-                .filter(Boolean)
-                .map(seg => encodeURIComponent(seg))
-                .join('/');
+        function encodePath(filePath) {
+            const cleanPath = String(filePath).startsWith('./') ? String(filePath).slice(2) : String(filePath);
+            const parts = cleanPath.split('/').filter(Boolean);
+            return './' + parts.map(part => encodeURIComponent(part)).join('/');
         }
 
-        // Относительный путь для GitHub Pages (с правильным URL-encoding)
-        function toPagesHref(repoPath) {
-            return './' + encodePathSegments(repoPath);
-        }
-
-        // GitHub Blob viewer (лучше для PDF/LFS и крупных файлов)
-        function toGitHubBlobHref(repoPath) {
-            return `https://github.com/${encodeURIComponent(GITHUB_OWNER)}/${encodeURIComponent(GITHUB_REPO)}/blob/${encodeURIComponent(GITHUB_BRANCH)}/${encodePathSegments(repoPath)}`;
-        }
-
-        function getFileType(filename) {
-            const idx = filename.lastIndexOf('.');
-            if (idx === -1) return 'file';
-            return filename.slice(idx + 1).toLowerCase();
-        }
-
-        async function githubFetchJson(pathnameWithQuery) {
-            const url = `https://api.github.com${pathnameWithQuery}`;
-            const response = await fetch(url, {
-                headers: {
-                    'Accept': 'application/vnd.github+json'
-                }
-            });
-
-            if (!response.ok) {
-                const text = await response.text().catch(() => '');
-                throw new Error(`GitHub API error ${response.status}: ${text || response.statusText}`);
-            }
-
-            return response.json();
-        }
-
-        async function githubListContents(repoPath) {
-            const encoded = encodePathSegments(repoPath);
-            return githubFetchJson(`/repos/${encodeURIComponent(GITHUB_OWNER)}/${encodeURIComponent(GITHUB_REPO)}/contents/${encoded}?ref=${encodeURIComponent(GITHUB_BRANCH)}`);
+        function getGitHubUrl(filePath) {
+            const cleanPath = String(filePath).startsWith('./') ? String(filePath).slice(2) : String(filePath);
+            const parts = cleanPath.split('/').filter(Boolean);
+            return `https://github.com/${encodeURIComponent(GITHUB_OWNER)}/${encodeURIComponent(GITHUB_REPO)}/blob/${encodeURIComponent(GITHUB_BRANCH)}/${parts.map(part => encodeURIComponent(part)).join('/')}`;
         }
 
         function buildViewerHref(pathParam) {
@@ -96,6 +63,12 @@
             return parts.slice(0, -1).join('/');
         }
 
+        function getFileType(filename) {
+            const idx = String(filename).lastIndexOf('.');
+            if (idx === -1) return 'file';
+            return String(filename).slice(idx + 1).toLowerCase();
+        }
+
         function entriesFromFileData(pathParam) {
             if (typeof fileData === 'undefined') return null;
 
@@ -108,24 +81,24 @@
             if (!Array.isArray(subjectFiles)) return null;
 
             const base = parts.join('/');
-            const basePrefix = base + '/';
+            const basePrefix = './' + base + '/';
 
             const folderSet = new Set();
             const files = [];
 
             for (const f of subjectFiles) {
-                const repoPath = String(f?.path || '').startsWith('./') ? String(f.path).slice(2) : String(f?.path || '');
-                if (!repoPath) continue;
-                if (!repoPath.startsWith(basePrefix)) continue;
+                const fullPath = String(f?.path || '');
+                if (!fullPath) continue;
+                if (!fullPath.startsWith(basePrefix)) continue;
 
-                const rest = repoPath.slice(basePrefix.length);
+                const rest = fullPath.slice(basePrefix.length);
                 const restParts = rest.split('/').filter(Boolean);
                 if (restParts.length === 0) continue;
 
                 if (restParts.length === 1) {
                     files.push({
                         name: f.name,
-                        repoPath,
+                        path: fullPath,
                         type: f.type || getFileType(f.name),
                         size: typeof f.size === 'number' ? f.size : 0
                     });
@@ -136,10 +109,10 @@
 
             const dirs = Array.from(folderSet).map(name => ({
                 name,
-                repoPath: basePrefix + name
+                pathParam: base + '/' + name
             }));
 
-            return { dirs, files };
+            return { course, subject, dirs, files };
         }
 
         function iconForType(type) {
@@ -189,36 +162,14 @@
             const fileList = document.getElementById('file-list');
             fileList.innerHTML = '<p class="empty-msg">Загрузка…</p>';
 
-            let dirs = [];
-            let files = [];
-            try {
-                const entries = await githubListContents(pathParam);
-                if (!Array.isArray(entries)) throw new Error('Unexpected GitHub API response');
-
-                dirs = entries
-                    .filter(e => e && e.type === 'dir' && e.path && e.name)
-                    .map(e => ({ name: e.name, repoPath: e.path }));
-
-                files = entries
-                    .filter(e => e && e.type === 'file' && e.path && e.name)
-                    .map(e => ({
-                        name: e.name,
-                        repoPath: e.path,
-                        type: getFileType(e.name),
-                        size: typeof e.size === 'number' ? e.size : 0
-                    }));
-            } catch (error) {
-                const fallback = entriesFromFileData(pathParam);
-                if (fallback) {
-                    dirs = fallback.dirs;
-                    files = fallback.files;
-                } else {
-                    fileList.innerHTML = '<p class="empty-msg">Не удалось загрузить файлы</p>';
-                    // eslint-disable-next-line no-console
-                    console.error(error);
-                    return;
-                }
+            const fallback = entriesFromFileData(pathParam);
+            if (!fallback) {
+                fileList.innerHTML = '<p class="empty-msg">Папка не найдена или пуста</p>';
+                return;
             }
+
+            const dirs = fallback.dirs;
+            const files = fallback.files;
 
             if ((!dirs || dirs.length === 0) && (!files || files.length === 0)) {
                 fileList.innerHTML = '<p class="empty-msg">Папка пуста</p>';
@@ -238,7 +189,7 @@
 
             dirs.forEach(dir => {
                 const folderCard = document.createElement('a');
-                folderCard.href = buildViewerHref(dir.repoPath);
+                folderCard.href = buildViewerHref(dir.pathParam);
                 folderCard.className = 'file-card';
                 folderCard.target = '_self';
 
@@ -259,11 +210,11 @@
 
                 // PDF и большие файлы открываем через GitHub (из-за LFS/ограничений Pages)
                 if (fileType === 'pdf') {
-                    fileCard.href = toGitHubBlobHref(file.repoPath);
+                    fileCard.href = getGitHubUrl(file.path);
                 } else if (['mp4', 'avi', 'mp3'].includes(fileType) && fileSize > 50000000) {
-                    fileCard.href = toGitHubBlobHref(file.repoPath);
+                    fileCard.href = getGitHubUrl(file.path);
                 } else {
-                    fileCard.href = toPagesHref(file.repoPath);
+                    fileCard.href = encodePath(file.path);
                 }
 
                 fileCard.className = 'file-card';
