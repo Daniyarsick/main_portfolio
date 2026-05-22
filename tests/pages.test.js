@@ -85,3 +85,40 @@ test("README documents GitHub Pages deployment and content updates", () => {
   assert.match(readme, /GitHub Actions/);
   assert.match(readme, /Git LFS/);
 });
+
+test("homepage presents a full portfolio structure", () => {
+  const index = read("index.html");
+  assert.match(index, /href="#featured"/);
+  assert.match(index, /href="#archive"/);
+  assert.match(index, /id="about"/);
+  assert.match(index, /id="directions"/);
+  assert.match(index, /id="featured"/);
+  assert.match(index, /id="trajectory"/);
+  assert.match(index, /class="hero-summary"/);
+  assert.match(index, /class="hero-stats"/);
+  assert.match(index, /Преддипломная практика/);
+  assert.match(index, /ComposeLearn/);
+  assert.match(index, /Образовательная траектория/);
+});
+
+test("course archive renders visual metadata and highlighted sections", () => {
+  const script = read("script.js");
+  const css = read("style.css");
+  assert.match(script, /getFileTypeSummary/);
+  assert.match(script, /getTotalFileCount/);
+  assert.match(script, /folder-meta/);
+  assert.match(script, /file-type-badges/);
+  assert.match(script, /highlight-subjects/);
+  assert.match(css, /\.folder-wrapper\.is-highlighted/);
+  assert.match(css, /\.type-badge/);
+  assert.match(css, /\.folder-count/);
+});
+
+test("visual system uses professional mixed palette and tighter card radii", () => {
+  const css = read("style.css");
+  assert.match(css, /--primary:\s*#14b8a6/);
+  assert.match(css, /--secondary:\s*#f59e0b/);
+  assert.match(css, /--surface:/);
+  assert.match(css, /border-radius:\s*10px/);
+  assert.doesNotMatch(css, /border-radius:\s*20px/);
+});

@@ -57,6 +57,37 @@ function getFileIcon(type) {
     return icons[type] || 'fas fa-file';
 }
 
+function getTotalFileCount(files) {
+    return Array.isArray(files) ? files.length : 0;
+}
+
+function getFileTypeSummary(files) {
+    const priority = ['pdf', 'docx', 'pptx', 'png', 'jpg', 'zip', 'md'];
+    const counts = new Map();
+
+    (files || []).forEach(file => {
+        const type = file.type || 'file';
+        counts.set(type, (counts.get(type) || 0) + 1);
+    });
+
+    const sortedTypes = Array.from(counts.keys()).sort((a, b) => {
+        const aIndex = priority.indexOf(a);
+        const bIndex = priority.indexOf(b);
+        if (aIndex !== -1 || bIndex !== -1) {
+            return (aIndex === -1 ? priority.length : aIndex) - (bIndex === -1 ? priority.length : bIndex);
+        }
+        return a.localeCompare(b);
+    });
+
+    return sortedTypes.slice(0, 4).map(type => ({ type, count: counts.get(type) }));
+}
+
+function isHighlightedSubject(name) {
+    // highlight-subjects: important fourth-year archive sections.
+    const highlightSubjects = ['ПредДипломнаяПрактика', 'Курсовая работа', 'Практика'];
+    return highlightSubjects.some(item => item.toLowerCase() === String(name).toLowerCase());
+}
+
 // Render course folders dynamically
 function renderCourseFolders(courseName) {
     const container = document.getElementById('dynamic-folders');
@@ -107,6 +138,17 @@ function renderCourseFolders(courseName) {
         // Create expandable folder for all disciplines
         const wrapper = document.createElement('div');
         wrapper.className = 'folder-wrapper';
+        if (courseName === '4 курс' && isHighlightedSubject(displayName)) {
+            wrapper.classList.add('is-highlighted');
+        }
+
+        const localFiles = hasLocalFiles && localKey ? fileData[courseName][localKey] : [];
+        const fileCount = getTotalFileCount(localFiles);
+        const typeSummary = getFileTypeSummary(localFiles);
+        const externalCount = hasExternalLinks && externalKey ? externalLinks[courseName][externalKey].length : 0;
+        const badgesMarkup = typeSummary.map(item =>
+            `<span class="type-badge">${item.type}<strong>${item.count}</strong></span>`
+        ).join('');
 
         const header = document.createElement('div');
         header.className = 'subject-item folder-header';
@@ -121,8 +163,17 @@ function renderCourseFolders(courseName) {
             }
         };
         header.innerHTML = `
-            <span class="subject-name">${displayName}</span>
-            <span class="folder-icon"><i class="fas fa-folder"></i></span>
+            <span class="folder-title">
+                <span class="subject-name">${displayName}</span>
+                <span class="folder-meta">
+                    <span class="folder-count">${fileCount} файлов</span>
+                    ${externalCount ? `<span class="folder-count">${externalCount} ссылок</span>` : ''}
+                </span>
+            </span>
+            <span class="folder-actions">
+                <span class="file-type-badges">${badgesMarkup}</span>
+                <span class="folder-icon"><i class="fas fa-folder"></i></span>
+            </span>
         `;
 
         const linksContainer = document.createElement('div');

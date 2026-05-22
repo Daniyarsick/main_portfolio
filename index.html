@@ -24,118 +24,249 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">Portfolio.</a>
+            <a href="#" class="logo">ADP</a>
             <ul class="nav-links">
-                <li><a href="#courses">Курсы</a></li>
-                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#featured">Работы</a></li>
+                <li><a href="#archive">Архив</a></li>
                 <li><a href="#contact">Контакты</a></li>
             </ul>
         </div>
     </nav>
 
     <header class="hero">
-        <div class="hero-content">
-            <div class="photo-container">
-                <img src="photo.jpg" alt="Аннануров Даниил" class="profile-photo">
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <p class="eyebrow">Портфолио ИВТ • РГПУ им. А.И. Герцена</p>
+                <h1>Аннануров Даниил Петрович</h1>
+                <p class="major">Информатика и вычислительная техника</p>
+                <p class="hero-summary">
+                    Собираю учебные проекты, практики и исследовательские материалы в понятный архив.
+                    Основной фокус - backend и web-разработка, Android на Jetpack Compose, инфраструктура
+                    и прикладные образовательные продукты.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#featured" class="btn primary">Смотреть проекты</a>
+                    <a href="#archive" class="btn secondary">Материалы по курсам</a>
+                    <a href="#contact" class="btn ghost">Связаться</a>
+                </div>
+                <div class="hero-stats" aria-label="Краткая статистика портфолио">
+                    <div>
+                        <strong>4</strong>
+                        <span>курса</span>
+                    </div>
+                    <div>
+                        <strong>700+</strong>
+                        <span>материалов</span>
+                    </div>
+                    <div>
+                        <strong>20+</strong>
+                        <span>проектных тем</span>
+                    </div>
+                </div>
             </div>
-            <h1>Аннануров Даниил Петрович</h1>
-            <p class="university">РГПУ им. А.И. Герцена</p>
-            <p class="major">Информатика и вычислительная техника (ИВТ)</p>
-            <div class="hero-buttons">
-                <a href="#courses" class="btn primary">Смотреть работы</a>
-                <a href="#contact" class="btn secondary">Связаться</a>
-            </div>
+            <aside class="hero-profile" aria-label="Профиль">
+                <div class="photo-container">
+                    <img src="photo.jpg" alt="Аннануров Даниил" class="profile-photo">
+                </div>
+                <div class="profile-panel">
+                    <span class="status-dot"></span>
+                    <p>Открыт к сотрудничеству, стажировкам и проектной работе.</p>
+                </div>
+            </aside>
         </div>
     </header>
 
-    <section id="courses" class="section">
-        <div class="container">
-            <h2 class="section-title">Мои Курсы</h2>
-            <div class="grid">
-                <a href="course1.html" class="card course-card">
-                    <div class="card-content">
-                        <div class="card-icon">1</div>
-                        <h3>1 Курс</h3>
-                        <p>Фундаментальные основы и введение в программирование</p>
-                    </div>
-                    <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
-                </a>
-                <a href="course2.html" class="card course-card">
-                    <div class="card-content">
-                        <div class="card-icon">2</div>
-                        <h3>2 Курс</h3>
-                        <p>Алгоритмы, структуры данных и математический анализ</p>
-                    </div>
-                    <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
-                </a>
-                <a href="course3.html" class="card course-card">
-                    <div class="card-content">
-                        <div class="card-icon">3</div>
-                        <h3>3 Курс</h3>
-                        <p>Проектирование, базы данных и специализированные технологии</p>
-                    </div>
-                    <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
-                </a>
-                <a href="course4.html" class="card course-card">
-                    <div class="card-content">
-                        <div class="card-icon">4</div>
-                        <h3>4 Курс</h3>
-                        <p>Программирование, микросервисы и проекты (7 семестр)</p>
-                    </div>
-                    <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
-                </a>
+    <main>
+        <section id="about" class="section">
+            <div class="container split-section">
+                <div>
+                    <p class="eyebrow">Обо мне</p>
+                    <h2 class="section-title left">Разрабатываю учебные и прикладные цифровые решения</h2>
+                </div>
+                <div class="section-copy">
+                    <p>
+                        Я студент направления ИВТ, работаю с программированием, web-сервисами,
+                        мобильной разработкой и инфраструктурой. В этом портфолио собраны отчеты,
+                        лабораторные, практики, курсовые работы и материалы ВКР.
+                    </p>
+                    <p>
+                        Сайт устроен как витрина и архив: на главной - ключевые направления и
+                        избранные работы, внутри курсов - полный каталог учебных материалов.
+                    </p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="skills" class="section alt-bg">
-        <div class="container">
-            <h2 class="section-title">Технические Навыки</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fab fa-python"></i>
-                    <h3>Python</h3>
+        <section id="directions" class="section alt-bg">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Ключевые направления</p>
+                    <h2 class="section-title">Технологии и области</h2>
                 </div>
-                <div class="skill-card">
-                    <i class="fab fa-linux"></i>
-                    <h3>Linux</h3>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-docker"></i>
-                    <h3>Docker</h3>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-android"></i>
-                    <h3>Android</h3>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Jetpack Compose</h3>
+                <div class="directions-grid">
+                    <article class="direction-card">
+                        <i class="fab fa-python"></i>
+                        <h3>Python</h3>
+                        <p>Скрипты, анализ данных, учебные задачи и backend-подходы.</p>
+                    </article>
+                    <article class="direction-card">
+                        <i class="fab fa-android"></i>
+                        <h3>Android / Jetpack Compose</h3>
+                        <p>Проектирование образовательного продукта и мобильных интерфейсов.</p>
+                    </article>
+                    <article class="direction-card">
+                        <i class="fab fa-docker"></i>
+                        <h3>Docker / Linux</h3>
+                        <p>Развертывание сервисов, окружения, серверные и сетевые практики.</p>
+                    </article>
+                    <article class="direction-card">
+                        <i class="fas fa-code-branch"></i>
+                        <h3>Web / API</h3>
+                        <p>Django, REST, Spring Boot, микросервисы и интеграционные задачи.</p>
+                    </article>
+                    <article class="direction-card">
+                        <i class="fas fa-database"></i>
+                        <h3>Базы данных</h3>
+                        <p>Проектирование данных, документация и прикладные учебные проекты.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Контакты</h2>
-            <div class="contact-content">
-                <p>Открыт к предложениям и сотрудничеству.</p>
-                <div class="social-links">
-                    <a href="https://github.com/daniyarsick" class="social-btn" target="_blank"><i
-                            class="fab fa-github"></i> GitHub</a>
-                    <a href="https://t.me/daniyarsick" class="social-btn" target="_blank"><i
-                            class="fab fa-telegram"></i> Telegram</a>
-                    <a href="mailto:dan.annanurov@gmail.com" class="social-btn"><i class="fas fa-envelope"></i>
-                        Email</a>
+        <section id="featured" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Избранные работы</p>
+                    <h2 class="section-title">Проекты, практики и ВКР</h2>
+                </div>
+                <div class="featured-grid">
+                    <a href="course4.html" class="feature-card accent">
+                        <span class="feature-label">Преддипломная практика</span>
+                        <h3>ComposeLearn</h3>
+                        <p>Материалы практики, демонстрационный план, раздаточные материалы и презентация.</p>
+                        <span class="feature-link">Открыть 4 курс <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                    <a href="4%20%D0%BA%D1%83%D1%80%D1%81/%D0%9F%D1%80%D0%B5%D0%B4%D0%94%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC%D0%BD%D0%B0%D1%8F%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0/%D0%94%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC1.pdf"
+                        class="feature-card">
+                        <span class="feature-label">ВКР / диплом</span>
+                        <h3>Дипломная работа</h3>
+                        <p>Основной PDF-документ выпускной квалификационной работы.</p>
+                        <span class="feature-link">Открыть PDF <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                    <a href="course4.html" class="feature-card">
+                        <span class="feature-label">Курсовая работа</span>
+                        <h3>4 курс</h3>
+                        <p>Финальные материалы курсовой работы и сопутствующие документы.</p>
+                        <span class="feature-link">Смотреть архив <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                    <a href="https://github.com/Daniyarsick/educational-project_prog7" class="feature-card"
+                        target="_blank" rel="noopener">
+                        <span class="feature-label">Образовательный проект</span>
+                        <h3>Prog7</h3>
+                        <p>Проектная работа по программированию с публикацией на GitHub.</p>
+                        <span class="feature-link">GitHub <i class="fas fa-arrow-right"></i></span>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="trajectory" class="section alt-bg">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Образовательная траектория</p>
+                    <h2 class="section-title">От базовых дисциплин к выпускным проектам</h2>
+                </div>
+                <div class="timeline">
+                    <a href="course1.html" class="timeline-item">
+                        <span>1 курс</span>
+                        <strong>Фундаментальные основы</strong>
+                        <p>Информатика, дискретная математика, первые лабораторные и практики.</p>
+                    </a>
+                    <a href="course2.html" class="timeline-item">
+                        <span>2 курс</span>
+                        <strong>Алгоритмы и прикладные дисциплины</strong>
+                        <p>Программирование, базы данных, моделирование и статистические пакеты.</p>
+                    </a>
+                    <a href="course3.html" class="timeline-item">
+                        <span>3 курс</span>
+                        <strong>Проектирование и специализация</strong>
+                        <p>ML, сети, бизнес-аналитика, документация и проектные работы.</p>
+                    </a>
+                    <a href="course4.html" class="timeline-item highlighted">
+                        <span>4 курс</span>
+                        <strong>Практики, курсовая и ВКР</strong>
+                        <p>Преддипломная практика, ComposeLearn, дипломные и итоговые материалы.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="archive" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Архив материалов</p>
+                    <h2 class="section-title">Материалы по курсам</h2>
+                </div>
+                <div class="grid">
+                    <a href="course1.html" class="card course-card">
+                        <div class="card-content">
+                            <div class="card-icon">1</div>
+                            <h3>1 Курс</h3>
+                            <p>Фундаментальные основы и введение в программирование</p>
+                        </div>
+                        <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+                    </a>
+                    <a href="course2.html" class="card course-card">
+                        <div class="card-content">
+                            <div class="card-icon">2</div>
+                            <h3>2 Курс</h3>
+                            <p>Алгоритмы, структуры данных и математический анализ</p>
+                        </div>
+                        <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+                    </a>
+                    <a href="course3.html" class="card course-card">
+                        <div class="card-content">
+                            <div class="card-icon">3</div>
+                            <h3>3 Курс</h3>
+                            <p>Проектирование, базы данных и специализированные технологии</p>
+                        </div>
+                        <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+                    </a>
+                    <a href="course4.html" class="card course-card featured-course">
+                        <div class="card-content">
+                            <div class="card-icon">4</div>
+                            <h3>4 Курс</h3>
+                            <p>Практики, курсовая, преддипломные материалы и ВКР</p>
+                        </div>
+                        <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section compact-section">
+            <div class="container">
+                <div class="contact-content">
+                    <p class="eyebrow">Контакты</p>
+                    <h2 class="section-title">Связаться</h2>
+                    <p>Открыт к предложениям, сотрудничеству и обсуждению проектных задач.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/daniyarsick" class="social-btn" target="_blank" rel="noopener"><i
+                                class="fab fa-github"></i> GitHub</a>
+                        <a href="https://t.me/daniyarsick" class="social-btn" target="_blank" rel="noopener"><i
+                                class="fab fa-telegram"></i> Telegram</a>
+                        <a href="mailto:dan.annanurov@gmail.com" class="social-btn"><i class="fas fa-envelope"></i>
+                            Email</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Аннануров Даниил. Все права защищены.</p>
+            <p>&copy; 2026 Аннануров Даниил. Все права защищены.</p>
         </div>
     </footer>
 
