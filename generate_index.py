@@ -25,6 +25,9 @@ def build_index(root_dir: Path, courses: list[str]) -> dict:
             file_data[course][subject.name] = []
 
             for abs_path in subject.rglob('*'):
+                if any(part.startswith(".") for part in abs_path.relative_to(subject).parts):
+                    continue
+
                 if not abs_path.is_file():
                     continue
 
