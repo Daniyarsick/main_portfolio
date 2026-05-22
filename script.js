@@ -1,13 +1,7 @@
-// GitHub config for direct file links
-const GITHUB_OWNER = 'Daniyarsick';
-const GITHUB_REPO = 'main_portfolio';
-const GITHUB_BRANCH = 'main';
-
-// Get GitHub blob URL for a file path (shows in GitHub viewer)
-function getGitHubBlobUrl(filePath) {
+function getLocalFileUrl(filePath) {
     const cleanPath = String(filePath).startsWith('./') ? String(filePath).slice(2) : String(filePath);
     const parts = cleanPath.split('/').filter(Boolean);
-    return `https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}/blob/${GITHUB_BRANCH}/${parts.map(part => encodeURIComponent(part)).join('/')}`;
+    return './' + parts.map(part => encodeURIComponent(part)).join('/');
 }
 
 // Smooth scroll for nav links
@@ -116,7 +110,16 @@ function renderCourseFolders(courseName) {
 
         const header = document.createElement('div');
         header.className = 'subject-item folder-header';
+        header.tabIndex = 0;
+        header.setAttribute('role', 'button');
+        header.setAttribute('aria-expanded', 'false');
         header.onclick = function () { toggleFolder(this); };
+        header.onkeydown = function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleFolder(this);
+            }
+        };
         header.innerHTML = `
             <span class="subject-name">${displayName}</span>
             <span class="folder-icon"><i class="fas fa-folder"></i></span>
@@ -169,8 +172,18 @@ function renderCourseFolders(courseName) {
 
                     const subfolderHeader = document.createElement('div');
                     subfolderHeader.className = 'subfolder-header';
+                    subfolderHeader.tabIndex = 0;
+                    subfolderHeader.setAttribute('role', 'button');
+                    subfolderHeader.setAttribute('aria-expanded', 'false');
                     subfolderHeader.innerHTML = `<i class="fas fa-folder"></i> ${folderName} <span class="subfolder-count">(${fileCount})</span>`;
                     subfolderHeader.onclick = function(e) { e.stopPropagation(); toggleSubfolder(this); };
+                    subfolderHeader.onkeydown = function(e) {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            toggleSubfolder(this);
+                        }
+                    };
 
                     const subfolderContent = document.createElement('div');
                     subfolderContent.className = 'subfolder-content';
@@ -186,8 +199,7 @@ function renderCourseFolders(courseName) {
                 // Render files in this folder
                 tree.files.forEach(file => {
                     const fileLink = document.createElement('a');
-                    // Use GitHub blob URL for all files (shows in GitHub viewer)
-                    fileLink.href = getGitHubBlobUrl(file.path);
+                    fileLink.href = getLocalFileUrl(file.path);
                     fileLink.className = 'subject-item link-item subfolder-file';
                     fileLink.target = '_blank';
                     fileLink.style.marginLeft = (depth * 0.5) + 'rem';
@@ -238,6 +250,7 @@ function toggleFolder(header) {
     const wrapper = header.closest('.folder-wrapper');
     const content = wrapper.querySelector('.folder-links');
     content.classList.toggle('active');
+    header.setAttribute('aria-expanded', content.classList.contains('active') ? 'true' : 'false');
     const icon = header.querySelector('.folder-icon i');
     if (content.classList.contains('active')) {
         icon.classList.remove('fa-folder');
@@ -253,6 +266,7 @@ function toggleSubfolder(header) {
     const wrapper = header.closest('.subfolder-wrapper');
     const content = wrapper.querySelector('.subfolder-content');
     content.classList.toggle('active');
+    header.setAttribute('aria-expanded', content.classList.contains('active') ? 'true' : 'false');
     const icon = header.querySelector('i');
     if (content.classList.contains('active')) {
         icon.classList.remove('fa-folder');

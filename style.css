@@ -73,10 +73,20 @@ body {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
+    border-radius: 8px;
+    padding: 0.25rem 0.35rem;
 }
 
 .nav-links a:hover {
     color: var(--primary);
+}
+
+a:focus-visible,
+button:focus-visible,
+.folder-header:focus-visible,
+.subfolder-header:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
 }
 
 /* Hero Section */
@@ -354,12 +364,34 @@ footer {
 
 /* Mobile */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .nav-container {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
     .nav-links {
-        display: none;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .nav-links a {
+        display: inline-flex;
+        padding: 0.45rem 0.65rem;
+        background: rgba(255, 255, 255, 0.05);
     }
 
     .hero h1 {
         font-size: 2.5rem;
+    }
+
+    .hero {
+        padding-top: 9rem;
     }
 
     .grid {
@@ -423,6 +455,8 @@ footer {
 .subject-name {
     font-weight: 600;
     font-size: 1.1rem;
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 
 .folder-icon {
@@ -481,6 +515,7 @@ footer {
     font-weight: 500;
     font-size: 0.9rem;
     word-break: break-word;
+    overflow-wrap: anywhere;
     margin-bottom: 0.5rem;
     line-height: 1.4;
 }

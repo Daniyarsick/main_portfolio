@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Просмотр файлов - Портфолио</title>
+    <link rel="icon" href="photo.jpg">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -30,20 +31,10 @@
 
     <script src="files.js"></script>
     <script>
-        const GITHUB_OWNER = 'Daniyarsick';
-        const GITHUB_REPO = 'main_portfolio';
-        const GITHUB_BRANCH = 'main';
-
-        function encodePath(filePath) {
+        function getLocalFileUrl(filePath) {
             const cleanPath = String(filePath).startsWith('./') ? String(filePath).slice(2) : String(filePath);
             const parts = cleanPath.split('/').filter(Boolean);
             return './' + parts.map(part => encodeURIComponent(part)).join('/');
-        }
-
-        function getGitHubBlobUrl(filePath) {
-            const cleanPath = String(filePath).startsWith('./') ? String(filePath).slice(2) : String(filePath);
-            const parts = cleanPath.split('/').filter(Boolean);
-            return `https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}/blob/${GITHUB_BRANCH}/${parts.map(part => encodeURIComponent(part)).join('/')}`;
         }
 
         function buildViewerHref(pathParam) {
@@ -208,8 +199,7 @@
                 const fileType = file.type || getFileType(file.name);
                 const fileSize = typeof file.size === 'number' ? file.size : 0;
 
-                // Use GitHub blob URL for all files (shows in GitHub viewer)
-                fileCard.href = getGitHubBlobUrl(file.path);
+                fileCard.href = getLocalFileUrl(file.path);
 
                 fileCard.className = 'file-card';
                 fileCard.target = '_blank';
