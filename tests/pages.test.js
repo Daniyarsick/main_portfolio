@@ -101,6 +101,37 @@ test("homepage presents a full portfolio structure", () => {
   assert.match(index, /Образовательная траектория/);
 });
 
+test("homepage removes collaboration pitch and simplifies about section", () => {
+  const index = read("index.html");
+  assert.doesNotMatch(index, /Открыт к сотрудничеству, стажировкам и проектной работе/);
+  assert.doesNotMatch(index, /Разрабатываю учебные и прикладные цифровые решения/);
+  assert.match(index, /Я студент направления ИВТ, работаю с программированием, web-сервисами/);
+  assert.match(index, /Сайт устроен как витрина и архив/);
+  assert.match(index, /class="about-card"/);
+});
+
+test("homepage highlights Android portfolio projects and learning apps", () => {
+  const index = read("index.html");
+  assert.match(index, /https:\/\/github\.com\/Daniyarsick\/Shopping_List/);
+  assert.match(index, /<h3>Shopping List<\/h3>/);
+  assert.match(index, /https:\/\/github\.com\/Daniyarsick\/Kotlin_SQLite/);
+  assert.match(index, /<h3>Kotlin SQLite<\/h3>/);
+  assert.match(index, /Учебные Android-приложения на Kotlin/);
+  assert.match(index, /https:\/\/github\.com\/Daniyarsick\/Itproger_App/);
+  assert.match(index, /https:\/\/github\.com\/Daniyarsick\/My_First_GIt_Project/);
+  assert.match(index, /https:\/\/github\.com\/Daniyarsick\/Country_app/);
+});
+
+test("homepage includes One UI inspired Material surfaces", () => {
+  const css = read("style.css");
+  assert.match(css, /--one-ui-blue:\s*#2189ff/);
+  assert.match(css, /\.feature-card\.android/);
+  assert.match(css, /\.learning-apps/);
+  assert.match(css, /\.about-card/);
+  assert.match(css, /border-radius:\s*18px/);
+  assert.doesNotMatch(css, /gradient orbs?/i);
+});
+
 test("course archive renders visual metadata and highlighted sections", () => {
   const script = read("script.js");
   const css = read("style.css");

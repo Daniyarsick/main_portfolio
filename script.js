@@ -23,7 +23,7 @@ window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (navbar) {
         navbar.style.background = window.scrollY > 50 ?
-            'rgba(15, 23, 42, 0.95)' : 'rgba(15, 23, 42, 0.8)';
+            'rgba(255, 255, 255, 0.94)' : 'rgba(255, 255, 255, 0.82)';
     }
 });
 
