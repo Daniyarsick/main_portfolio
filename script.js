@@ -4,6 +4,30 @@ function getLocalFileUrl(filePath) {
     return './' + parts.map(part => encodeURIComponent(part)).join('/');
 }
 
+const themeToggle = document.querySelector('.theme-toggle');
+const storedTheme = localStorage.getItem('portfolio-theme');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+function applyTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    if (themeToggle) {
+        const isDark = theme === 'dark';
+        themeToggle.setAttribute('aria-pressed', String(isDark));
+        themeToggle.innerHTML = `<i class="fas fa-${isDark ? 'sun' : 'moon'}"></i>`;
+    }
+}
+
+applyTheme(storedTheme || (prefersDark ? 'dark' : 'light'));
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('portfolio-theme', nextTheme);
+        applyTheme(nextTheme);
+        updateNavbarBackground();
+    });
+}
+
 // Smooth scroll for nav links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -18,14 +42,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar background on scroll
-window.addEventListener('scroll', () => {
+function updateNavbarBackground() {
     const navbar = document.querySelector('.navbar');
     if (navbar) {
         navbar.style.background = window.scrollY > 50 ?
-            'rgba(255, 255, 255, 0.94)' : 'rgba(255, 255, 255, 0.82)';
+            'var(--navbar-bg-scrolled)' : 'var(--navbar-bg)';
     }
-});
+}
+
+// Navbar background on scroll
+window.addEventListener('scroll', updateNavbarBackground);
+updateNavbarBackground();
 
 // Get file icon based on file type
 function getFileIcon(type) {

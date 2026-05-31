@@ -96,8 +96,6 @@ test("homepage presents a full portfolio structure", () => {
   assert.match(index, /id="trajectory"/);
   assert.match(index, /class="hero-summary"/);
   assert.match(index, /class="hero-stats"/);
-  assert.match(index, /Преддипломная практика/);
-  assert.match(index, /ComposeLearn/);
   assert.match(index, /Образовательная траектория/);
 });
 
@@ -122,6 +120,27 @@ test("homepage highlights Android portfolio projects and learning apps", () => {
   assert.match(index, /https:\/\/github\.com\/Daniyarsick\/Country_app/);
 });
 
+test("homepage featured work excludes practice and diploma cards and includes UML VKR", () => {
+  const index = read("index.html");
+  const featuredSection = index.match(/<section id="featured"[\s\S]*?<\/section>/)[0];
+  assert.doesNotMatch(featuredSection, /Преддипломная практика/);
+  assert.doesNotMatch(featuredSection, /Дипломная работа/);
+  assert.match(featuredSection, /https:\/\/github\.com\/Daniyarsick\/UML_VKR/);
+  assert.match(featuredSection, /<h3>UML_VKR<\/h3>/);
+});
+
+test("homepage supports a dark theme toggle", () => {
+  const index = read("index.html");
+  const css = read("style.css");
+  const script = read("script.js");
+  assert.match(index, /class="theme-toggle"/);
+  assert.match(index, /aria-label="Переключить темную тему"/);
+  assert.match(css, /\[data-theme="dark"\]/);
+  assert.match(css, /--bg-color:\s*#0f172a/);
+  assert.match(script, /portfolio-theme/);
+  assert.match(script, /dataset\.theme/);
+});
+
 test("homepage includes One UI inspired Material surfaces", () => {
   const css = read("style.css");
   assert.match(css, /--one-ui-blue:\s*#2189ff/);
@@ -143,6 +162,15 @@ test("course archive renders visual metadata and highlighted sections", () => {
   assert.match(css, /\.folder-wrapper\.is-highlighted/);
   assert.match(css, /\.type-badge/);
   assert.match(css, /\.folder-count/);
+});
+
+test("light theme file badges keep readable contrast", () => {
+  const css = read("style.css");
+  assert.doesNotMatch(css, /\.type-badge\s*\{[^}]*color:\s*#d1fae5/i);
+  assert.match(css, /--type-badge-text:\s*#0f766e/);
+  assert.match(css, /--type-badge-strong:\s*#0f172a/);
+  assert.match(css, /\.type-badge\s*\{[^}]*color:\s*var\(--type-badge-text\)/is);
+  assert.match(css, /\.type-badge strong\s*\{[^}]*color:\s*var\(--type-badge-strong\)/is);
 });
 
 test("fourth course includes specification languages repository", () => {
