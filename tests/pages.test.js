@@ -86,6 +86,28 @@ test("README documents GitHub Pages deployment and content updates", () => {
   assert.match(readme, /Git LFS/);
 });
 
+test("repository can be served locally with Docker Compose", () => {
+  const dockerfile = read("Dockerfile");
+  const compose = read("docker-compose.yml");
+  const nginx = read("docker/nginx.conf");
+  const dockerignore = read(".dockerignore");
+  const readme = read("README.md");
+
+  assert.match(dockerfile, /FROM\s+nginx:.*alpine/);
+  assert.match(dockerfile, /COPY\s+docker\/nginx\.conf\s+\/etc\/nginx\/conf\.d\/default\.conf/);
+  assert.match(dockerfile, /COPY\s+\.\s+\/usr\/share\/nginx\/html/);
+  assert.match(compose, /portfolio-site:/);
+  assert.match(compose, /build:\s*\./);
+  assert.match(compose, /"8080:80"/);
+  assert.match(nginx, /root\s+\/usr\/share\/nginx\/html;/);
+  assert.match(nginx, /index\s+index\.html;/);
+  assert.match(nginx, /charset\s+utf-8;/);
+  assert.match(dockerignore, /\.git/);
+  assert.doesNotMatch(dockerignore, /course[1-4]\.html/);
+  assert.match(readme, /docker compose up --build/);
+  assert.match(readme, /http:\/\/localhost:8080/);
+});
+
 test("homepage presents a full portfolio structure", () => {
   const index = read("index.html");
   assert.match(index, /href="#featured"/);

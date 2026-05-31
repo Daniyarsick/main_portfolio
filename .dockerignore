@@ -1,0 +1,8 @@
+.git
+.github
+.playwright-mcp
+downloads
+output
+tests
+diplom1_extracted.txt
+*.log

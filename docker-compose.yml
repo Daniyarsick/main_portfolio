@@ -1,0 +1,7 @@
+services:
+  portfolio-site:
+    build: .
+    image: main-portfolio:local
+    ports:
+      - "8080:80"
+    restart: unless-stopped
