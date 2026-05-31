@@ -117,7 +117,8 @@ test("homepage highlights Android portfolio projects and learning apps", () => {
   assert.match(index, /Учебные Android-приложения на Kotlin/);
   assert.match(index, /https:\/\/github\.com\/Daniyarsick\/Itproger_App/);
   assert.match(index, /https:\/\/github\.com\/Daniyarsick\/My_First_GIt_Project/);
-  assert.match(index, /https:\/\/github\.com\/Daniyarsick\/Country_app/);
+  assert.match(index, /https:\/\/github\.com\/Daniyarsick\/Weather_App_Rest_API_Retrofit_Kotlin_Coroutines_OpenWeatherMap/);
+  assert.match(index, /Weather App REST API/);
 });
 
 test("homepage featured work excludes practice and diploma cards and includes UML VKR", () => {
@@ -191,6 +192,18 @@ test("light theme file badges keep readable contrast", () => {
   assert.match(css, /--type-badge-strong:\s*#0f172a/);
   assert.match(css, /\.type-badge\s*\{[^}]*color:\s*var\(--type-badge-text\)/is);
   assert.match(css, /\.type-badge strong\s*\{[^}]*color:\s*var\(--type-badge-strong\)/is);
+});
+
+test("expanded archive file rows use theme-specific surfaces", () => {
+  const css = read("style.css");
+  assert.match(css, /--folder-links-bg:\s*rgba\(238,\s*243,\s*248,\s*0\.7\)/);
+  assert.match(css, /--folder-link-bg:\s*rgba\(255,\s*255,\s*255,\s*0\.72\)/);
+  assert.match(css, /--folder-link-hover-bg:\s*rgba\(33,\s*137,\s*255,\s*0\.08\)/);
+  assert.match(css, /\[data-theme="dark"\]\s*\{[\s\S]*--folder-links-bg:\s*rgba\(15,\s*23,\s*42,\s*0\.36\)/);
+  assert.match(css, /\[data-theme="dark"\]\s*\{[\s\S]*--folder-link-bg:\s*rgba\(30,\s*41,\s*59,\s*0\.72\)/);
+  assert.match(css, /\.folder-links\s*\{[^}]*background:\s*var\(--folder-links-bg\)/is);
+  assert.match(css, /\.folder-links \.subject-item\s*\{[^}]*background:\s*var\(--folder-link-bg\)/is);
+  assert.match(css, /\.folder-links \.subject-item:hover\s*\{[^}]*background:\s*var\(--folder-link-hover-bg\)/is);
 });
 
 test("fourth course includes specification languages repository", () => {

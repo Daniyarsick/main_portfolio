@@ -29,6 +29,9 @@
     --type-badge-bg: rgba(20, 184, 166, 0.14);
     --type-badge-text: #0f766e;
     --type-badge-strong: #0f172a;
+    --folder-links-bg: rgba(238, 243, 248, 0.7);
+    --folder-link-bg: rgba(255, 255, 255, 0.72);
+    --folder-link-hover-bg: rgba(33, 137, 255, 0.08);
 }
 
 [data-theme="dark"] {
@@ -53,6 +56,9 @@
     --type-badge-bg: rgba(45, 212, 191, 0.16);
     --type-badge-text: #99f6e4;
     --type-badge-strong: #f8fafc;
+    --folder-links-bg: rgba(15, 23, 42, 0.36);
+    --folder-link-bg: rgba(30, 41, 59, 0.72);
+    --folder-link-hover-bg: rgba(96, 165, 250, 0.14);
 }
 
 * {
@@ -747,7 +753,7 @@ header .subtitle,
     gap: 0.35rem;
     padding: 0.5rem 0.75rem 0.9rem;
     border-top: 1px solid var(--card-border);
-    background: rgba(238, 243, 248, 0.7);
+    background: var(--folder-links-bg);
 }
 
 .folder-links.active {
@@ -755,7 +761,11 @@ header .subtitle,
 }
 
 .folder-links .subject-item {
-    background: rgba(255, 255, 255, 0.7);
+    background: var(--folder-link-bg);
+}
+
+.folder-links .subject-item:hover {
+    background: var(--folder-link-hover-bg);
 }
 
 .subfolder-wrapper {
