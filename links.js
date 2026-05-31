@@ -38,7 +38,7 @@ const externalLinks = {
     },
     "3 курс": {
         "Учебная практика": [
-            { name: "Учебная практика (3 курс)", url: "https://github.com/Daniyarsick/educational-practice-3-year", icon: "fab fa-github" },
+            { name: "Учебная практика (3 курс)", url: "https://github.com/Daniyarsick/pract6-3-year", icon: "fab fa-github" },
             { name: "Practice 6", url: "https://github.com/Daniyarsick/pract6-3-year", icon: "fab fa-github" }
         ],
         "Программирование 5 семестр": [
@@ -112,6 +112,9 @@ const externalLinks = {
             { name: "Linear Programming (Jupyter)", url: "https://github.com/Daniyarsick/Linear-Prog7/blob/main/Linear_Programming_Lab.ipynb", icon: "fas fa-book" },
             { name: "RabbitMQ Weather Aggregator", url: "https://github.com/Daniyarsick/RabbitMq_Prog7/blob/main/weather-aggregator-system/README.md", icon: "fas fa-cloud" },
             { name: "Educational Project", url: "https://github.com/Daniyarsick/educational-project_prog7", icon: "fab fa-github" }
+        ],
+        "Языки написания спецификаций": [
+            { name: "UML VKR", url: "https://github.com/Daniyarsick/UML_VKR", icon: "fab fa-github" }
         ]
     }
 };

@@ -114,6 +114,21 @@ test("course archive renders visual metadata and highlighted sections", () => {
   assert.match(css, /\.folder-count/);
 });
 
+test("fourth course includes specification languages repository", () => {
+  const links = read("links.js");
+  assert.match(links, /"4 курс"\s*:\s*\{/);
+  assert.match(links, /"Языки написания спецификаций"\s*:\s*\[/);
+  assert.match(links, /https:\/\/github\.com\/Daniyarsick\/UML_VKR/);
+});
+
+test("third course practice link points to the current repository", () => {
+  const links = read("links.js");
+  assert.match(
+    links,
+    /\{\s*name:\s*"Учебная практика \(3 курс\)",\s*url:\s*"https:\/\/github\.com\/Daniyarsick\/pract6-3-year"/
+  );
+});
+
 test("visual system uses professional mixed palette and tighter card radii", () => {
   const css = read("style.css");
   assert.match(css, /--primary:\s*#14b8a6/);
