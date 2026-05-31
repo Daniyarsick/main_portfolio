@@ -93,10 +93,10 @@ test("homepage presents a full portfolio structure", () => {
   assert.match(index, /id="about"/);
   assert.match(index, /id="directions"/);
   assert.match(index, /id="featured"/);
-  assert.match(index, /id="trajectory"/);
   assert.match(index, /class="hero-summary"/);
   assert.match(index, /class="hero-stats"/);
-  assert.match(index, /Образовательная траектория/);
+  assert.doesNotMatch(index, /id="trajectory"/);
+  assert.doesNotMatch(index, /Образовательная траектория/);
 });
 
 test("homepage removes collaboration pitch and simplifies about section", () => {
@@ -125,8 +125,22 @@ test("homepage featured work excludes practice and diploma cards and includes UM
   const featuredSection = index.match(/<section id="featured"[\s\S]*?<\/section>/)[0];
   assert.doesNotMatch(featuredSection, /Преддипломная практика/);
   assert.doesNotMatch(featuredSection, /Дипломная работа/);
+  assert.doesNotMatch(featuredSection, /Prog7/);
   assert.match(featuredSection, /https:\/\/github\.com\/Daniyarsick\/UML_VKR/);
   assert.match(featuredSection, /<h3>UML_VKR<\/h3>/);
+});
+
+test("homepage featured cards are ordered as UML, Shopping List, Kotlin SQLite, fourth course", () => {
+  const index = read("index.html");
+  const featuredSection = index.match(/<section id="featured"[\s\S]*?<\/section>/)[0];
+  const uml = featuredSection.indexOf("<h3>UML_VKR</h3>");
+  const shopping = featuredSection.indexOf("<h3>Shopping List</h3>");
+  const sqlite = featuredSection.indexOf("<h3>Kotlin SQLite</h3>");
+  const course = featuredSection.indexOf("<h3>4 курс</h3>");
+  assert.ok(uml !== -1 && shopping !== -1 && sqlite !== -1 && course !== -1, "all four featured cards should exist");
+  assert.ok(uml < shopping, "UML_VKR should come before Shopping List");
+  assert.ok(shopping < sqlite, "Shopping List should come before Kotlin SQLite");
+  assert.ok(sqlite < course, "Kotlin SQLite should come before 4 курс");
 });
 
 test("homepage supports a dark theme toggle", () => {
@@ -149,6 +163,12 @@ test("homepage includes One UI inspired Material surfaces", () => {
   assert.match(css, /\.about-card/);
   assert.match(css, /border-radius:\s*18px/);
   assert.doesNotMatch(css, /gradient orbs?/i);
+});
+
+test("homepage hero does not create a large empty gap before about", () => {
+  const css = read("style.css");
+  assert.doesNotMatch(css, /\.hero\s*\{[^}]*min-height:\s*92vh/is);
+  assert.match(css, /\.hero\s*\{[^}]*min-height:\s*auto/is);
 });
 
 test("course archive renders visual metadata and highlighted sections", () => {

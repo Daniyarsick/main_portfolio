@@ -164,10 +164,10 @@ button:focus-visible,
 }
 
 .hero {
-    min-height: 92vh;
+    min-height: auto;
     display: flex;
     align-items: center;
-    padding: 8rem 0 4rem;
+    padding: 7.5rem 0 3rem;
     background: var(--hero-bg);
 }
 
@@ -298,7 +298,11 @@ button:focus-visible,
 }
 
 .section {
-    padding: 5.5rem 0;
+    padding: 4.5rem 0;
+}
+
+#about {
+    padding-top: 3rem;
 }
 
 .section.alt-bg {
