@@ -6,19 +6,22 @@ function getLocalFileUrl(filePath) {
 
 const themeToggle = document.querySelector('.theme-toggle');
 const storedTheme = localStorage.getItem('portfolio-theme');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const themeColorMeta = document.querySelector('meta[name="theme-color"]');
 
 function applyTheme(theme) {
     document.documentElement.dataset.theme = theme;
+    if (themeColorMeta) {
+        themeColorMeta.setAttribute('content', theme === 'dark' ? '#0b1020' : '#f7f8fc');
+    }
     if (themeToggle) {
         const isDark = theme === 'dark';
         themeToggle.setAttribute('aria-pressed', String(isDark));
         themeToggle.setAttribute('aria-label', isDark ? 'Включить светлую тему' : 'Включить тёмную тему');
-        themeToggle.innerHTML = `<i class="fas fa-${isDark ? 'sun' : 'moon'}"></i>`;
+        themeToggle.innerHTML = `<span aria-hidden="true">${isDark ? '☀' : '☾'}</span>`;
     }
 }
 
-applyTheme(storedTheme || (prefersDark ? 'dark' : 'light'));
+applyTheme(storedTheme || 'light');
 
 if (themeToggle) {
     themeToggle.addEventListener('click', () => {
@@ -44,6 +47,17 @@ if (navToggle && navMenu) {
         const isOpen = navMenu.classList.toggle('is-open');
         navToggle.setAttribute('aria-expanded', String(isOpen));
         navToggle.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+    });
+
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') {
+            closeNavigation();
+            navToggle.focus();
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) closeNavigation();
     });
 }
 
