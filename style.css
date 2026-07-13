@@ -2433,13 +2433,13 @@ header .subtitle,
 }
 
 .portfolio-home .image-viewer {
-    width: min(1180px, calc(100% - 2rem));
-    height: min(860px, calc(100% - 2rem));
+    width: 100%;
+    height: 100%;
     max-width: none;
     max-height: none;
     padding: 0;
-    border: 1px solid var(--home-line);
-    border-radius: 14px;
+    border: 0;
+    border-radius: 0;
     color: var(--home-text);
     background: var(--home-surface);
     box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
@@ -2485,12 +2485,16 @@ header .subtitle,
     display: grid;
     place-items: center;
     background: #11151d;
-    cursor: grab;
+    cursor: zoom-in;
     touch-action: none;
 }
 
 .portfolio-home .image-viewer__stage.is-dragging {
     cursor: grabbing;
+}
+
+.portfolio-home .image-viewer__stage.is-zoomed {
+    cursor: grab;
 }
 
 .portfolio-home .image-viewer__image {
@@ -2520,11 +2524,23 @@ header .subtitle,
 }
 
 .portfolio-home .image-viewer__caption {
-    min-height: 42px;
+    min-height: 48px;
     padding: 0.65rem 1rem;
     color: var(--home-muted);
     text-align: center;
     font-size: 0.82rem;
+}
+
+.portfolio-home .image-viewer__caption span,
+.portfolio-home .image-viewer__caption small {
+    display: block;
+}
+
+.portfolio-home .image-viewer__caption small {
+    margin-top: 0.15rem;
+    color: var(--home-muted);
+    font-size: 0.72rem;
+    opacity: 0.8;
 }
 
 .portfolio-home.viewer-open {

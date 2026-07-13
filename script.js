@@ -91,7 +91,7 @@ updateNavbarBackground();
 
 const viewerDialog = document.getElementById('image-viewer');
 const viewerImage = viewerDialog?.querySelector('.image-viewer__image');
-const viewerCaption = viewerDialog?.querySelector('.image-viewer__caption');
+const viewerCaption = viewerDialog?.querySelector('.image-viewer__caption span');
 const viewerStage = viewerDialog?.querySelector('.image-viewer__stage');
 const viewerScaleOutput = viewerDialog?.querySelector('.image-viewer__scale');
 const viewerPrevious = viewerDialog?.querySelector('[data-viewer-action="previous"]');
@@ -105,21 +105,63 @@ let viewerLastFocus = null;
 let viewerDrag = null;
 let viewerPinchDistance = 0;
 let viewerPinchScale = 1;
+const viewerMinScale = 1;
+const viewerMaxScale = 8;
+const viewerScaleStep = 0.5;
 
 function applyViewerTransform() {
     if (!viewerImage || !viewerScaleOutput) return;
     viewerImage.style.transform = `translate3d(${viewerOffsetX}px, ${viewerOffsetY}px, 0) scale(${viewerScale})`;
     viewerScaleOutput.value = `${Math.round(viewerScale * 100)}%`;
     viewerScaleOutput.textContent = `${Math.round(viewerScale * 100)}%`;
+    viewerStage?.classList.toggle('is-zoomed', viewerScale > viewerMinScale);
 }
 
 function setViewerScale(nextScale) {
-    viewerScale = Math.min(3, Math.max(1, nextScale));
-    if (viewerScale === 1) {
+    viewerScale = Math.min(viewerMaxScale, Math.max(viewerMinScale, nextScale));
+    if (viewerScale === viewerMinScale) {
         viewerOffsetX = 0;
         viewerOffsetY = 0;
     }
     applyViewerTransform();
+}
+
+function getViewerBaseSize() {
+    if (!viewerImage?.naturalWidth || !viewerImage?.naturalHeight || !viewerStage) return null;
+    const availableWidth = Math.max(1, viewerStage.clientWidth - 32);
+    const availableHeight = Math.max(1, viewerStage.clientHeight - 32);
+    const fitScale = Math.min(1, availableWidth / viewerImage.naturalWidth, availableHeight / viewerImage.naturalHeight);
+    const width = viewerImage.naturalWidth * fitScale;
+    const height = viewerImage.naturalHeight * fitScale;
+    viewerImage.style.width = `${width}px`;
+    viewerImage.style.height = `${height}px`;
+    return {
+        width,
+        height,
+        availableWidth,
+        availableHeight
+    };
+}
+
+function fitViewerToWidth() {
+    const base = getViewerBaseSize();
+    if (!base) return;
+    viewerScale = Math.min(viewerMaxScale, Math.max(viewerMinScale, base.availableWidth / base.width));
+    viewerOffsetX = 0;
+    viewerOffsetY = Math.max(0, (base.height * viewerScale - viewerStage.clientHeight) / 2 + 16);
+    applyViewerTransform();
+}
+
+function initializeViewerImage() {
+    const base = getViewerBaseSize();
+    if (!base) return;
+    const imageRatio = viewerImage.naturalHeight / viewerImage.naturalWidth;
+    const stageRatio = base.availableHeight / base.availableWidth;
+    if (imageRatio > stageRatio * 1.15) {
+        fitViewerToWidth();
+    } else {
+        resetViewerTransform();
+    }
 }
 
 function resetViewerTransform() {
@@ -140,6 +182,7 @@ function showViewerItem(index) {
     if (viewerPrevious) viewerPrevious.disabled = viewerItems.length < 2;
     if (viewerNext) viewerNext.disabled = viewerItems.length < 2;
     resetViewerTransform();
+    if (viewerImage.complete) requestAnimationFrame(initializeViewerImage);
 }
 
 function openImageViewer(trigger) {
@@ -162,10 +205,12 @@ document.querySelectorAll('[data-viewer-src]').forEach(trigger => {
 });
 
 if (viewerDialog && viewerStage) {
+    viewerImage?.addEventListener('load', initializeViewerImage);
     viewerDialog.querySelector('.image-viewer__close')?.addEventListener('click', () => viewerDialog.close());
-    viewerDialog.querySelector('[data-viewer-action="zoom-in"]')?.addEventListener('click', () => setViewerScale(viewerScale + 0.25));
-    viewerDialog.querySelector('[data-viewer-action="zoom-out"]')?.addEventListener('click', () => setViewerScale(viewerScale - 0.25));
+    viewerDialog.querySelector('[data-viewer-action="zoom-in"]')?.addEventListener('click', () => setViewerScale(viewerScale + viewerScaleStep));
+    viewerDialog.querySelector('[data-viewer-action="zoom-out"]')?.addEventListener('click', () => setViewerScale(viewerScale - viewerScaleStep));
     viewerDialog.querySelector('[data-viewer-action="reset"]')?.addEventListener('click', resetViewerTransform);
+    viewerDialog.querySelector('[data-viewer-action="fit-width"]')?.addEventListener('click', fitViewerToWidth);
     viewerPrevious?.addEventListener('click', () => showViewerItem(viewerIndex - 1));
     viewerNext?.addEventListener('click', () => showViewerItem(viewerIndex + 1));
 
@@ -188,15 +233,23 @@ if (viewerDialog && viewerStage) {
         }
         if (event.key === 'ArrowLeft' && viewerItems.length > 1) showViewerItem(viewerIndex - 1);
         if (event.key === 'ArrowRight' && viewerItems.length > 1) showViewerItem(viewerIndex + 1);
-        if (event.key === '+' || event.key === '=') setViewerScale(viewerScale + 0.25);
-        if (event.key === '-' || event.key === '_') setViewerScale(viewerScale - 0.25);
+        if (event.key === '+' || event.key === '=') setViewerScale(viewerScale + viewerScaleStep);
+        if (event.key === '-' || event.key === '_') setViewerScale(viewerScale - viewerScaleStep);
         if (event.key === '0') resetViewerTransform();
     });
 
     viewerStage.addEventListener('wheel', event => {
         event.preventDefault();
-        setViewerScale(viewerScale + (event.deltaY < 0 ? 0.25 : -0.25));
+        setViewerScale(viewerScale + (event.deltaY < 0 ? viewerScaleStep : -viewerScaleStep));
     }, { passive: false });
+
+    viewerStage.addEventListener('dblclick', () => {
+        if (viewerScale > viewerMinScale) {
+            resetViewerTransform();
+        } else {
+            fitViewerToWidth();
+        }
+    });
 
     viewerStage.addEventListener('pointerdown', event => {
         if (viewerScale <= 1 || event.pointerType === 'touch') return;
