@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Портфолио Даниила Аннанурова — Backend и Android разработчика. Проекты на Python, Java, Kotlin, Spring Boot, gRPC и Docker.">
+    <meta name="description" content="Портфолио Даниила Аннанурова — Backend и Android разработчика. Проекты на Python, FastAPI, Java, Spring Boot и Kotlin.">
     <meta name="author" content="Даниил Аннануров">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#f7f8fc">
     <meta property="og:title" content="Даниил Аннануров — Backend / Android разработчик">
-    <meta property="og:description" content="Проекты, технический стек и учебный архив Даниила Аннанурова.">
+    <meta property="og:description" content="Проекты, технологии и учебный архив Даниила Аннанурова.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://daniyarsick.github.io/main_portfolio/">
     <meta property="og:image" content="https://daniyarsick.github.io/main_portfolio/photo.jpg">
@@ -16,7 +16,7 @@
     <link rel="icon" href="photo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Даниил Аннануров — Backend / Android разработчик</title>
@@ -30,7 +30,7 @@
             </button>
             <ul class="nav-links" id="main-navigation">
                 <li><a href="#projects">Проекты</a></li>
-                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#skills">Технологии</a></li>
                 <li><a href="#education">Образование</a></li>
                 <li><a href="#contact">Контакты</a></li>
             </ul>
@@ -43,25 +43,25 @@
     <header class="hero">
         <div class="container hero-grid">
             <div class="hero-copy">
-                <p class="eyebrow">Backend · Android · Санкт-Петербург / удалённо</p>
-                <h1>Даниил<br>Аннануров</h1>
+                <p class="hero-location">Санкт-Петербург · удалённо</p>
+                <h1>Даниил Аннануров</h1>
                 <p class="hero-role">Backend / Android разработчик</p>
-                <p class="hero-summary">Разрабатываю API и сервисы на Python и Java, мобильные приложения на Kotlin и воспроизводимые окружения в Docker. Проектирую структуру решения до кода и документирую результат.</p>
+                <p class="hero-summary">Пишу API и сервисы на Python и Java, Android-приложения на Kotlin. Работаю с базами данных, Docker и технической документацией.</p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn primary">Смотреть проекты <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
+                    <a href="#projects" class="btn primary">Проекты</a>
                     <a href="https://github.com/daniyarsick" class="btn secondary" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
-                    <a href="#contact" class="btn text-btn">Связаться <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    <a href="#contact" class="btn text-btn">Контакты</a>
                 </div>
                 <dl class="hero-facts">
-                    <div><dt>Основной стек</dt><dd>Python · Java · Kotlin</dd></div>
-                    <div><dt>Направления</dt><dd>API · Android · Docker</dd></div>
-                    <div><dt>Образование</dt><dd>ИВТ · 4 курс</dd></div>
+                    <div><dt>Backend</dt><dd>Python · Java</dd></div>
+                    <div><dt>Android</dt><dd>Kotlin · MVVM</dd></div>
+                    <div><dt>Образование</dt><dd>09.03.01 · завершено</dd></div>
                 </dl>
             </div>
             <aside class="hero-profile" aria-label="Профиль Даниила">
                 <div class="portrait-card">
                     <img src="photo.jpg" alt="Даниил Аннануров" class="profile-photo" width="640" height="640" fetchpriority="high">
-                    <div class="portrait-caption"><span>РГПУ им. А. И. Герцена</span><strong>Информатика и вычислительная техника</strong></div>
+                    <div class="portrait-caption"><span>РГПУ им. А. И. Герцена</span><strong>09.03.01 Информатика и вычислительная техника</strong></div>
                 </div>
             </aside>
         </div>
@@ -70,86 +70,101 @@
     <main>
         <section id="projects" class="section projects-section">
             <div class="container">
-                <header class="section-heading split-heading">
-                    <div><p class="eyebrow">Избранные проекты</p><h2>От задачи<br>до работающего решения</h2></div>
-                    <p>Четыре проекта показывают работу с backend, Android, базами данных, контейнеризацией и проектированием систем.</p>
+                <header class="section-heading">
+                    <h2>Проекты</h2>
+                    <p>Четыре работы, по которым можно посмотреть код, документацию и реальные экраны.</p>
                 </header>
 
-                <article class="case-study">
-                    <div class="case-visual visual-indigo">
-                        <div class="browser-frame">
-                            <div class="browser-bar"><span></span><span></span><span></span><small>Glossary MindMap</small></div>
-                            <img src="assets/projects/grpc-mindmap.webp" alt="Интерфейс Glossary MindMap с терминами gRPC, Protocol Buffers и Docker" width="1200" height="800" loading="lazy">
-                        </div>
+                <article class="project-card">
+                    <div class="project-gallery project-gallery--three" aria-label="Скриншоты Books API">
+                        <button class="project-image project-image--main" type="button" data-viewer-group="fastapi" data-viewer-src="assets/projects/fastapi-swagger.webp" data-viewer-caption="Swagger UI: эндпоинты Books API" aria-label="Увеличить Swagger UI Books API">
+                            <img src="assets/projects/fastapi-swagger.webp" alt="Swagger UI со списком эндпоинтов Books API" width="1715" height="1000" loading="lazy">
+                        </button>
+                        <button class="project-image" type="button" data-viewer-group="fastapi" data-viewer-src="assets/projects/fastapi-stats.webp" data-viewer-caption="Ответ эндпоинта статистики по книгам" aria-label="Увеличить ответ статистики Books API">
+                            <img src="assets/projects/fastapi-stats.webp" alt="Swagger UI с JSON-ответом статистики по книгам" width="1453" height="900" loading="lazy">
+                        </button>
+                        <button class="project-image" type="button" data-viewer-group="fastapi" data-viewer-src="assets/projects/fastapi-create.webp" data-viewer-caption="Создание книги: ответ 201" aria-label="Увеличить результат создания книги">
+                            <img src="assets/projects/fastapi-create.webp" alt="Swagger UI с ответом 201 после создания книги" width="1466" height="500" loading="lazy">
+                        </button>
                     </div>
-                    <div class="case-copy">
-                        <div class="case-meta"><span>01</span><span>Backend · Full stack</span></div>
-                        <h3>Glossary MindMap</h3>
-                        <p class="case-lead">Сервис технических терминов с визуализацией связей в формате интеллект-карты.</p>
-                        <dl class="case-details">
-                            <div><dt>Задача</dt><dd>Представить связанные технические термины в наглядном web-интерфейсе.</dd></div>
-                            <div><dt>Реализация</dt><dd>gRPC-сервис и Protocol Buffers связаны с REST-шлюзом на Flask, frontend использует vis-network, окружение запускается через Docker Compose.</dd></div>
-                        </dl>
-                        <ul class="tech-list"><li>Python</li><li>gRPC</li><li>Flask</li><li>JavaScript</li><li>Docker</li></ul>
-                        <a class="case-link" href="https://github.com/Daniyarsick/grpc-glossary-mindmap" target="_blank" rel="noopener">Код и документация <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    <div class="project-copy">
+                        <p class="project-kind">Python · REST API</p>
+                        <h3>Books API на FastAPI</h3>
+                        <p>API для управления каталогом книг. Поддерживает CRUD, фильтрацию по автору и году, пагинацию и отдельный эндпоинт статистики.</p>
+                        <ul class="project-points">
+                            <li>Pydantic проверяет входные данные.</li>
+                            <li>SQLAlchemy работает с базой SQLite.</li>
+                            <li>API-key защищает операции создания, изменения и удаления.</li>
+                            <li>OpenAPI-документация доступна через Swagger UI.</li>
+                        </ul>
+                        <p class="project-stack"><strong>Технологии:</strong> FastAPI, Pydantic, SQLAlchemy, SQLite, OpenAPI</p>
+                        <a class="project-link" href="https://github.com/Daniyarsick/RestApi_prog7" target="_blank" rel="noopener">Репозиторий <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
                     </div>
                 </article>
 
-                <article class="case-study case-study--reverse">
-                    <div class="case-visual visual-violet phone-stage">
-                        <div class="phone-frame phone-main"><img src="assets/projects/weather-app.webp" alt="Главный экран Weather App с погодой в Москве" width="640" height="1422" loading="lazy"></div>
-                        <div class="phone-frame phone-secondary"><img src="assets/projects/weather-forecast.webp" alt="Экран прогноза погоды Weather App" width="640" height="1422" loading="lazy"></div>
+                <article class="project-card">
+                    <div class="project-gallery project-gallery--phones" aria-label="Скриншоты Weather App">
+                        <button class="project-image" type="button" data-viewer-group="weather" data-viewer-src="assets/projects/weather-app.webp" data-viewer-caption="Текущая погода в Москве" aria-label="Увеличить главный экран Weather App">
+                            <img src="assets/projects/weather-app.webp" alt="Главный экран Weather App с погодой в Москве" width="640" height="1422" loading="lazy">
+                        </button>
+                        <button class="project-image" type="button" data-viewer-group="weather" data-viewer-src="assets/projects/weather-forecast.webp" data-viewer-caption="Прогноз погоды" aria-label="Увеличить экран прогноза Weather App">
+                            <img src="assets/projects/weather-forecast.webp" alt="Экран прогноза погоды Weather App" width="640" height="1422" loading="lazy">
+                        </button>
                     </div>
-                    <div class="case-copy">
-                        <div class="case-meta"><span>02</span><span>Android</span></div>
+                    <div class="project-copy">
+                        <p class="project-kind">Kotlin · Android</p>
                         <h3>Weather App</h3>
-                        <p class="case-lead">Android-приложение с текущей погодой и прогнозом на несколько дней.</p>
-                        <dl class="case-details">
-                            <div><dt>Задача</dt><dd>Получать данные OpenWeatherMap и удобно показывать их на мобильном устройстве.</dd></div>
-                            <div><dt>Реализация</dt><dd>Архитектура MVVM, Retrofit-запросы, Coroutines для асинхронных операций, RecyclerView для прогнозов и SharedPreferences для настроек.</dd></div>
-                        </dl>
-                        <ul class="tech-list"><li>Kotlin</li><li>Android SDK</li><li>MVVM</li><li>Retrofit</li><li>Coroutines</li></ul>
-                        <a class="case-link" href="https://github.com/Daniyarsick/Weather_App_Rest_API_Retrofit_Kotlin_Coroutines_OpenWeatherMap" target="_blank" rel="noopener">Посмотреть проект <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                        <p>Android-приложение показывает текущую погоду и прогноз, полученные через OpenWeatherMap.</p>
+                        <ul class="project-points">
+                            <li>MVVM разделяет интерфейс и работу с данными.</li>
+                            <li>Retrofit и Coroutines отвечают за сетевые запросы.</li>
+                            <li>RecyclerView отображает прогноз, SharedPreferences хранит настройки.</li>
+                        </ul>
+                        <p class="project-stack"><strong>Технологии:</strong> Kotlin, Android SDK, MVVM, Retrofit, Coroutines</p>
+                        <a class="project-link" href="https://github.com/Daniyarsick/Weather_App_Rest_API_Retrofit_Kotlin_Coroutines_OpenWeatherMap" target="_blank" rel="noopener">Репозиторий <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
                     </div>
                 </article>
 
-                <article class="case-study">
-                    <div class="case-visual visual-blue spring-stage">
-                        <div class="browser-frame spring-console">
-                            <div class="browser-bar"><span></span><span></span><span></span><small>jdbc:h2:mem:taskdb</small></div>
+                <article class="project-card">
+                    <div class="project-gallery project-gallery--two" aria-label="Скриншоты Task Management API">
+                        <button class="project-image project-image--main" type="button" data-viewer-group="spring" data-viewer-src="assets/projects/spring-h2-console.webp" data-viewer-caption="H2 Console проекта Task Management API" aria-label="Увеличить H2 Console Task Management API">
                             <img src="assets/projects/spring-h2-console.webp" alt="H2 Console проекта Task Management API" width="1200" height="582" loading="lazy">
-                        </div>
-                        <div class="browser-frame spring-login">
+                        </button>
+                        <button class="project-image" type="button" data-viewer-group="spring" data-viewer-src="assets/projects/spring-h2-login.webp" data-viewer-caption="Подключение к базе H2" aria-label="Увеличить форму подключения к H2">
                             <img src="assets/projects/spring-h2-login.webp" alt="Форма подключения к базе H2" width="689" height="371" loading="lazy">
-                        </div>
+                        </button>
                     </div>
-                    <div class="case-copy">
-                        <div class="case-meta"><span>03</span><span>Java · REST API</span></div>
+                    <div class="project-copy">
+                        <p class="project-kind">Java · REST API</p>
                         <h3>Task Management API</h3>
-                        <p class="case-lead">Защищённый CRUD-сервис для создания, просмотра, изменения и удаления задач.</p>
-                        <dl class="case-details">
-                            <div><dt>Задача</dt><dd>Создать RESTful-приложение управления задачами с хранением данных и аутентификацией.</dd></div>
-                            <div><dt>Реализация</dt><dd>Слои controller, service и repository, Spring Data JPA, H2, Spring Security и отдельная обработка отсутствующих ресурсов.</dd></div>
-                        </dl>
-                        <ul class="tech-list"><li>Java 17</li><li>Spring Boot</li><li>Spring Security</li><li>JPA</li><li>H2</li></ul>
-                        <a class="case-link" href="https://github.com/Daniyarsick/RESTfull-SpringBoot-Prog7" target="_blank" rel="noopener">Код и README <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                        <p>CRUD-сервис для управления задачами с хранением данных и базовой аутентификацией.</p>
+                        <ul class="project-points">
+                            <li>Код разделён на controller, service и repository.</li>
+                            <li>Spring Data JPA работает с H2.</li>
+                            <li>Spring Security ограничивает доступ и обрабатывает авторизацию.</li>
+                        </ul>
+                        <p class="project-stack"><strong>Технологии:</strong> Java 17, Spring Boot, Spring Security, JPA, H2</p>
+                        <a class="project-link" href="https://github.com/Daniyarsick/RESTfull-SpringBoot-Prog7" target="_blank" rel="noopener">Репозиторий <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
                     </div>
                 </article>
 
-                <article class="case-study case-study--reverse">
-                    <div class="case-visual visual-mint uml-stage">
-                        <div class="diagram-frame"><img src="assets/projects/uml-sequence.webp" alt="UML-диаграмма последовательности образовательной платформы" width="647" height="1342" loading="lazy"></div>
+                <article class="project-card">
+                    <div class="project-gallery project-gallery--diagram" aria-label="Материалы проектирования ВКР">
+                        <button class="project-image" type="button" data-viewer-group="uml" data-viewer-src="assets/projects/uml-sequence.webp" data-viewer-caption="Диаграмма последовательности образовательного веб-ресурса" aria-label="Увеличить UML-диаграмму последовательности">
+                            <img src="assets/projects/uml-sequence.webp" alt="UML-диаграмма последовательности образовательного веб-ресурса" width="647" height="1342" loading="lazy">
+                        </button>
                     </div>
-                    <div class="case-copy">
-                        <div class="case-meta"><span>04</span><span>System design · ВКР</span></div>
-                        <h3>Платформа изучения Jetpack Compose</h3>
-                        <p class="case-lead">Проектирование образовательного продукта до начала разработки.</p>
-                        <dl class="case-details">
-                            <div><dt>Задача</dt><dd>Описать архитектуру, роли и ключевые сценарии образовательной платформы.</dd></div>
-                            <div><dt>Реализация</dt><dd>Шесть UML-диаграмм, модель прогресса, квизы, сертификаты, wireframes экранов и TypeScript-модели домена.</dd></div>
-                        </dl>
-                        <ul class="tech-list"><li>PlantUML</li><li>Mermaid</li><li>TypeScript</li><li>System design</li></ul>
-                        <a class="case-link" href="https://github.com/Daniyarsick/UML_VKR" target="_blank" rel="noopener">Изучить проектирование <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    <div class="project-copy">
+                        <p class="project-kind">Проектирование ВКР</p>
+                        <h3>Архитектура веб-ресурса для изучения Jetpack Compose</h3>
+                        <p>Проектирование образовательного веб-ресурса до реализации. В репозитории описаны роли гостя, студента и администратора, а также путь от выбора курса до получения сертификата.</p>
+                        <ul class="project-points">
+                            <li>Шесть UML-диаграмм описывают сценарии, классы и состояния системы.</li>
+                            <li>Модель включает уроки, квизы, прогресс, достижения и сертификаты.</li>
+                            <li>Подготовлены TypeScript-модели домена и wireframes шести экранов.</li>
+                        </ul>
+                        <p class="project-stack"><strong>Материалы:</strong> PlantUML, Mermaid, TypeScript, wireframes</p>
+                        <a class="project-link" href="https://github.com/Daniyarsick/UML_VKR" target="_blank" rel="noopener">Репозиторий <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
                     </div>
                 </article>
             </div>
@@ -157,56 +172,85 @@
 
         <section class="section more-projects-section" aria-labelledby="more-projects-title">
             <div class="container">
-                <header class="section-heading compact-heading"><div><p class="eyebrow">Ещё работы</p><h2 id="more-projects-title">Дополнительные проекты</h2></div><a href="https://github.com/daniyarsick?tab=repositories" target="_blank" rel="noopener">Все репозитории <i class="fas fa-arrow-right"></i></a></header>
+                <header class="section-heading section-heading--row">
+                    <div><h2 id="more-projects-title">Другие работы</h2><p>Небольшие учебные и практические проекты.</p></div>
+                    <a href="https://github.com/daniyarsick?tab=repositories" target="_blank" rel="noopener">Все репозитории <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </header>
                 <div class="more-projects-grid">
-                    <a href="https://github.com/Daniyarsick/Shopping_List" target="_blank" rel="noopener"><span class="project-icon"><i class="fab fa-android"></i></span><div><h3>Shopping List</h3><p>Kotlin · ViewModel · RecyclerView</p></div><i class="fas fa-arrow-up-right-from-square"></i></a>
-                    <a href="https://github.com/Daniyarsick/Kotlin_SQLite" target="_blank" rel="noopener"><span class="project-icon"><i class="fas fa-database"></i></span><div><h3>Kotlin SQLite</h3><p>Android · SQLite · авторизация</p></div><i class="fas fa-arrow-up-right-from-square"></i></a>
-                    <a href="https://github.com/Daniyarsick/pingpong-flask-final" target="_blank" rel="noopener"><span class="project-icon"><i class="fab fa-docker"></i></span><div><h3>Flask Ping Pong</h3><p>Python · Flask · Docker Compose</p></div><i class="fas fa-arrow-up-right-from-square"></i></a>
-                    <a href="https://github.com/Daniyarsick/Oauth2.0_Prog7" target="_blank" rel="noopener"><span class="project-icon"><i class="fas fa-key"></i></span><div><h3>OAuth 2.0</h3><p>Python · GitHub · Google OAuth</p></div><i class="fas fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://github.com/Daniyarsick/Shopping_List" target="_blank" rel="noopener"><div><h3>Shopping List</h3><p>Kotlin · ViewModel · RecyclerView</p></div><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    <a href="https://github.com/Daniyarsick/Kotlin_SQLite" target="_blank" rel="noopener"><div><h3>Kotlin SQLite</h3><p>Android · SQLite · авторизация</p></div><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    <a href="https://github.com/Daniyarsick/pingpong-flask-final" target="_blank" rel="noopener"><div><h3>Flask Ping Pong</h3><p>Python · Flask · Docker Compose</p></div><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    <a href="https://github.com/Daniyarsick/Oauth2.0_Prog7" target="_blank" rel="noopener"><div><h3>OAuth 2.0</h3><p>Python · GitHub · Google OAuth</p></div><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
                 </div>
             </div>
         </section>
 
         <section id="skills" class="section skills-section">
-            <div class="container skills-layout">
-                <header class="section-heading"><p class="eyebrow">Технический стек</p><h2>Инструменты для полного цикла разработки</h2><p>От структуры данных и API до клиентского интерфейса, документации и воспроизводимого запуска.</p></header>
+            <div class="container">
+                <header class="section-heading"><h2>Технологии</h2><p>Инструменты, которые использую в проектах.</p></header>
                 <div class="skill-groups">
-                    <article><span>01</span><div><h3>Backend</h3><p>Python, Flask, Django, Java, Spring Boot, REST API, gRPC, RabbitMQ</p></div></article>
-                    <article><span>02</span><div><h3>Android</h3><p>Kotlin, MVVM, Jetpack Compose, Retrofit, Coroutines, RecyclerView</p></div></article>
-                    <article><span>03</span><div><h3>Данные и инфраструктура</h3><p>PostgreSQL, H2, SQLite, Docker, Docker Compose, Linux, Nginx</p></div></article>
-                    <article><span>04</span><div><h3>Проектирование</h3><p>UML, Git, GitHub, API-документация, декомпозиция пользовательских сценариев</p></div></article>
+                    <article><h3>Backend</h3><p>Python, FastAPI, Flask, Django, Java, Spring Boot, REST API, gRPC, RabbitMQ</p></article>
+                    <article><h3>Android</h3><p>Kotlin, MVVM, Jetpack Compose, Retrofit, Coroutines, RecyclerView</p></article>
+                    <article><h3>Данные и инфраструктура</h3><p>PostgreSQL, H2, SQLite, Docker, Docker Compose, Linux, Nginx</p></article>
+                    <article><h3>Рабочий процесс</h3><p>Git, GitHub, UML, OpenAPI, техническая документация</p></article>
                 </div>
             </div>
         </section>
 
         <section id="education" class="section education-section">
             <div class="container">
-                <header class="section-heading split-heading"><div><p class="eyebrow">Образование</p><h2>Учебная база<br>и практика</h2></div><p>Полный архив лабораторных, практик, курсовых работ и материалов ВКР по программе ИВТ.</p></header>
+                <header class="section-heading"><h2>Образование</h2><p>Обучение завершено. Ниже сохранён архив работ по курсам.</p></header>
                 <div class="education-card">
-                    <div class="education-main"><span>2022 — 2026</span><h3>РГПУ им. А. И. Герцена</h3><p>Информатика и вычислительная техника</p></div>
+                    <div class="education-main">
+                        <span>2022–2026 · бакалавриат</span>
+                        <h3>РГПУ им. А. И. Герцена</h3>
+                        <p>09.03.01 Информатика и вычислительная техника</p>
+                    </div>
                     <nav class="course-links" aria-label="Материалы по курсам">
-                        <a href="course1.html"><span>01</span><strong>Первый курс</strong><i class="fas fa-arrow-right"></i></a>
-                        <a href="course2.html"><span>02</span><strong>Второй курс</strong><i class="fas fa-arrow-right"></i></a>
-                        <a href="course3.html"><span>03</span><strong>Третий курс</strong><i class="fas fa-arrow-right"></i></a>
-                        <a href="course4.html"><span>04</span><strong>Четвёртый курс</strong><i class="fas fa-arrow-right"></i></a>
+                        <a href="course1.html"><strong>Первый курс</strong><i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        <a href="course2.html"><strong>Второй курс</strong><i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        <a href="course3.html"><strong>Третий курс</strong><i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        <a href="course4.html"><strong>Четвёртый курс</strong><i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                     </nav>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="section contact-section">
-            <div class="container contact-card">
-                <div><p class="eyebrow">Контакты</p><h2>Давайте обсудим<br>ваш проект</h2><p>Быстрее всего отвечаю в Telegram. Также можно написать на почту или посмотреть остальные репозитории на GitHub.</p></div>
+            <div class="container contact-row">
+                <div><h2>Контакты</h2><p>Telegram — самый быстрый способ связаться со мной.</p></div>
                 <div class="contact-actions">
-                    <a href="https://t.me/daniyarsick" class="contact-primary" target="_blank" rel="noopener"><i class="fab fa-telegram"></i><span><small>Написать в</small>Telegram</span><i class="fas fa-arrow-up-right-from-square"></i></a>
-                    <a href="mailto:dan.annanurov@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-                    <a href="https://github.com/daniyarsick" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://t.me/daniyarsick" target="_blank" rel="noopener"><i class="fab fa-telegram" aria-hidden="true"></i> Telegram</a>
+                    <a href="mailto:dan.annanurov@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i> Email</a>
+                    <a href="https://github.com/daniyarsick" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer><div class="container"><p>© 2026 Даниил Аннануров</p><a href="#top">Наверх <i class="fas fa-arrow-up"></i></a></div></footer>
+    <footer><div class="container"><p>© 2026 Даниил Аннануров</p><a href="#top">Наверх <i class="fas fa-arrow-up" aria-hidden="true"></i></a></div></footer>
+
+    <dialog class="image-viewer" id="image-viewer" aria-labelledby="image-viewer-title">
+        <div class="image-viewer__panel">
+            <header class="image-viewer__header">
+                <p id="image-viewer-title">Просмотр изображения</p>
+                <button class="image-viewer__close" type="button" aria-label="Закрыть просмотрщик"><i class="fas fa-xmark" aria-hidden="true"></i></button>
+            </header>
+            <div class="image-viewer__stage">
+                <img class="image-viewer__image" src="" alt="">
+            </div>
+            <div class="image-viewer__toolbar" aria-label="Управление изображением">
+                <button type="button" data-viewer-action="previous" aria-label="Предыдущее изображение"><i class="fas fa-arrow-left" aria-hidden="true"></i></button>
+                <button type="button" data-viewer-action="zoom-out" aria-label="Уменьшить"><i class="fas fa-minus" aria-hidden="true"></i></button>
+                <output class="image-viewer__scale" aria-live="polite">100%</output>
+                <button type="button" data-viewer-action="zoom-in" aria-label="Увеличить"><i class="fas fa-plus" aria-hidden="true"></i></button>
+                <button type="button" data-viewer-action="reset">Сбросить</button>
+                <button type="button" data-viewer-action="next" aria-label="Следующее изображение"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+            <p class="image-viewer__caption"></p>
+        </div>
+    </dialog>
+
     <script src="script.js"></script>
 </body>
 </html>

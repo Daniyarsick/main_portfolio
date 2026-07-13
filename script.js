@@ -50,7 +50,7 @@ if (navToggle && navMenu) {
     });
 
     document.addEventListener('keydown', event => {
-        if (event.key === 'Escape') {
+        if (event.key === 'Escape' && navMenu.classList.contains('is-open')) {
             closeNavigation();
             navToggle.focus();
         }
@@ -88,6 +88,168 @@ function updateNavbarBackground() {
 // Navbar background on scroll
 window.addEventListener('scroll', updateNavbarBackground);
 updateNavbarBackground();
+
+const viewerDialog = document.getElementById('image-viewer');
+const viewerImage = viewerDialog?.querySelector('.image-viewer__image');
+const viewerCaption = viewerDialog?.querySelector('.image-viewer__caption');
+const viewerStage = viewerDialog?.querySelector('.image-viewer__stage');
+const viewerScaleOutput = viewerDialog?.querySelector('.image-viewer__scale');
+const viewerPrevious = viewerDialog?.querySelector('[data-viewer-action="previous"]');
+const viewerNext = viewerDialog?.querySelector('[data-viewer-action="next"]');
+let viewerItems = [];
+let viewerIndex = 0;
+let viewerScale = 1;
+let viewerOffsetX = 0;
+let viewerOffsetY = 0;
+let viewerLastFocus = null;
+let viewerDrag = null;
+let viewerPinchDistance = 0;
+let viewerPinchScale = 1;
+
+function applyViewerTransform() {
+    if (!viewerImage || !viewerScaleOutput) return;
+    viewerImage.style.transform = `translate3d(${viewerOffsetX}px, ${viewerOffsetY}px, 0) scale(${viewerScale})`;
+    viewerScaleOutput.value = `${Math.round(viewerScale * 100)}%`;
+    viewerScaleOutput.textContent = `${Math.round(viewerScale * 100)}%`;
+}
+
+function setViewerScale(nextScale) {
+    viewerScale = Math.min(3, Math.max(1, nextScale));
+    if (viewerScale === 1) {
+        viewerOffsetX = 0;
+        viewerOffsetY = 0;
+    }
+    applyViewerTransform();
+}
+
+function resetViewerTransform() {
+    viewerScale = 1;
+    viewerOffsetX = 0;
+    viewerOffsetY = 0;
+    applyViewerTransform();
+}
+
+function showViewerItem(index) {
+    if (!viewerImage || !viewerItems.length) return;
+    viewerIndex = (index + viewerItems.length) % viewerItems.length;
+    const item = viewerItems[viewerIndex];
+    const caption = item.dataset.viewerCaption || item.querySelector('img')?.alt || 'Изображение проекта';
+    viewerImage.src = item.dataset.viewerSrc;
+    viewerImage.alt = caption;
+    if (viewerCaption) viewerCaption.textContent = caption;
+    if (viewerPrevious) viewerPrevious.disabled = viewerItems.length < 2;
+    if (viewerNext) viewerNext.disabled = viewerItems.length < 2;
+    resetViewerTransform();
+}
+
+function openImageViewer(trigger) {
+    if (!viewerDialog || typeof viewerDialog.showModal !== 'function') {
+        window.open(trigger.dataset.viewerSrc, '_blank', 'noopener');
+        return;
+    }
+    const group = trigger.dataset.viewerGroup;
+    viewerItems = Array.from(document.querySelectorAll('[data-viewer-src]')).filter(item => item.dataset.viewerGroup === group);
+    viewerIndex = Math.max(0, viewerItems.indexOf(trigger));
+    viewerLastFocus = trigger;
+    showViewerItem(viewerIndex);
+    viewerDialog.showModal();
+    document.body.classList.add('viewer-open');
+    viewerDialog.querySelector('.image-viewer__close')?.focus();
+}
+
+document.querySelectorAll('[data-viewer-src]').forEach(trigger => {
+    trigger.addEventListener('click', () => openImageViewer(trigger));
+});
+
+if (viewerDialog && viewerStage) {
+    viewerDialog.querySelector('.image-viewer__close')?.addEventListener('click', () => viewerDialog.close());
+    viewerDialog.querySelector('[data-viewer-action="zoom-in"]')?.addEventListener('click', () => setViewerScale(viewerScale + 0.25));
+    viewerDialog.querySelector('[data-viewer-action="zoom-out"]')?.addEventListener('click', () => setViewerScale(viewerScale - 0.25));
+    viewerDialog.querySelector('[data-viewer-action="reset"]')?.addEventListener('click', resetViewerTransform);
+    viewerPrevious?.addEventListener('click', () => showViewerItem(viewerIndex - 1));
+    viewerNext?.addEventListener('click', () => showViewerItem(viewerIndex + 1));
+
+    viewerDialog.addEventListener('click', event => {
+        if (event.target === viewerDialog) viewerDialog.close();
+    });
+
+    viewerDialog.addEventListener('close', () => {
+        document.body.classList.remove('viewer-open');
+        viewerLastFocus?.focus();
+        viewerItems = [];
+        resetViewerTransform();
+    });
+
+    viewerDialog.addEventListener('keydown', event => {
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            viewerDialog.close();
+            return;
+        }
+        if (event.key === 'ArrowLeft' && viewerItems.length > 1) showViewerItem(viewerIndex - 1);
+        if (event.key === 'ArrowRight' && viewerItems.length > 1) showViewerItem(viewerIndex + 1);
+        if (event.key === '+' || event.key === '=') setViewerScale(viewerScale + 0.25);
+        if (event.key === '-' || event.key === '_') setViewerScale(viewerScale - 0.25);
+        if (event.key === '0') resetViewerTransform();
+    });
+
+    viewerStage.addEventListener('wheel', event => {
+        event.preventDefault();
+        setViewerScale(viewerScale + (event.deltaY < 0 ? 0.25 : -0.25));
+    }, { passive: false });
+
+    viewerStage.addEventListener('pointerdown', event => {
+        if (viewerScale <= 1 || event.pointerType === 'touch') return;
+        viewerDrag = {
+            id: event.pointerId,
+            startX: event.clientX,
+            startY: event.clientY,
+            offsetX: viewerOffsetX,
+            offsetY: viewerOffsetY
+        };
+        viewerStage.setPointerCapture(event.pointerId);
+        viewerStage.classList.add('is-dragging');
+    });
+
+    viewerStage.addEventListener('pointermove', event => {
+        if (!viewerDrag || viewerDrag.id !== event.pointerId) return;
+        viewerOffsetX = viewerDrag.offsetX + event.clientX - viewerDrag.startX;
+        viewerOffsetY = viewerDrag.offsetY + event.clientY - viewerDrag.startY;
+        applyViewerTransform();
+    });
+
+    function stopViewerDrag(event) {
+        if (!viewerDrag || viewerDrag.id !== event.pointerId) return;
+        viewerDrag = null;
+        viewerStage.classList.remove('is-dragging');
+    }
+
+    viewerStage.addEventListener('pointerup', stopViewerDrag);
+    viewerStage.addEventListener('pointercancel', stopViewerDrag);
+
+    viewerStage.addEventListener('touchstart', event => {
+        if (event.touches.length !== 2) return;
+        viewerPinchDistance = Math.hypot(
+            event.touches[0].clientX - event.touches[1].clientX,
+            event.touches[0].clientY - event.touches[1].clientY
+        );
+        viewerPinchScale = viewerScale;
+    }, { passive: true });
+
+    viewerStage.addEventListener('touchmove', event => {
+        if (event.touches.length !== 2 || !viewerPinchDistance) return;
+        event.preventDefault();
+        const distance = Math.hypot(
+            event.touches[0].clientX - event.touches[1].clientX,
+            event.touches[0].clientY - event.touches[1].clientY
+        );
+        setViewerScale(viewerPinchScale * distance / viewerPinchDistance);
+    }, { passive: false });
+
+    viewerStage.addEventListener('touchend', () => {
+        viewerPinchDistance = 0;
+    });
+}
 
 // Get file icon based on file type
 function getFileIcon(type) {
@@ -150,10 +312,29 @@ function isHighlightedSubject(name) {
     return highlightSubjects.some(item => item.toLowerCase() === String(name).toLowerCase());
 }
 
+function showCourseState(container, title, message) {
+    const state = document.createElement('section');
+    state.className = 'course-state';
+    const heading = document.createElement('h2');
+    const text = document.createElement('p');
+    heading.textContent = title;
+    text.textContent = message;
+    state.append(heading, text);
+    container.appendChild(state);
+}
+
 // Render course folders dynamically
 function renderCourseFolders(courseName) {
     const container = document.getElementById('dynamic-folders');
     if (!container) return;
+    container.replaceChildren();
+
+    const hasFileData = typeof fileData !== 'undefined' && Boolean(fileData[courseName]);
+    const hasExternalData = typeof externalLinks !== 'undefined' && Boolean(externalLinks[courseName]);
+    if (!hasFileData && !hasExternalData) {
+        showCourseState(container, 'Материалы не загрузились', 'Обновите страницу. Если ошибка повторится, вернитесь на главную и сообщите о проблеме.');
+        return;
+    }
 
     // Normalize string for comparison (trim, normalize unicode, collapse whitespace)
     function normalize(s) {
@@ -193,6 +374,11 @@ function renderCourseFolders(courseName) {
 
     // Sort by display name and render
     const sorted = Array.from(disciplineMap.values()).sort((a, b) => a.displayName.localeCompare(b.displayName, 'ru'));
+
+    if (!sorted.length) {
+        showCourseState(container, 'Материалы пока не добавлены', 'Для этого курса нет доступных файлов или внешних ссылок.');
+        return;
+    }
 
     sorted.forEach(discipline => {
         const { displayName, hasLocalFiles, hasExternalLinks, localKey, externalKey } = discipline;
